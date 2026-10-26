@@ -1,0 +1,49 @@
+{
+  "task": "T101",
+  "authorRole": "A1",
+  "date": "2026-10-26",
+  "suggestedStatus": "REVIEW",
+  "baseCommit": "98ffec73e2d81adfc136168ab0330d9441bd1ac9",
+  "codeCommit": "88e24ca70489f7743d76110bc411301803658e43",
+  "branch": "task/T101",
+  "reservation": {
+    "creationRequiresAbsentRef": true,
+    "remoteShaConfirmed": "98ffec73e2d81adfc136168ab0330d9441bd1ac9",
+    "prExistingBeforeReservation": false,
+    "mainConditions": { "T000": "DONE", "T101": "READY", "owner": "A1" }
+  },
+  "environment": {
+    "os": "Windows",
+    "shell": "PowerShell",
+    "node": "22.12.0",
+    "npm": "10.9.0",
+    "playwright": "1.64.1",
+    "chromium": "156.0.8078.4"
+  },
+  "checks": [
+    { "command": "npm ci", "exitCode": 0, "packagesAdded": 189, "audited": 190, "reportedVulnerabilities": 0 },
+    { "command": "npm run lint", "exitCode": 0, "sourceCommentCheck": "passed" },
+    { "command": "npm run typecheck", "exitCode": 0 },
+    { "command": "npm test -- --run", "exitCode": 0, "passedFiles": 6, "passedTests": 104, "newSimulationFiles": 3, "newSimulationTests": 75 },
+    { "command": "npm run build", "exitCode": 0, "transformedModules": 15 },
+    { "command": "npm run test:e2e", "exitCode": 0, "passedTests": 1, "scope": "existing application startup smoke" },
+    { "command": "git diff --cached --check", "exitCode": 0, "scope": "eight source and test files before code commit" }
+  ],
+  "independentExpectationsForDefaultScenario": {
+    "semiMajorAxisMetres": 8560644525.098671,
+    "frontCentreFlux": 0.991594982122775,
+    "durationDays": 0.14138454646614354,
+    "partialFluxTimeDays": 2.564741816043867,
+    "partialFluxFromVerticalIntegration": 0.9958792674903914,
+    "fluxAbsoluteTolerance": 1e-10,
+    "durationAbsoluteToleranceDays": 1e-6,
+    "areaQuadratureAbsoluteTolerance": 2e-8
+  },
+  "resolvedAttempts": [
+    "Restricted test execution could not write the existing discovery probe's temporary Vitest token; permitted execution passed.",
+    "An initial test-only exact area bound differed by one floating-point unit; the bound now allows rounding tolerance.",
+    "Lint rejected an overprecise test literal; replacing it by the nominal-radius quotient passed lint and the complete test suite."
+  ],
+  "notExecutedAtReportCreation": ["pull request CI", "independent A2 review"],
+  "limitations": ["uniform star", "circular edge-on central transit", "no simulate or noise", "no UI or detector", "local verification only Windows and Chromium"]
+}
