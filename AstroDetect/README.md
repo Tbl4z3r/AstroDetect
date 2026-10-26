@@ -7,13 +7,13 @@ Repositorio destino: https://github.com/Tbl4z3r/AstroDetect
 
 ## Estado real — 26 de octubre de 2026
 
-T000 incorpora una base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega está en revisión; T000 aún no está DONE ni habilita tareas dependientes. No están implementados el simulador, los controles educativos ni el detector. No hay despliegue.
+T000 está DONE: base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega fue aprobada por A3 e integrada en main mediante el PR #1, con CI aprobada también después de la integración. T101, T201 y T301 están READY; cada tarea requiere una asignación explícita antes de iniciarse. No están implementados el simulador, los controles educativos ni el detector. No hay despliegue.
 
-El código está en la rama task/T000. La creación del PR mediante el conector encontró una limitación de permisos; la integración en main está pendiente. Las carreras, asignación de responsabilidades humanas y fecha de entrega siguen pendientes de información.
+El código de T000 está integrado en main desde `c30aed6f45f3e969189136c50ca6a2c69c2004d2`. Para comenzar las tareas READY, actualizar main y registrar su SHA real con este cierre incluido. Las carreras, asignación de responsabilidades humanas y fecha de entrega siguen pendientes de información.
 
 Desde esta carpeta, con Node 22.12.0 y npm 10.9.0: ejecutar `npm ci` y `npm run dev`; abrir la dirección local con la subruta `/AstroDetect/`. Para comprobar la base: `npm run lint`, `npm run typecheck`, `npm test -- --run`, `npm run build`, `npx playwright install chromium` y `npm run test:e2e`.
 
-Entrega y evidencia: [reporte T000, intento 02](agents/reports/T000-PRODUCTOR-attempt-02.md). La pantalla de arranque sólo informa del estado de preparación.
+Entrega y evidencia: [cierre de producción de T000, intento 04](agents/reports/T000-PRODUCTOR-attempt-04.md). La pantalla de arranque sólo informa del estado de preparación.
 
 ## Empezar
 

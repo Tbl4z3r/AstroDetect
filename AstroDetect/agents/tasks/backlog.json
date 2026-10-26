@@ -9,7 +9,7 @@
       "title": "Crear base reproducible y congelar contratos v1",
       "owner": "PRODUCTOR",
       "reviewer": "A3",
-      "status": "REVIEW",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [],
       "size": 3,
@@ -21,8 +21,8 @@
       "title": "Geometría orbital y flujo ideal",
       "owner": "A1",
       "reviewer": "A2",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T000"
       ],
@@ -49,8 +49,8 @@
       "title": "Controles y estructura accesible",
       "owner": "A2",
       "reviewer": "A3",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T000"
       ],
@@ -78,8 +78,8 @@
       "title": "Detector básico aislado y auditable",
       "owner": "A3",
       "reviewer": "A1",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T000"
       ],

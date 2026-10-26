@@ -4,7 +4,7 @@
 
 - Base React, TypeScript y Vite; dependencias fijadas y contratos v1 congelados.
 - Scripts de instalación y comprobación, control de comentarios por lenguaje y arranque probado en Chromium desde la subruta.
-- Workflow de validación sin despliegue. Revisión independiente y cierre de producción documentados en reportes T000; integración todavía pendiente.
+- Workflow de validación sin despliegue. T000 aprobado por A3 e integrado mediante el PR #1; CI del PR y de main aprobadas. Producción registra T000 DONE y habilita T101, T201 y T301 como READY, sin iniciar esas tareas.
 - No se implementaron funcionalidades de las tareas de A1, A2 o A3.
 
 ## 0.0.0 — 2026-10-26
