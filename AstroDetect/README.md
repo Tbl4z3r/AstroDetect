@@ -7,7 +7,7 @@ Repositorio destino: https://github.com/Tbl4z3r/AstroDetect
 
 ## Estado real — 26 de octubre de 2026
 
-T000 está DONE: base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega fue aprobada por A3 e integrada en main mediante el PR #1, con CI aprobada también después de la integración. T101 (PR #3) y T201 (PR #4) están en REVIEW: entregadas, pendientes de revisión independiente y auditoría de Claude; todavía no integradas. T301 está READY y requiere una asignación explícita antes de iniciarse. El detector no está implementado. No hay despliegue.
+T000 está DONE: base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega fue aprobada por A3 e integrada en main mediante el PR #1, con CI aprobada también después de la integración. T101 está DONE: geometría orbital y flujo ideal integrados mediante el PR #3, con revisión A2 y auditoría de Claude aprobadas sobre `e7a9bca`. T201 (PR #4) está en REVIEW, con revisión A3 y auditoría de Claude aprobadas, pendiente de integración. T102 y T301 están READY y requieren una asignación explícita antes de iniciarse. El detector no está implementado. No hay despliegue.
 
 El código de T000 está integrado en main desde `c30aed6f45f3e969189136c50ca6a2c69c2004d2`. Para comenzar las tareas READY, actualizar main y registrar su SHA real con este cierre incluido. Las carreras, asignación de responsabilidades humanas y fecha de entrega siguen pendientes de información.
 

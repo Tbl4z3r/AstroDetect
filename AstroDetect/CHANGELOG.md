@@ -6,6 +6,7 @@
 - Scripts de instalación y comprobación, control de comentarios por lenguaje y arranque probado en Chromium desde la subruta.
 - Workflow de validación sin despliegue. T000 aprobado por A3 e integrado mediante el PR #1; CI del PR y de main aprobadas. Producción registra T000 DONE y habilita T101, T201 y T301 como READY, sin iniciar esas tareas.
 - No se implementaron funcionalidades de las tareas de A1, A2 o A3.
+- T101: `validateScenario`, `positionAt` y `fluxAt` con órbita circular de Kepler e intersección exacta de discos, integrados mediante el PR #3 (`9ca3d7d`). Revisión A2 y auditoría de Claude aprobadas sobre `e7a9bca`. Producción registra T101 DONE y habilita T102 como READY.
 
 ## 0.0.0 — 2026-10-26
 
