@@ -7,9 +7,13 @@ Repositorio destino: https://github.com/Tbl4z3r/AstroDetect
 
 ## Estado real — 26 de octubre de 2026
 
-Versión documental 0.0.0: paquete de producción, reglas, contratos y tareas para tres agentes. La aplicación, sus pruebas y su publicación están pendientes. Este paquete no contiene una aplicación ejecutable. Las carreras, asignación de responsabilidades humanas y fecha de entrega aún deben ser informadas por el equipo.
+T000 incorpora una base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega está en revisión; T000 aún no está DONE ni habilita tareas dependientes. No están implementados el simulador, los controles educativos ni el detector. No hay despliegue.
 
-El repositorio remoto se encontró vacío. Las dos conexiones GitHub disponibles tienen permiso de lectura, sin escritura. Este paquete se entrega localmente y no se ha publicado ni incorporado a GitHub.
+El código está en la rama task/T000. La creación del PR mediante el conector encontró una limitación de permisos; la integración en main está pendiente. Las carreras, asignación de responsabilidades humanas y fecha de entrega siguen pendientes de información.
+
+Desde esta carpeta, con Node 22.12.0 y npm 10.9.0: ejecutar `npm ci` y `npm run dev`; abrir la dirección local con la subruta `/AstroDetect/`. Para comprobar la base: `npm run lint`, `npm run typecheck`, `npm test -- --run`, `npm run build`, `npx playwright install chromium` y `npm run test:e2e`.
+
+Entrega y evidencia: [reporte T000, intento 02](agents/reports/T000-PRODUCTOR-attempt-02.md). La pantalla de arranque sólo informa del estado de preparación.
 
 ## Empezar
 
