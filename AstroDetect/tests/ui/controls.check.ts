@@ -80,6 +80,3 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
   expect(await page.getByRole('heading', { level: 2 }).count()).toBe(5);
   expect(await page.getByText(/No hay resultados de detección/).isVisible()).toBe(true);
 });
-
-
-
