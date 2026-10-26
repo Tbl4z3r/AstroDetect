@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-26",
+  "scope": "Validación documental local; no pruebas de aplicación",
+  "fileCount": 49,
+  "taskCount": 12,
+  "localLinksChecked": 16,
+  "taskGraphAcyclic": true,
+  "errors": []
+}

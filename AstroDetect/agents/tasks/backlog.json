@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-26",
+  "documentVersion": "0.0.0",
+  "note": "Estados de implementación. Los reportes planning-Ax no cierran estas tareas. Sólo producción edita el registro.",
+  "tasks": [
+    {
+      "id": "T000",
+      "title": "Crear base reproducible y congelar contratos v1",
+      "owner": "PRODUCTOR",
+      "reviewer": "A3",
+      "status": "READY",
+      "blockedReason": null,
+      "dependsOn": [],
+      "size": 3,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T000.md"
+    },
+    {
+      "id": "T101",
+      "title": "Geometría orbital y flujo ideal",
+      "owner": "A1",
+      "reviewer": "A2",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T000"
+      ],
+      "size": 3,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T101.md"
+    },
+    {
+      "id": "T102",
+      "title": "Serie temporal y ruido reproducible",
+      "owner": "A1",
+      "reviewer": "A2",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T101"
+      ],
+      "size": 2,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T102.md"
+    },
+    {
+      "id": "T201",
+      "title": "Controles y estructura accesible",
+      "owner": "A2",
+      "reviewer": "A3",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T000"
+      ],
+      "size": 2,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T201.md"
+    },
+    {
+      "id": "T202",
+      "title": "Animación y curva sincronizadas",
+      "owner": "A2",
+      "reviewer": "A3",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T102",
+        "T201"
+      ],
+      "size": 3,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T202.md"
+    },
+    {
+      "id": "T301",
+      "title": "Detector básico aislado y auditable",
+      "owner": "A3",
+      "reviewer": "A1",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T000"
+      ],
+      "size": 3,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T301.md"
+    },
+    {
+      "id": "T302",
+      "title": "Fixtures de integración y límites del detector",
+      "owner": "A3",
+      "reviewer": "A1",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T102",
+        "T301"
+      ],
+      "size": 2,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T302.md"
+    },
+    {
+      "id": "T401",
+      "title": "Integrar laboratorio y resultados",
+      "owner": "PRODUCTOR",
+      "reviewer": "A3",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T202",
+        "T301",
+        "T302"
+      ],
+      "size": 2,
+      "targetVersion": "0.1.0-alpha",
+      "file": "agents/tasks/T401.md"
+    },
+    {
+      "id": "T402",
+      "title": "Aceptación especializada del MVP",
+      "owner": "A3",
+      "reviewer": "A1",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T401"
+      ],
+      "size": 3,
+      "targetVersion": "0.1.0",
+      "file": "agents/tasks/T402.md"
+    },
+    {
+      "id": "T403",
+      "title": "Preparar y verificar publicación GitHub Pages",
+      "owner": "PRODUCTOR",
+      "reviewer": "A3",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T402"
+      ],
+      "size": 2,
+      "targetVersion": "0.1.0",
+      "file": "agents/tasks/T403.md"
+    },
+    {
+      "id": "T404",
+      "title": "Redactar informe académico con evidencia",
+      "owner": "PRODUCTOR",
+      "reviewer": "A1",
+      "status": "BLOCKED",
+      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "dependsOn": [
+        "T402"
+      ],
+      "size": 3,
+      "targetVersion": "0.1.0",
+      "file": "agents/tasks/T404.md"
+    },
+    {
+      "id": "T405",
+      "title": "Caso desconocido y razonamiento del estudiante",
+      "owner": "A2",
+      "reviewer": "A3",
+      "status": "BACKLOG",
+      "blockedReason": null,
+      "dependsOn": [
+        "T403"
+      ],
+      "size": 3,
+      "targetVersion": "0.2.0",
+      "file": "agents/tasks/T405.md"
+    }
+  ]
+}

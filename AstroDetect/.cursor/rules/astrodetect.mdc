@@ -1,0 +1,12 @@
+---
+description: Reglas comunes de producción y colaboración de AstroDetect
+alwaysApply: true
+---
+
+Lee y cumple AGENTS.md en la raíz del repositorio.
+Trabaja exclusivamente la tarea asignada y sus archivos permitidos.
+Lee docs/contratos.md antes de integrar módulos.
+No añadas comentarios ni docstrings al código. Documenta en Markdown.
+Registra evidencia y estado en agents/reports, separados de agents/tasks.
+No declares tu propio trabajo DONE: entrega en REVIEW y detente.
+No abras otra tarea por iniciativa propia.
