@@ -17,3 +17,7 @@ Por hallazgo: ID, severidad (bloqueante/alta/media/baja), archivo, reproducción
 ## Revalidación y cierre
 
 Referencias anteriores y corregidas; verificación pendiente si cambió el código. El productor decide integración y DONE. El revisor se detiene al entregar.
+
+## Gate adicional de Claude
+
+Esta revisión especializada no sustituye el reporte obligatorio de Claude Code. Producción debe comprobar ambos, cuando correspondan, antes de integrar y cerrar. El modelo o agente que redacta este reporte debe identificarse con veracidad y no firmar como Claude.

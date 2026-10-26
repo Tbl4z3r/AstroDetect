@@ -48,3 +48,13 @@ Para configuración escrita por producción, A3 revisa. Para una integración es
 ## Regla de parada
 
 Entregar y detenerse cuando la tarea alcanza REVIEW, queda BLOCKED o recibe cancelación. No empezar otra tarea, publicar, añadir mejoras o revisar espontáneamente módulos adicionales. Una mejora se registra en el apartado fuera de alcance del reporte. Corregir una regresión de una tarea cerrada exige una nueva ficha F-ID vinculada al cambio original.
+
+## Auditoría obligatoria de Claude
+
+Desde la adopción de esta política, toda nueva entrega en REVIEW requiere un dictamen APPROVED emitido realmente por Claude Code sobre su referencia exacta, además de las revisiones técnicas aplicables. Ningún agente Codex puede producir ese dictamen en su nombre.
+
+Producción no integra, declara DONE ni habilita tareas dependientes sin comprobar el reporte compartido, su procedencia, base de integración, SHA y verificaciones obligatorias. Un cambio posterior de código, pruebas, contratos, dependencias o configuración exige reauditar; un cambio de base exige revalidar compatibilidad. El reporte de auditoría añadido posteriormente debe identificarse como evidencia, sin atribuir a Claude la revisión de código nuevo.
+
+Claude actúa sólo como auditor: no corrige implementaciones, no edita el registro y no hace merge. Los agentes conservan sus roles y se detienen en REVIEW. El alcance detallado está en agents/instructions/04-auditor-claude.md y el circuito en docs/auditoria-claude.md.
+
+No se modifican estados DONE históricos ni se inventan aprobaciones retrospectivas. Un prompt y esta política no constituyen un disparador automático ni una protección técnica de main. Hasta configurar esa integración, producción inicia cada auditoría y mantiene el bloqueo de sus dependencias.
