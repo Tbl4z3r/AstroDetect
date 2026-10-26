@@ -1,0 +1,39 @@
+{
+  "name": "astrodetect",
+  "version": "0.1.0-alpha",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0 <23",
+    "npm": ">=10.9.0 <11"
+  },
+  "packageManager": "npm@10.9.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "lint": "eslint . --max-warnings 0 && node scripts/check-source-comments.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "parse5": "8.0.1",
+    "postcss": "8.5.31",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.1",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

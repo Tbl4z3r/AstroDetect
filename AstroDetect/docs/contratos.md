@@ -1,6 +1,6 @@
-# Contratos de integración — propuesta v1
+# Contratos de integración — v1 congelado
 
-El productor los congela en T000 antes de trabajo paralelo. Hasta entonces son diseño, no API implementada. Un cambio requiere solicitud en un reporte, consumidores afectados, migración y aprobación del productor. Ningún agente crea una variante silenciosa.
+Congelado por producción en T000 el 26 de octubre de 2026. Tipos y valores compartidos en src/contracts/index.ts, versión 1.0.0. Las funciones científicas y el detector se implementan en sus tareas; aquí sólo se definen sus firmas. Un cambio requiere solicitud en un reporte, consumidores afectados, migración y aprobación del productor. Ningún agente crea una variante silenciosa.
 
 ## Entradas y unidades
 
@@ -41,3 +41,15 @@ El contrato de determinismo exige que la misma entrada produzca la misma serie e
 ## Pruebas de contrato obligatorias
 
 La misma fase y flujo deben corresponder al mismo tiempo en animación y curva. Detector aislado usando fixtures manuales; ruido fijo reproducible; ninguna salida NaN/Infinity en el dominio válido; cambio de parámetros invalida resultados. Las implementaciones y los textos de interfaz deben usar estos mismos nombres de estado mediante traducciones visibles al español.
+
+## Decisiones congeladas en T000
+
+La API pública de tipos, valores, límites, constantes, muestreo y validación de opciones se exporta desde `src/contracts/index.ts`. Los consumidores importan esos valores y no crean copias locales. `SimulationEngine` y `TransitDetector` fijan firmas; no son implementaciones ni mocks.
+
+La validación científica `validateScenario` pertenece a A1: incluye finitud, límites y separación física. T000 sólo implementa `validateDetectionOptions`, que retorna ValidationResult por campo sin mutar la entrada. Las entradas de estas funciones son objetos del tipo declarado; la decodificación de fuentes externas no forma parte de este contrato.
+
+Constantes nominales: radio solar 695700000 m; radio terrestre ecuatorial 6378100 m; parámetro gravitacional solar 1.3271244e20 m³/s²; día 86400 s. Son las mismas de docs/modelo-cientifico.md.
+
+Modelo de ruido v1: xorshift32 con estado uint32 inicial seed, sustituyendo cero por 1831565813. Por uniforme: XOR desplazamiento izquierdo 13, XOR derecho sin signo 17, XOR izquierdo 5, convirtiendo a uint32 tras cada paso. U=(x+0.5)/4294967296. Por muestra consumir dos uniformes y usar sqrt(-2 ln U1) cos(2π U2), descartando seno. Reiniciar estado por serie. Semilla 0 comparte secuencia con 1831565813. Con ruido cero, observado coincide exactamente con limpio. Comparaciones entre plataformas usan tolerancia 1e-12 para flujo. El algoritmo se documenta aquí y se implementará únicamente en T102.
+
+Detección: entradas incorrectas y línea base no positiva lanzan Error explícito; validar opciones antes de calcular. Series válidas vacías o cortas producen insufficient-data. Un período estimado exige además superar dos cadencias, según docs/calidad-y-despliegue.md. No hay detector en T000.

@@ -9,7 +9,7 @@
       "title": "Crear base reproducible y congelar contratos v1",
       "owner": "PRODUCTOR",
       "reviewer": "A3",
-      "status": "READY",
+      "status": "REVIEW",
       "blockedReason": null,
       "dependsOn": [],
       "size": 3,
