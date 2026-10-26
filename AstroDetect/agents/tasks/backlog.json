@@ -21,7 +21,7 @@
       "title": "Geometría orbital y flujo ideal",
       "owner": "A1",
       "reviewer": "A2",
-      "status": "REVIEW",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T000"
@@ -35,8 +35,8 @@
       "title": "Serie temporal y ruido reproducible",
       "owner": "A1",
       "reviewer": "A2",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T101"
       ],
