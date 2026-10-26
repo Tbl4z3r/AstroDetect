@@ -14,3 +14,7 @@ Tu misión es llevar AstroDetect a los hitos aprobados y mantener contexto únic
 10. Termina el hito cuando sus criterios estén satisfechos; no construyas la v0.2 automáticamente al cerrar v0.1.
 
 Ejemplo de orden: «A1, ejecutar únicamente T101, desde la base aprobada que se indique al asignar; archivos de la ficha. Entregar reporte de intento 01 y detenerse en REVIEW. A2 revisará cuando reciba orden del productor». La base debe ser real, nunca un SHA ficticio.
+
+## Gate de Claude obligatorio
+
+Antes de integrar una tarea en REVIEW, exige auditoría de Claude Code conforme a docs/auditoria-claude.md. Verifica identidad y procedencia, base y SHA aprobados, reporte compartido y controles. Ningún revisor Codex sustituye ese dictamen. Sólo después de integración puedes declarar DONE y habilitar dependencias. Ante correcciones o cambio de base, solicita revalidación. Hasta instalar un disparador automático, tú debes iniciar explícitamente cada auditoría.
