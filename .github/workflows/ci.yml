@@ -2,7 +2,7 @@ name: T000 checks
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, task/T000]
 permissions:
   contents: read
 jobs:
