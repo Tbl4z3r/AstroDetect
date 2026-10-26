@@ -21,7 +21,7 @@
       "title": "Geometría orbital y flujo ideal",
       "owner": "A1",
       "reviewer": "A2",
-      "status": "READY",
+      "status": "REVIEW",
       "blockedReason": null,
       "dependsOn": [
         "T000"
@@ -49,7 +49,7 @@
       "title": "Controles y estructura accesible",
       "owner": "A2",
       "reviewer": "A3",
-      "status": "READY",
+      "status": "REVIEW",
       "blockedReason": null,
       "dependsOn": [
         "T000"
