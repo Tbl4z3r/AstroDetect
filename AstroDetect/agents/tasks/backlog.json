@@ -124,7 +124,7 @@
       "id": "T401",
       "title": "Integrar laboratorio y resultados",
       "owner": "PRODUCTOR",
-      "status": "READY",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T202",
@@ -133,20 +133,23 @@
       ],
       "size": 2,
       "targetVersion": "0.1.0-alpha",
-      "file": "agents/tasks/T401.md"
+      "file": "agents/tasks/T401.md",
+      "integratedCommit": "9119313b032f84ecb2d462cc777b4ab77e76b41d",
+      "verification": "Entrega T401 con 222 pruebas, siete recorridos Chromium, lint, tipos y build satisfactorios."
     },
     {
       "id": "T402",
       "title": "Aceptación especializada del MVP",
       "owner": "A3",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "IN_PROGRESS",
+      "blockedReason": null,
       "dependsOn": [
         "T401"
       ],
       "size": 3,
       "targetVersion": "0.1.0",
-      "file": "agents/tasks/T402.md"
+      "file": "agents/tasks/T402.md",
+      "assignedTo": "PRODUCCION-A3"
     },
     {
       "id": "T403",
