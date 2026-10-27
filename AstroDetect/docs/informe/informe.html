@@ -32,11 +32,13 @@ li { margin-bottom: 3pt; text-align: justify; }
   <h1>AstroDetect: un laboratorio web para comprender la detección de exoplanetas por tránsito</h1>
   <p>Informe del prototipo, versión 0.1.0-alpha</p>
   <p style="margin-top:28pt">Bastián Echeverría · Alexander Ferias · Emiliano Toledo</p>
-  <p><span class="pend">[Carreras de cada integrante: pendiente de confirmar]</span></p>
-  <p><span class="pend">[Curso, sección y docente: pendiente de confirmar]</span></p>
-  <p><span class="pend">[Institución: pendiente de confirmar]</span></p>
-  <p><span class="pend">[Fecha de entrega: pendiente de confirmar]</span></p>
-  <p style="margin-top:28pt">Repositorio: https://github.com/Tbl4z3r/AstroDetect</p>
+  <p>Licenciatura en Ingeniería en Ciencias de la Computación</p>
+  <p style="margin-top:18pt">Curso: Paseo por el Universo</p>
+  <p>Profesor: Juan Carlos Beamin Muhlenbrock</p>
+  <p>Pontificia Universidad Católica de Chile</p>
+  <p>2 de noviembre de 2026</p>
+  <p style="margin-top:28pt">Aplicación: https://tbl4z3r.github.io/AstroDetect/</p>
+  <p>Repositorio: https://github.com/Tbl4z3r/AstroDetect</p>
 </section>
 
 <h2>1. Introducción</h2>
@@ -50,7 +52,7 @@ li { margin-bottom: 3pt; text-align: justify; }
   <li>Evaluar la repetición de eventos contrastando el período configurado con el estimado por un detector que no conoce el escenario.</li>
   <li>Comunicar los resultados con cautela: una detección es una señal compatible, y una no detección no demuestra ausencia.</li>
 </ul>
-<p><span class="pend">[Aporte de cada carrera del equipo al proyecto: pendiente de confirmar las carreras para redactar este párrafo sin suposiciones.]</span></p>
+<p><b>Aporte disciplinar.</b> Los tres integrantes estudian Licenciatura en Ingeniería en Ciencias de la Computación. El proyecto aplica herramientas propias de esa formación a un problema astronómico: modelación numérica con atención a la precisión de coma flotante, generadores pseudoaleatorios reproducibles, un algoritmo de detección con estadística robusta, diseño de software modular con contratos de datos, pruebas automáticas con oráculos independientes e integración continua, y una interfaz web accesible. El contenido astronómico proviene del curso Paseo por el Universo y de la bibliografía citada.</p>
 
 <h2>2. Fundamento astronómico</h2>
 <p>Un tránsito ocurre cuando, desde la posición del observador, el disco del planeta se superpone al disco de la estrella. Si se supone una estrella de brillo superficial uniforme y un planeta opaco, la fracción de luz bloqueada es el área de superposición dividida por el área del disco estelar. En el centro de un tránsito central, con el planeta completamente dentro del disco, la profundidad es aproximadamente</p>
@@ -72,7 +74,7 @@ li { margin-bottom: 3pt; text-align: justify; }
 <h2>4. Diseño del sistema</h2>
 <p>La aplicación usa React, TypeScript en modo estricto, Vite y gráficos SVG nativos. El código se organiza en tres módulos con contratos de datos congelados antes de implementar (versión 1.0.0): simulación (validación, posición, flujo y serie temporal), análisis (detector aislado) e interfaz. El adaptador de la interfaz entrega al detector solamente pares de tiempo y flujo observado; una prueba automática verifica que no pueda leer la curva limpia ni los parámetros del escenario.</p>
 <p>La pantalla sigue cinco bloques en el orden del razonamiento: configuración, observación, medición, interpretación y apoyo. Cada cambio válido de parámetros regenera los datos de forma determinista, vuelve al inicio del tiempo y descarta resultados de detección anteriores. Un único reloj de simulación mueve el planeta en la animación y el cursor sobre la curva. La reproducción respeta la preferencia de movimiento reducido del sistema operativo y todos los controles funcionan con teclado.</p>
-<p>El trabajo se dividió en tareas acotadas con criterios de aceptación medibles: geometría y flujo (T101), serie temporal y ruido (T102), controles accesibles (T201), animación y curva sincronizadas (T202), detector (T301), casos de integración (T302), integración del laboratorio (T401) y aceptación del MVP (T402). Cada tarea se entregó con pruebas automáticas e integración continua en GitHub Actions. Las tareas T101, T102 y T201 tuvieron además una revisión cruzada y una auditoría independiente; desde el 26 de octubre el equipo optó por entrega directa sin revisión cruzada para las tareas restantes.</p>
+<p>El trabajo se dividió en tareas acotadas con criterios de aceptación medibles: geometría y flujo (T101), serie temporal y ruido (T102), controles accesibles (T201), animación y curva sincronizadas (T202), detector (T301), casos de integración (T302), integración del laboratorio (T401) y aceptación del MVP (T402). Cada tarea se entregó con pruebas automáticas e integración continua en GitHub Actions. Las tareas T101, T102 y T201 tuvieron además una revisión cruzada y una auditoría antes de integrarse; desde el 26 de octubre el equipo optó por entrega directa sin revisión cruzada para las tareas restantes.</p>
 
 <h2>5. Prototipo</h2>
 <p>Las figuras siguientes son capturas reales del prototipo compilado desde la versión integrada en la rama principal (commit 724a687), con los valores iniciales: estrella de 1 radio solar, planeta de 10 radios terrestres, período de 5 días, ruido de 500 ppm y semilla 42.</p>
@@ -115,7 +117,7 @@ li { margin-bottom: 3pt; text-align: justify; }
 <h2>8. Impacto educativo, conclusiones y trabajo futuro</h2>
 <p>AstroDetect cumple el objetivo general: el prototipo funciona de principio a fin en el navegador, relaciona la geometría con la curva de luz mediante un modelo verificado y comunica sus resultados con cautela. Los cuatro objetivos específicos tienen evidencia ejecutada: la cuadruplicación de la profundidad, la conservación de la curva ideal al cambiar el ruido con la misma semilla, la estimación correcta del período cuando la señal es suficiente, y los mensajes que separan candidato de confirmación.</p>
 <p>La propuesta educativa sigue un ciclo de predecir, experimentar, comparar, analizar y argumentar. Todavía no se ha aplicado con estudiantes, por lo que no se afirma ninguna mejora de aprendizaje; una evaluación simple consistiría en una predicción antes del uso y una justificación después, con preguntas anónimas.</p>
-<p><b>Estado de publicación.</b> El flujo de publicación en GitHub Pages está preparado y verificado hasta la compilación, pero el sitio aún no está publicado: falta habilitar Pages en la configuración del repositorio y ejecutar la primera publicación. La dirección prevista, https://tbl4z3r.github.io/AstroDetect/, no debe considerarse activa hasta registrar esa publicación. <span class="pend">[Actualizar este párrafo cuando se publique.]</span></p>
+<p><b>Publicación.</b> El prototipo está publicado gratuitamente en GitHub Pages, en https://tbl4z3r.github.io/AstroDetect/, desde el commit 64a2699 de la rama principal. La publicación se verificó el 27 de octubre de 2026: el sitio responde por HTTPS, carga todos sus recursos desde la subruta del proyecto, funciona en una pantalla de 360 píxeles y tras recargar, y diez sesiones independientes simultáneas completaron una búsqueda de tránsitos sin errores. Esta prueba no mide la capacidad máxima del alojamiento.</p>
 <p><b>Trabajo futuro.</b> Un modo de caso desconocido, en el que el estudiante infiere los parámetros sin ver la curva ideal (tarea T405); oscurecimiento de limbo e inclinación variable; ruido correlacionado; y un detector por plegado en fase que permita comparar métodos.</p>
 
 <h2>Referencias</h2>
