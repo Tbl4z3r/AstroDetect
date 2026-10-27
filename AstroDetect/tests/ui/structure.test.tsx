@@ -11,5 +11,6 @@ test('presenta estructura educativa y cinco controles etiquetados sin resultados
   expect(html).toContain('masa estelar fija de una masa solar');
   expect(html).toContain('inclinación fija de 90°');
   expect(html).toContain('No hay resultados de detección');
-  expect(html).not.toContain('Buscar posibles tránsitos');
+  expect(html).toContain('Buscar posibles tránsitos');
+  expect(html).not.toContain('data-testid="detection-results"');
 });

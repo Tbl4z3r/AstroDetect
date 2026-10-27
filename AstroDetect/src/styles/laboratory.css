@@ -44,6 +44,16 @@ output { display: block; font-variant-numeric: tabular-nums; }
 .observed-key { color: #185aaa; }
 .clean-key { color: #a94100; border-top-style: dashed !important; }
 .cursor-key { color: #752c83; }
+.detection-results { margin-block: 1.5rem; }
+.detection-status { font-weight: 650; padding-block: .75rem; border-block: 1px solid #c2ccd8; }
+.detection-events { padding-left: 1.5rem; }
+.detection-events li { padding-bottom: 1.25rem; }
+.detection-events h4 { margin-block: .5rem; }
+.detection-events dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .75rem 1.5rem; }
+.detection-events dt { font-weight: 650; }
+.detection-events dd { margin: 0; font-variant-numeric: tabular-nums; }
+.detection-warnings { border-left: 3px solid #62758c; padding-left: 1rem; }
+.detection-limit { margin-top: 1.5rem; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto; animation: none; transition: none; }
 }

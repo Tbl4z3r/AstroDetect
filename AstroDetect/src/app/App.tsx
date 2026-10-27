@@ -4,20 +4,36 @@ import HelpPanel from '../components/HelpPanel';
 import TransitAnimation from '../components/TransitAnimation';
 import LightCurve from '../components/LightCurve';
 import PlaybackControls from '../components/PlaybackControls';
+import DetectionPanel from '../components/DetectionPanel';
 import { DEFAULT_SCENARIO } from '../contracts';
-import type { Scenario } from '../contracts';
+import type { DetectionResult, Scenario } from '../contracts';
 import { simulate } from '../simulation';
 import { usePlayback } from './usePlayback';
+import { analyzeMeasurements } from './analyzeMeasurements';
 import '../styles/laboratory.css';
 
 export default function App() {
   const [dataset, setDataset] = useState(() => ({ scenario: { ...DEFAULT_SCENARIO }, result: simulate(DEFAULT_SCENARIO) }));
   const [valid, setValid] = useState(true);
+  const [detection, setDetection] = useState<DetectionResult | null>(null);
+  const [analysisError, setAnalysisError] = useState<string | null>(null);
   const playback = usePlayback(dataset.result.durationDays);
   function changeScenario(scenario: Scenario | null) {
     playback.restart();
+    setDetection(null);
+    setAnalysisError(null);
     setValid(scenario !== null);
     if (scenario) setDataset({ scenario, result: simulate(scenario) });
+  }
+  function analyze() {
+    if (!valid) return;
+    setAnalysisError(null);
+    setDetection(null);
+    try {
+      setDetection(analyzeMeasurements(dataset.result.samples));
+    } catch (error) {
+      setAnalysisError(error instanceof Error ? error.message : 'Intenta regenerar los datos con una configuración válida.');
+    }
   }
   return <>
     <a className="skip-link" href="#configuracion">Ir a la configuración</a>
@@ -36,7 +52,7 @@ export default function App() {
       <section aria-labelledby="medicion"><h2 id="medicion">3. Medición</h2>
         {valid ? <LightCurve result={dataset.result} timeDays={playback.timeDays} /> : <p>Curva suspendida hasta corregir la configuración.</p>}
       </section>
-      <section aria-labelledby="interpretacion"><h2 id="interpretacion">4. Interpretación</h2><p>La búsqueda de posibles tránsitos aún no está integrada. No hay resultados de detección.</p><p>Una señal compatible con un tránsito no confirma un planeta. La falta de detección no demuestra su ausencia.</p></section>
+      <DetectionPanel result={detection} error={analysisError} disabled={!valid} onDetect={analyze} />
       <HelpPanel />
     </main>
   </>;

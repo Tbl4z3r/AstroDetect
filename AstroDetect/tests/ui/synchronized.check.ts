@@ -108,11 +108,11 @@ test('teclado, movimiento reducido, extremos y pantalla móvil', async () => {
   expect((await curvePaths()).some(path => /NaN|Infinity/.test(path!))).toBe(false);
   await page.getByRole('button', { name: 'Restablecer configuración' }).click();
   await setTime('2.5');
-  await mkdir('agents/evidence/T202', { recursive: true });
-  await page.screenshot({ path: 'agents/evidence/T202/desktop.png', fullPage: true });
+  await mkdir('agents/evidence/T401', { recursive: true });
+  await page.screenshot({ path: 'agents/evidence/T401/synchronized-desktop.png', fullPage: true });
   await page.setViewportSize({ width: 360, height: 800 });
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-  await page.screenshot({ path: 'agents/evidence/T202/mobile.png', fullPage: true });
+  await page.screenshot({ path: 'agents/evidence/T401/synchronized-mobile.png', fullPage: true });
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await expect.poll(() => play.isEnabled()).toBe(true);
   expect(await page.getByTestId('clock').textContent()).toContain('2.5000');

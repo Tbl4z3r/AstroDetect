@@ -76,7 +76,7 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
     await page.setViewportSize({ width, height: 800 });
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), { message: String(width) }).toBe(true);
   }
-  expect(await page.getByRole('button').count()).toBe(4);
+  expect(await page.getByRole('button').count()).toBe(5);
   expect(await page.getByRole('heading', { level: 2 }).count()).toBe(5);
   expect(await page.getByText(/No hay resultados de detección/).isVisible()).toBe(true);
 });
