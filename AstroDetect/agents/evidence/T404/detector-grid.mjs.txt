@@ -1,0 +1,21 @@
+import { simulate } from './simulation/index.js';
+import { detectTransits } from './analysis/index.js';
+import { DEFAULT_DETECTION_OPTIONS } from './contracts/index.js';
+const rows = [];
+for (const rp of [2, 5, 10, 20]) for (const ppm of [100, 500, 1000, 5000]) {
+  let cand = 0, period = 0, all5 = 0, spurious = 0, missed = 0;
+  const depth = (rp * 6378100 / 695700000) ** 2;
+  for (let seed = 1; seed <= 20; seed++) {
+    const sc = { starRadiusSolar: 1, planetRadiusEarth: rp, periodDays: 5, noisePpm: ppm, seed };
+    const r = simulate(sc);
+    const d = detectTransits(r.samples.map(s => ({ timeDays: s.timeDays, flux: s.observedFlux })), DEFAULT_DETECTION_OPTIONS);
+    if (d.status === 'candidate') cand++;
+    if (d.estimatedPeriodDays !== null && Math.abs(d.estimatedPeriodDays - 5) / 5 < 0.01) period++;
+    const real = d.events.filter(e => [2.5, 7.5, 12.5, 17.5, 22.5].some(c => Math.abs(e.centerDays - c) < 0.2));
+    spurious += d.events.length - real.length;
+    const found = new Set(real.map(e => Math.round((e.centerDays - 2.5) / 5)));
+    if (found.size === 5) all5++; missed += 5 - found.size;
+  }
+  rows.push({ rp, ppm, depthPpm: Math.round(depth * 1e6), snrPerPoint: +(depth / (ppm * 1e-6)).toFixed(2), candidate: cand, periodOk: period, all5, missedOf100: missed, spurious });
+}
+console.log(JSON.stringify(rows));

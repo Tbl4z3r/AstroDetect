@@ -156,8 +156,8 @@
       "id": "T403",
       "title": "Preparar y verificar publicación GitHub Pages",
       "owner": "PRODUCTOR",
-      "status": "IN_PROGRESS",
-      "blockedReason": null,
+      "status": "BLOCKED",
+      "blockedReason": "Falta habilitar GitHub Pages con GitHub Actions (persona administradora) y ejecutar la primera publicación manual",
       "dependsOn": [
         "T402"
       ],
@@ -170,8 +170,8 @@
       "id": "T404",
       "title": "Redactar informe académico con evidencia",
       "owner": "PRODUCTOR",
-      "status": "IN_PROGRESS",
-      "blockedReason": null,
+      "status": "BLOCKED",
+      "blockedReason": "Borrador entregado; faltan carreras, curso, institución y fecha para la versión final",
       "dependsOn": [
         "T402"
       ],

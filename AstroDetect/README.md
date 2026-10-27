@@ -5,15 +5,15 @@ Diseño de una herramienta interactiva para simular y analizar tránsitos de exo
 Equipo: Bastián Echeverría, Alexander Ferias y Emiliano Toledo.
 Repositorio destino: https://github.com/Tbl4z3r/AstroDetect
 
-## Estado real — 26 de octubre de 2026
+## Estado real — 27 de octubre de 2026
 
-T000 está DONE: base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega fue aprobada por A3 e integrada en main mediante el PR #1, con CI aprobada también después de la integración. T101 está DONE: geometría orbital y flujo ideal integrados mediante el PR #3, con revisión A2 y auditoría de Claude aprobadas sobre `e7a9bca`. T201 está DONE: controles y estructura accesible integrados mediante el PR #4, con revisión A3 y auditoría de Claude aprobadas sobre `5f4f6df`. T102 está DONE: serie temporal y ruido reproducible integrados desde el PR #9. T202 y T302 están DONE mediante PR #12 y PR #11; T301 está DONE mediante PR #10. Las tareas se entregan sin revisión cruzada ni auditoría. T401 está READY y pendiente de asignación tras organizar el repositorio. El detector básico está implementado (T301); su conexión a la interfaz corresponde a T401. No hay despliegue.
+El MVP está implementado e integrado en main: de T000 a T402 están DONE. La aplicación permite configurar estrella, planeta, período, ruido y semilla; muestra la animación del tránsito sincronizada con la curva de luz de 5001 muestras; y ejecuta un detector por mediana y MAD que sólo recibe tiempos y flujo observado. T101 y T201 se integraron con revisión cruzada y auditoría de Claude; T102, T202, T301, T302, T401 y T402 se integraron con la política de entrega directa vigente desde el 26 de octubre (ver `agents/reports/production-flujo-directo.md`). Pendiente: T403, publicación en GitHub Pages, bloqueada hasta que una persona administradora habilite Pages con GitHub Actions (ver `docs/publicacion.md`); y T404, informe académico, con borrador en `docs/informe/` y bloqueado para su versión final hasta confirmar carreras, curso, institución y fecha. La dirección prevista `https://tbl4z3r.github.io/AstroDetect/` todavía no está publicada.
 
-El código de T000 está integrado en main desde `c30aed6f45f3e969189136c50ca6a2c69c2004d2`. Para comenzar las tareas READY, actualizar main y registrar su SHA real con este cierre incluido. Las carreras, asignación de responsabilidades humanas y fecha de entrega siguen pendientes de información.
+Las carreras, la asignación de responsabilidades humanas y la fecha de entrega siguen pendientes de información.
 
 Desde esta carpeta, con Node 22.12.0 y npm 10.9.0: ejecutar `npm ci` y `npm run dev`; abrir la dirección local con la subruta `/AstroDetect/`. Para comprobar la base: `npm run lint`, `npm run typecheck`, `npm test -- --run`, `npm run build`, `npx playwright install chromium` y `npm run test:e2e`.
 
-Entrega y evidencia: [cierre de producción de T000, intento 04](agents/reports/T000-PRODUCTOR-attempt-04.md). La pantalla ya ofrece controles, animación y curvas sincronizadas; el botón y los resultados del detector se conectarán en T401.
+Evidencia: reportes en `agents/reports/`, capturas y mediciones en `agents/evidence/` (por ejemplo, aceptación T402 y análisis del detector T404) y borrador del informe en [docs/informe/informe.pdf](docs/informe/informe.pdf).
 
 ## Empezar
 
