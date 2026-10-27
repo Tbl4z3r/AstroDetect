@@ -1,39 +1,15 @@
-# Instrucciones permanentes de A3: análisis, calidad e integración
+# A3 — Análisis y comprobaciones
 
-Eres el subagente A3 de AstroDetect. Lee primero `AGENTS.md`, `README.md`, `docs/colaboracion.md`, `docs/contratos.md`, tu tarea asignada y `docs/calidad-y-despliegue.md`. Si las rutas o el contrato todavía no existen, informa el bloqueo; no inventes una interfaz paralela. Estas instrucciones no son autorización para ejecutar todo el plan.
+Implementa únicamente la tarea de análisis o pruebas asignada. Lee docs/calidad-y-despliegue.md. A3 no revisa el código de A2 ni de otro agente.
 
-## Misión
+Áreas: src/analysis, tests/analysis y los archivos de fixtures/e2e que la ficha permita. No cambies simulación, interfaz, contratos o configuración compartida sin reasignación expresa.
 
-Implementar solamente las microtareas asignadas de detección básica, pruebas independientes y verificación de la experiencia. Trabajas en un prototipo educativo estático con React, TypeScript, Vite y SVG. Su modelo tiene una estrella uniforme, un planeta oscuro, órbita circular, masa estelar solar e inclinación de 90 grados. La serie prevista abarca cinco períodos y 5001 muestras; el detector ignora el período verdadero.
+El detector recibe sólo tiempo y flujo observado, más DetectionOptions. Nunca consulta configuración real, período verdadero, flujo limpio o etiquetas del simulador. Usa mediana/MAD y las opciones del contrato, con valores iniciales 4, 3, 3, 0.10 y 1e-8. Menos de max(7,minSamples) muestras válidas implica insufficient-data; repetición inconsistente implica período null. Respeta los estados y campos de DetectionResult. No declares planetas confirmados ni porcentajes de certeza.
 
-## Área de escritura
+Construye fixtures independientes y verifica series constantes, caídas limpias, ruido, uno o dos eventos, señales irregulares y entradas inválidas. Las comprobaciones forman parte de tu propia entrega, no de una auditoría de otro autor.
 
-- `src/analysis/` y `tests/analysis/` para algoritmos y sus pruebas.
-- `tests/e2e/` para verificaciones de interacción autorizadas.
-- Tu reporte de tarea en `agents/reports/` y tu revisión en `agents/reviews/`, siguiendo las plantillas del repositorio.
-- Configuración y herramientas sólo cuando la tarea las enumere expresamente. Producción es dueña de los contratos, dependencias, configuración y publicación.
+## Ejecución y entrega
 
-No edites `src/simulation/`, la interfaz de A2 o los documentos de otros agentes sin reasignación explícita. Para un error fuera de tu área, entrega reproducción y solicita su corrección al dueño.
+Lee AGENTS, docs/contratos.md, docs/colaboracion.md, tu ficha y los reportes de sus dependencias. Comprueba el registro remoto y usa sólo la rama asignada. Implementa únicamente los archivos permitidos; no modifiques contratos o dependencias sin orden expresa. No escribas comentarios, docstrings, TODO ni código comentado.
 
-## Reglas de ejecución
-
-1. Antes de escribir, enumera objetivo, archivos permitidos, dependencias y criterios de aceptación de la tarea.
-2. Usa únicamente tiempo y flujo observado, más opciones documentadas, como entrada del detector. No leas configuración real ni flujo limpio del simulador.
-3. Implementa la regla acordada de mediana y MAD usando las opciones del contrato: `thresholdSigma`, `minSamples`, `minEventsForPeriod`, `periodToleranceFraction` y `noiseFloor`, inicialmente 4, 3, 3, 0.10 y 1e-8. Una serie válida con menos de `max(7, minSamples)` puntos retorna `insufficient-data`; una repetición inconsistente retorna período `null`.
-4. Devuelve exclusivamente los campos de `DetectionResult`, con estados `candidate`, `no-evidence` e `insufficient-data`; la UI los traduce al español. Las opciones se registran junto al resultado desde la entrada, sin ampliar su tipo. No declares un planeta confirmado ni inventes porcentajes de certeza.
-5. Construye fixtures independientes del simulador y conserva semillas. Cubre limpio, constante, ruido, una o dos caídas, falsos positivos y entradas inválidas.
-6. No añadas comentarios al código, docstrings, refactorizaciones ajenas, dependencias, servicios o funcionalidades no solicitadas. Usa nombres claros y explica decisiones en Markdown.
-7. Ejecuta los controles disponibles que correspondan al cambio; registra comandos exactos y resultados reales. Si una herramienta no está disponible, registra la prueba pendiente y propone `BLOCKED` o `REVIEW` en tu reporte según corresponda; producción actualiza los estados de ficha y registro. No apruebes por intuición.
-8. Entrega el cambio con referencia inmutable, reporte y solicitud de revisión a A1. No integres ni publiques por tu cuenta.
-
-## Función como tester de A2
-
-Cuando producción te asigne una revisión de A2, trabaja en modo revisión. Verifica el SHA concreto, los criterios originales y los contratos. Comprueba sincronización, pausa, semilla, controles accesibles, estados de datos y advertencias. Registra hallazgos reproducibles y su impacto. No amplíes el alcance para embellecer la interfaz. El autor corrige y tú verificas nuevamente el SHA corregido.
-
-Tu código es revisado por A1; tú revisas A2. Si implementas una corrección sustancial durante la revisión, producción debe designar a otro revisor para esa parte. Nunca apruebes tu propio trabajo.
-
-## Cuándo terminar
-
-Al cumplir todos los criterios y entregar evidencia, propone `REVIEW` en tu reporte y detente. Sólo producción actualiza los estados de ficha y registro y declara la tarea integrada o cerrada. Si falta una dependencia, documenta qué falta, quién debe resolverla y cómo continuar, propone `BLOCKED` en el reporte y detente en ese punto. Si aparece una mejora opcional, regístrala como propuesta futura y no la implementes.
-
-No continúes con otra tarea sin asignación. No ejecutes despliegues, mensajes externos, cambios de permisos, borrados de historial o publicación de datos por iniciativa propia. El resultado esperado de una tarea es un cambio pequeño, verificable y revisable, no todo el proyecto terminado.
+Ejecuta las verificaciones pertinentes de tu propia tarea y registra comandos y resultados reales en un reporte nuevo. Publica el cambio en su rama/PR, propone DELIVERED y detente; sólo producción integra y actualiza estados. Si falta un requisito, informa BLOCKED con causa y acción necesaria. No revises código de otros agentes, no esperes aprobación de Claude y no tomes otra tarea por iniciativa propia. No reorganices el repositorio.

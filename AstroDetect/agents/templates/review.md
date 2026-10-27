@@ -1,23 +1,3 @@
-# Revisión ID — Revisor — Intento
+# Plantilla de revisión retirada
 
-- Autor del cambio:
-- Revisor independiente:
-- Referencia exacta revisada:
-- Tarea y reporte revisados:
-- Veredicto: APPROVED / CHANGES_REQUESTED / BLOCKED.
-
-## Evidencia
-
-Qué se leyó, ejecutó y observó realmente. Referenciar criterios originales y límites de la revisión.
-
-## Hallazgos
-
-Por hallazgo: ID, severidad (bloqueante/alta/media/baja), archivo, reproducción, esperado, observado, impacto y acción solicitada. Si no hay hallazgos, indicarlo sin inventar pruebas.
-
-## Revalidación y cierre
-
-Referencias anteriores y corregidas; verificación pendiente si cambió el código. El productor decide integración y DONE. El revisor se detiene al entregar.
-
-## Gate adicional de Claude
-
-Esta revisión especializada no sustituye el reporte obligatorio de Claude Code. Producción debe comprobar ambos, cuando correspondan, antes de integrar y cerrar. El modelo o agente que redacta este reporte debe identificarse con veracidad y no firmar como Claude.
+No se realizan revisiones cruzadas ni auditorías de código. Para una nueva entrega usa agents/templates/report.md y el estado DELIVERED. Este archivo permanece para conservar referencias históricas.

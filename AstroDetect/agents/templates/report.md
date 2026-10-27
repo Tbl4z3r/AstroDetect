@@ -1,25 +1,21 @@
-# Reporte ID — Agente — Intento
+# Reporte ID — Autor — Intento
 
-- Fecha y versión objetivo:
-- Estado sugerido: REVIEW / BLOCKED / CHANGES_REQUESTED.
-- Tarea y rol:
-- Base de trabajo y rama:
-- Referencia entregada: SHA de código o manifiesto de hashes de archivos si aún no hay git.
+- Fecha, tarea y versión:
+- Estado sugerido: DELIVERED / BLOCKED.
+- Autor y persona asignada:
+- Base y rama:
+- Referencia de código:
 - Reporte previo:
-- Dependencias y contratos consumidos:
+- Contratos y dependencias:
 
 ## Alcance realizado
 
-Archivos cambiados y conducta antes/después. Vincular cada criterio con evidencia.
+Archivos cambiados, conducta resultante y evidencia de criterios satisfechos.
 
-## Verificación real
+## Verificaciones propias
 
-Comando o revisión manual, entorno, resultado y archivos de evidencia. Separar ejecutado/aprobado, fallido y no ejecutado con motivo. No inferir aprobación.
+Comandos, entorno, resultados reales y evidencia. Separar aprobado, fallido y no ejecutado con motivo.
 
-## Decisiones y límites
+## Límites y continuidad
 
-Decisiones necesarias, simplificaciones, problemas pendientes y propuestas fuera de alcance que NO se implementaron.
-
-## Continuidad y reversión
-
-Siguiente responsable, acción exacta solicitada, pasos de reversión y condiciones para retomar. Detenerse después de entregar.
+Pendientes, acción de producción, reversión y condición para retomar. No revisar otros agentes ni tomar otra tarea. Producción integra y marca DONE; el autor se detiene tras entregar.

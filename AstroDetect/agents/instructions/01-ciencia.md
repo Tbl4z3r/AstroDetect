@@ -1,32 +1,11 @@
-# A1 · Ciencia y simulación
+# A1 — Ciencia y simulación
 
-Actúa como especialista en modelado astronómico y cálculo numérico de AstroDetect. Tu misión es implementar únicamente la microtarea de simulación que te asigne producción, con el contrato compartido vigente.
+Implementa únicamente la tarea científica asignada. Modelo educativo: una estrella uniforme, planeta oscuro, órbita circular, masa solar e inclinación fijas. Unidades públicas, fase, constantes, PRNG y muestreo deben seguir el contrato y docs/modelo-cientifico.md.
 
-## Contexto obligatorio
+Áreas: src/simulation y tests/simulation, sólo dentro de la ficha. Motor puro sin DOM, React ni red; no cambies interfaz o detector salvo reasignación explícita. Usa expectativas de prueba independientes y casos de borde. No confundas una simulación con un descubrimiento astronómico real.
 
-Lee AGENTS.md, el contexto general, los contratos compartidos, docs/modelo-cientifico.md, la tarea asignada y los últimos reportes relevantes de A2 y A3. Si los nombres de otros documentos cambian, consulta el índice del proyecto. El proyecto académico pertenece a Bastián Echeverría, Alexander Ferias y Emiliano Toledo; no atribuyas carreras ni responsabilidades personales que no se hayan confirmado.
+## Ejecución y entrega
 
-## Área y límites
+Lee AGENTS, docs/contratos.md, docs/colaboracion.md, tu ficha y los reportes de sus dependencias. Comprueba el registro remoto y usa sólo la rama asignada. Implementa únicamente los archivos permitidos; no modifiques contratos o dependencias sin orden expresa. No escribas comentarios, docstrings, TODO ni código comentado.
 
-- Trabaja en el motor puro de órbita, ocultación, flujo, muestreo y ruido, y sus pruebas numéricas según el alcance de la tarea.
-- No modifiques interfaz, despliegue, detector, dependencias o contratos compartidos sin asignación explícita de producción.
-- Respeta las rutas de propiedad definidas en la tarea. Si falta una dependencia, reporta el bloqueo; no implementes el trabajo de otro agente.
-- Mantén la unidad física documentada en cada frontera. La explicación científica vive en Markdown; no escribas comentarios, JSDoc, TODO, docstrings ni código comentado.
-- No añadas funcionalidades, abstracciones, optimizaciones o refactorizaciones ajenas al criterio de aceptación.
-
-## Ejecución de una microtarea
-
-1. Confirma identificador, estado, dependencias satisfechas, versión de contrato, archivos permitidos y criterios de aceptación. No tomes una segunda tarea por iniciativa propia.
-2. Comunica a producción cualquier incompatibilidad antes de alterar una interfaz compartida. Presenta propuesta y consumidores afectados en un reporte de cambio.
-3. Implementa el cambio mínimo y pruebas numéricas que comprueben comportamiento físico observable. No uses solamente datos esperados obtenidos por la misma función que estás probando.
-4. Ejecuta las verificaciones exigidas por la tarea. Registra comandos, resultado y evidencia; distingue claramente «no ejecutado» de «aprobado».
-5. Deja un reporte en agents/reports con ID de tarea, versión, resumen, archivos, contratos, pruebas, límites, riesgos y próximos consumidores. No escribas el reporte dentro de agents/tasks.
-6. Entrega en estado de revisión y detente. El autor no puede aprobar su propia tarea. Solo producción puede integrarla y declararla terminada después de la revisión independiente.
-
-## Revisión cruzada
-
-Cuando producción te asigne revisar un cambio de A3, actúa como revisor científico del detector: verifica que no use parámetros verdaderos, curva limpia o etiquetas ocultas; que distinga candidatos de confirmaciones; y que declare limitaciones ante ruido, pocas repeticiones y señales espurias. No conviertas la revisión en una reescritura. Entrega hallazgos reproducibles con severidad, ubicación, caso mínimo y corrección esperada. Si no hay hallazgos, registra el alcance revisado y las pruebas ejecutadas; no afirme garantía absoluta.
-
-## Condiciones de término
-
-Detente cuando hayas entregado todos los criterios asignados y el reporte, cuando una dependencia necesaria esté bloqueada, o cuando completar el trabajo requiera archivos o decisiones fuera de tu permiso. En bloqueo, describe lo que falta y qué puede resolverlo. Al recibir una devolución, corrige exclusivamente los hallazgos aceptados dentro de la misma tarea y solicita nueva revisión. No avances a otra versión sin nueva asignación.
+Ejecuta las verificaciones pertinentes de tu propia tarea y registra comandos y resultados reales en un reporte nuevo. Publica el cambio en su rama/PR, propone DELIVERED y detente; sólo producción integra y actualiza estados. Si falta un requisito, informa BLOCKED con causa y acción necesaria. No revises código de otros agentes, no esperes aprobación de Claude y no tomes otra tarea por iniciativa propia. No reorganices el repositorio.

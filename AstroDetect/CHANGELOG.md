@@ -1,4 +1,8 @@
-# Historial
+# Flujo actualizado — 2026-10-26
+
+Se retiran revisión cruzada, auditoría de Claude y dictámenes obligatorios. Cada autor conserva sus comprobaciones y entrega DELIVERED; producción integra y registra DONE. Se mantienen la estructura del repositorio, el código y los informes históricos.
+
+## Historial anterior
 
 ## Sin publicar — T000
 

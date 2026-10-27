@@ -26,7 +26,7 @@ flowchart LR
 - `tests/e2e/`, `tests/fixtures/`: aceptación y datos independientes; A3, sin cambiar otras áreas sin asignación.
 - Raíz, `src/main.tsx`, configuración npm/Vite/TS/lint, `index.html`, `src/contracts/`, `.github/` y documentación común: productor o tarea expresamente delegada.
 
-Estas carpetas de código se crearán en implementación, no contienen código en esta entrega documental. El propietario no es un bloqueo absoluto: una tarea puede autorizar un cambio concreto en otro módulo, con revisión y coordinación previas.
+Estas carpetas de código se crearán en implementación, no contienen código en esta entrega documental. El propietario no es un bloqueo absoluto: una tarea puede autorizar un cambio concreto en otro módulo, con asignación y coordinación previas.
 
 ## Estado y sincronización
 

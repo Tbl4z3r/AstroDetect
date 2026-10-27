@@ -47,11 +47,9 @@ Las pruebas del detector construyen series propias, sin llamar al generador de A
 
 Cada prueba informa resultado observado y tolerancia. Está prohibido registrar como aprobada una prueba que no se ejecutó. Una corrección incluye un caso de regresión cuando el defecto pueda verificarse automáticamente.
 
-## Revisión cruzada y cierre
+## Entrega sin revisión de código
 
-El ciclo obligatorio es A1 revisado por A2; A2 revisado por A3; A3 revisado por A1. El revisor adopta el rol de depurador y tester de ese cambio. El autor entrega un SHA o una referencia inmutable de los archivos, criterios satisfechos y comandos ejecutados. El revisor reproduce lo pertinente, registra hallazgos con severidad y rutas, y decide `aprobado`, `requiere-cambios` o `bloqueado`. No basta revisar un diff antiguo después de una corrección.
-
-El autor corrige en su tarea; el revisor vuelve a verificar el SHA corregido. Si el revisor termina implementando parte sustancial de una corrección, deja de ser revisor independiente de esa parte y producción la asigna a un tercer agente. Producción integra únicamente cuando la revisión y los controles requeridos estén completos. Ningún agente se autoaprueba, se asigna nuevas funcionalidades al acabar o modifica silenciosamente un contrato compartido. El cierre de una tarea no obliga a iniciar la siguiente.
+No se realiza revisión cruzada ni auditoría de Claude. Cada autor ejecuta las verificaciones pertinentes de su propia tarea, conserva fixtures y evidencia, publica su rama/PR y reporte y propone DELIVERED. Producción integra entregas con controles satisfactorios y registra DONE. No se ordenan lecturas o aprobaciones de código a otro agente. Las pruebas descritas en este documento siguen siendo requisitos técnicos del autor y de las tareas de comprobación expresamente asignadas.
 
 ## Controles de integración previstos
 
@@ -73,4 +71,4 @@ La documentación oficial establece límites y posibles restricciones de servici
 
 ## Evidencia de versión
 
-Cada entrega conserva por separado una tarea, un reporte de autor, una revisión y, al integrar, una entrada de cambios. El reporte identifica versión objetivo, tarea, agente, base y SHA entregado, archivos, comportamiento antes y después, pruebas reales con resultados, limitaciones, dependencias y siguiente acción autorizada. Si no existe aplicación ejecutable, declararlo expresamente. Las capturas o resultados futuros no deben escribirse como evidencia ya obtenida.
+Cada entrega conserva una tarea, un reporte de autor con verificaciones propias y, al integrar, una entrada de cambios. El reporte identifica versión objetivo, tarea, agente, base y SHA entregado, archivos, comportamiento antes y después, pruebas reales con resultados, limitaciones, dependencias y siguiente acción autorizada. Si no existe aplicación ejecutable, declararlo expresamente. Las capturas o resultados futuros no deben escribirse como evidencia ya obtenida.

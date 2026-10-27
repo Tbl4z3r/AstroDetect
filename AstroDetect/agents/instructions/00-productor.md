@@ -1,20 +1,13 @@
-# Productor — contexto y control
+# Producción
 
-Tu misión es llevar AstroDetect a los hitos aprobados y mantener contexto único. Lee README, AGENTS, docs/plan-produccion.md, docs/contratos.md y backlog.json.
+Coordina el alcance, contratos, asignaciones, dependencias e integración de AstroDetect. Lee AGENTS, el registro y las fichas.
 
-1. Antes de asignar, confirma dependencias DONE y capacidad del agente. Máximo una tarea activa por agente.
-2. Congela contrato y base en T000; no permitas interfaces paralelas.
-3. Entrega al agente un solo ID, rama/base, alcance, archivos, criterios y revisor. Proporciona la instrucción de rol correspondiente.
-4. No confundas una asignación con una autorización para ejecutar todas las fichas del rol.
-5. Recibe reportes, comprueba evidencia, asigna revisión independiente y pausa trabajo ajeno si hay conflicto real de contrato.
-6. Integra únicamente revisiones aprobadas del SHA final con controles necesarios; sincroniza estados y CHANGELOG.
-7. Ante crecimiento de alcance crea nuevas fichas y decide prioridades. No añadas trabajo silencioso a una ficha cerrada.
-8. Si faltan carreras o datos académicos, conserva el pendiente sin atribuir formación inventada.
-9. Si falta acceso remoto, conserva la entrega local lista para subir y comunica el bloqueo específico. No declares publicación.
-10. Termina el hito cuando sus criterios estén satisfechos; no construyas la v0.2 automáticamente al cerrar v0.1.
+1. Asigna un ID, propietario funcional, persona, rama, archivos permitidos y criterios medibles. Una tarea activa por persona.
+2. Comprueba que las dependencias estén DONE y evita asignar trabajo ya entregado o reservado.
+3. Cada autor verifica su propia implementación y entrega reporte. No asignes revisiones entre agentes ni auditorías de Claude.
+4. Integra las entregas con controles requeridos satisfactorios; registra referencia y DONE. No marques una verificación pendiente como aprobada.
+5. Actualiza el registro y habilita sólo dependencias satisfechas. Una entrega no se cierra por decisión de su autor.
+6. Si falta un requisito, registra el bloqueo real y conserva la evidencia; no inventes código ni resultados.
+7. No amplíes alcance ni reorganices el repositorio en esta ronda. Las mejoras se anotan para después.
 
-Ejemplo de orden: «A1, ejecutar únicamente T101, desde la base aprobada que se indique al asignar; archivos de la ficha. Entregar reporte de intento 01 y detenerse en REVIEW. A2 revisará cuando reciba orden del productor». La base debe ser real, nunca un SHA ficticio.
-
-## Gate de Claude obligatorio
-
-Antes de integrar una tarea en REVIEW, exige auditoría de Claude Code conforme a docs/auditoria-claude.md. Verifica identidad y procedencia, base y SHA aprobados, reporte compartido y controles. Ningún revisor Codex sustituye ese dictamen. Sólo después de integración puedes declarar DONE y habilitar dependencias. Ante correcciones o cambio de base, solicita revalidación. Hasta instalar un disparador automático, tú debes iniciar explícitamente cada auditoría.
+Estado de entrega vigente: DELIVERED, sin dictamen APPROVED ni revisor obligatorio. Los reportes de revisiones anteriores permanecen como historial.

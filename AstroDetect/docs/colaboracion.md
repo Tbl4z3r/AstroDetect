@@ -1,60 +1,35 @@
-# Protocolo de colaboración y retroactividad
+# Colaboración sin revisión de código
 
-## Fuente de contexto y precedencia
+Esta política sustituye la revisión cruzada A1/A2/A3 y la auditoría de Claude. No se requiere un dictamen APPROVED. Se conservan contratos, separación de archivos, pruebas del autor y coordinación de producción.
 
-La instrucción explícita vigente del equipo prevalece. Después rigen AGENTS.md, contrato central aprobado, tarea asignada y rol. Si dos documentos técnicos discrepan, detener sólo la parte afectada y pedir resolución al productor. El contrato de docs/contratos.md prevalece sobre ejemplos de otros documentos; cualquier cambio debe quedar registrado. La documentación describe requisitos, no resultados de pruebas.
+## Estados
 
-El productor actualiza README, contratos, backlog, configuración compartida y CHANGELOG. Los agentes escriben únicamente en el alcance de su ficha y en archivos nuevos de reporte/revisión. No comparten un reporte acumulativo editable. Los estados de la ficha y registro los sincroniza sólo el productor.
+BACKLOG → READY → IN_PROGRESS → DELIVERED → DONE.
 
-## Máquina de estados
+BLOCKED significa que falta una dependencia, acceso, decisión o verificación necesaria. Si hay una corrección pendiente, producción puede devolver DELIVERED a IN_PROGRESS con alcance concreto. CANCELLED requiere decisión expresa. REVIEW y CHANGES_REQUESTED dejan de ser estados operativos; sus usos históricos no asignan revisiones nuevas.
 
-`BACKLOG → READY → IN_PROGRESS → REVIEW → DONE`.
+READY exige dependencias DONE, alcance definido y una asignación. DELIVERED significa que el autor publicó su cambio, reporte y resultados de las verificaciones requeridas. DONE significa que producción integró la entrega y registró su referencia. Ninguna etapa exige lectura o aprobación del código por otro agente.
 
-`REVIEW → CHANGES_REQUESTED → IN_PROGRESS → REVIEW` para correcciones. `BLOCKED` puede interrumpir cualquier estado activo y guarda estado previo, motivo y responsable; sólo el productor lo reactiva al resolverse. `CANCELLED` requiere decisión explícita del productor y motivo. En este paquete los BLOCKED se deben a predecesoras no finalizadas.
+## Asignación única y trabajo entre computadores
 
-READY exige dependencias DONE, alcance y archivos definidos, criterios medibles, herramientas y contexto disponibles. IN_PROGRESS exige asignación explícita y base de trabajo registrada. REVIEW exige entrega y pruebas necesarias ejecutadas con resultado, o pendientes claramente identificados que impedirán el cierre. DONE exige revisión independiente aprobada en el SHA final, controles requeridos aprobados, integración del cambio y registro del productor. Entregar documentos no equivale a terminar las tareas de implementación.
+Producción mantiene agents/tasks/backlog.json: propietario funcional, persona asignada, rama y dependencias. Los roles A1, A2 y A3 son especialidades; una persona puede recibir otro rol en una ronda posterior con asignación explícita.
 
-Un agente no modifica el registro para declararse terminado: informa estado sugerido en su reporte. Si no quedan acciones autorizadas, se detiene aun cuando existan otras tareas READY.
+Una tarea por rama y por persona. Si producción ya reservó una rama y así lo indica el registro, el destinatario usa esa rama; no crea duplicados. Si no está reservada, crearla con una operación que falle si existe. Ante una rama ajena o cambios no reconocidos, detenerse y consultar a producción. Cada computador conserva su copia local.
 
-## Asignación mínima
+No elegir tareas libremente ni ejecutar tareas bloqueadas. Un contrato congelado evita implementaciones incompatibles. Todo cambio de contrato o configuración compartida necesita asignación expresa.
 
-Cada orden contiene ID de ficha, agente autor, revisor, rama/base, archivos permitidos y evidencia esperada. Si se pide implementar sin ID, el productor crea primero la ficha. Si falta una decisión que no afecta otras partes, avanzar sólo en lo independiente. Nunca sustituir una dependencia inexistente por un contrato inventado.
+## Entrega y cierre
 
-## Ramas, integración y conflictos
+El autor implementa sólo su ficha, ejecuta sus verificaciones y entrega un reporte con base, referencia, archivos, decisiones, comandos/resultados y límites. Publica su rama y un PR identificado por tarea para integrar; un PR es el mecanismo de incorporación y no implica una revisión de código. Propone DELIVERED en el reporte y se detiene.
 
-Una tarea por rama `task/T101-descripcion` y un checkout independiente por agente cuando haya edición simultánea. No ejecutar tres agentes que escriban el mismo directorio de trabajo. Las tareas sólo leen contratos congelados desde la misma base o desde una base actualizada explícitamente. Commits pequeños con ID: `feat(T101): ...`, `fix(T301): ...`, `docs(T404): ...`.
+Producción comprueba los metadatos de la entrega y los controles requeridos, integra en orden de dependencias, registra DONE y habilita las siguientes tareas. Los fallos de pruebas deben resolverse; retirar la revisión no convierte un test fallido o no ejecutado en aprobado. No se hace revisión cruzada ni se espera a Claude.
 
-El productor integra PRs pequeños en orden de dependencias. Si no hay rama base porque el repositorio está vacío, primero incorpora esta planificación mediante un commit inicial autorizado y después crea ramas. No se pueden abrir PRs contra una rama inexistente. Prohibidos force-push a main y reescritura de historia compartida. Ante conflicto, conservar ambas intenciones, resolver, ejecutar nuevamente las verificaciones afectadas y pedir revisión si cambia el comportamiento.
+## Carpetas y memoria
 
-## Reportes, revisiones y memoria de versiones
+- agents/tasks/: fichas y registro, administrados por producción.
+- agents/instructions/: instrucciones por especialidad.
+- agents/reports/: un archivo nuevo por entrega e intento, escrito por su autor.
+- agents/evidence/Txxx/: evidencia pertinente y pequeña.
+- agents/reviews/: historial anterior, sin actividad nueva.
 
-- Tareas: `agents/tasks/Txxx.md`, estables salvo cambio autorizado del productor.
-- Registro: `agents/tasks/backlog.json`, única fuente de estados.
-- Reportes: `agents/reports/Txxx-Ax-attempt-01.md` con un archivo por intento.
-- Revisiones: `agents/reviews/Txxx-reviewer-Ay-attempt-01.md`.
-- Evidencias: `agents/evidence/Txxx/`, sólo archivos pequeños necesarios, sin binarios enormes ni node_modules.
-- Historial: CHANGELOG agrupado por versión, actualizado sólo por el productor al integrar.
-
-Cada reporte enlaza reporte anterior, base y entrega, dependencias, decisiones, pruebas, limitaciones, reversión y siguiente responsable. Las revisiones identifican exactamente qué entrega cubren. Si hay corrección, crear otro intento y conservar el anterior; no borrar hallazgos históricos.
-
-## Revisión especializada
-
-A2 revisa A1; A3 revisa A2; A1 revisa A3. La tarea es una revisión limitada a los criterios del cambio y riesgos reales, no una invitación a reescribir el módulo. Leer el diff y ejecutar verificaciones pertinentes. Un hallazgo lleva severidad, archivo, reproducción, resultado esperado y observado. Diferenciar fallas bloqueantes de sugerencias opcionales.
-
-El autor corrige; el revisor revalida la nueva referencia. Si el revisor implementa una corrección, un tercero revisa esa parte. No usar el rol de tester para autoaprobar código propio. Producción integra; aprobación de revisión por sí sola no cambia el estado a DONE.
-
-Para configuración escrita por producción, A3 revisa. Para una integración escrita por A3, A1 revisa. Cuando no haya código ejecutable, revisar enlaces, consistencia de contratos, cobertura de tareas y honestidad de estados; no afirmar pruebas funcionales.
-
-## Regla de parada
-
-Entregar y detenerse cuando la tarea alcanza REVIEW, queda BLOCKED o recibe cancelación. No empezar otra tarea, publicar, añadir mejoras o revisar espontáneamente módulos adicionales. Una mejora se registra en el apartado fuera de alcance del reporte. Corregir una regresión de una tarea cerrada exige una nueva ficha F-ID vinculada al cambio original.
-
-## Auditoría obligatoria de Claude
-
-Desde la adopción de esta política, toda nueva entrega en REVIEW requiere un dictamen APPROVED emitido realmente por Claude Code sobre su referencia exacta, además de las revisiones técnicas aplicables. Ningún agente Codex puede producir ese dictamen en su nombre.
-
-Producción no integra, declara DONE ni habilita tareas dependientes sin comprobar el reporte compartido, su procedencia, base de integración, SHA y verificaciones obligatorias. Un cambio posterior de código, pruebas, contratos, dependencias o configuración exige reauditar; un cambio de base exige revalidar compatibilidad. El reporte de auditoría añadido posteriormente debe identificarse como evidencia, sin atribuir a Claude la revisión de código nuevo.
-
-Claude actúa sólo como auditor: no corrige implementaciones, no edita el registro y no hace merge. Los agentes conservan sus roles y se detienen en REVIEW. El alcance detallado está en agents/instructions/04-auditor-claude.md y el circuito en docs/auditoria-claude.md.
-
-No se modifican estados DONE históricos ni se inventan aprobaciones retrospectivas. Un prompt y esta política no constituyen un disparador automático ni una protección técnica de main. Hasta configurar esa integración, producción inicia cada auditoría y mantiene el bloqueo de sus dependencias.
+Conservar intentos y referencias, sin sobrescribir reportes ajenos. No limpiar ni mover carpetas, ramas o archivos durante esta ronda. La organización del repositorio se hará después de terminar las tareas.

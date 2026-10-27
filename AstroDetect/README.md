@@ -20,8 +20,8 @@ Entrega y evidencia: [cierre de producción de T000, intento 04](agents/reports/
 1. Leer [plan de producción](docs/plan-produccion.md), [reglas generales](AGENTS.md) y [protocolo de colaboración](docs/colaboracion.md).
 2. El productor asigna una sola tarea cuyo estado sea READY; consultar [registro](agents/tasks/backlog.json) y las fichas individuales.
 3. Entregar al agente su [instrucción de rol](agents/instructions/) más el ID de tarea, base de trabajo y archivos autorizados.
-4. Al terminar, crear un reporte en `agents/reports/`; el agente se detiene en REVIEW y otro revisa el mismo cambio.
-5. Sólo el productor integra y declara DONE después de revisión y verificaciones.
+4. Al terminar, crear un reporte en `agents/reports/`; el agente propone DELIVERED y se detiene, sin revisión cruzada ni auditoría.
+5. Sólo el productor integra y declara DONE después de la entrega y las verificaciones requeridas.
 
 Roles: A1 ciencia y simulación, A2 interfaz educativa, A3 análisis y calidad. El productor conserva contratos, configuración compartida, registro y releases. Ningún rol corresponde automáticamente a uno de los estudiantes.
 
@@ -41,3 +41,7 @@ El alcance v0.1 es una estrella, un planeta, órbita circular, radios y período
 GitHub Pages es la opción prevista: el sitio entrega archivos estáticos y cada navegador hace sus propios cálculos. Es una elección razonable para unas diez personas independientes, pendiente de probar rendimiento y despliegue. No hay cuentas, servidor de cálculo, API de IA ni cobros por usuario.
 
 La ausencia de fines de lucro no define una licencia de distribución. El equipo deberá decidir la licencia antes de una release reutilizable; no se ha añadido una licencia por suposición.
+
+## Cambio de flujo vigente
+
+El equipo retiró la revisión cruzada y la auditoría obligatoria de Claude. Se mantienen contratos, verificaciones del autor, asignación única y cierre de producción. Las menciones a revisiones ya realizadas en estados históricos no vuelven a activarlas. No se reorganizan archivos ni carpetas en esta ronda. Consulta agents/tasks/asignaciones-actuales.md para los siguientes trabajos.

@@ -2,13 +2,12 @@
   "schemaVersion": 1,
   "updated": "2026-10-26",
   "documentVersion": "0.0.0",
-  "note": "Estados de implementación. Los reportes planning-Ax no cierran estas tareas. Sólo producción edita el registro.",
+  "note": "Producción mantiene estados y asignaciones. El autor verifica su tarea, propone DELIVERED y se detiene; no hay revisión cruzada ni auditoría. No reorganizar el repositorio en esta ronda.",
   "tasks": [
     {
       "id": "T000",
       "title": "Crear base reproducible y congelar contratos v1",
       "owner": "PRODUCTOR",
-      "reviewer": "A3",
       "status": "DONE",
       "blockedReason": null,
       "dependsOn": [],
@@ -20,7 +19,6 @@
       "id": "T101",
       "title": "Geometría orbital y flujo ideal",
       "owner": "A1",
-      "reviewer": "A2",
       "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
@@ -34,21 +32,21 @@
       "id": "T102",
       "title": "Serie temporal y ruido reproducible",
       "owner": "A1",
-      "reviewer": "A2",
-      "status": "READY",
+      "status": "DELIVERED",
       "blockedReason": null,
       "dependsOn": [
         "T101"
       ],
       "size": 2,
       "targetVersion": "0.1.0-alpha",
-      "file": "agents/tasks/T102.md"
+      "file": "agents/tasks/T102.md",
+      "pullRequest": 9,
+      "deliveredHeadSha": "a78f6708e20b1fb01df4e6ad5bc89b39465e14fe"
     },
     {
       "id": "T201",
       "title": "Controles y estructura accesible",
       "owner": "A2",
-      "reviewer": "A3",
       "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
@@ -62,7 +60,6 @@
       "id": "T202",
       "title": "Animación y curva sincronizadas",
       "owner": "A2",
-      "reviewer": "A3",
       "status": "BLOCKED",
       "blockedReason": "T201 DONE; espera T102 DONE",
       "dependsOn": [
@@ -71,13 +68,14 @@
       ],
       "size": 3,
       "targetVersion": "0.1.0-alpha",
-      "file": "agents/tasks/T202.md"
+      "file": "agents/tasks/T202.md",
+      "assignedTo": "companero-2",
+      "branch": "task/T202"
     },
     {
       "id": "T301",
       "title": "Detector básico aislado y auditable",
       "owner": "A3",
-      "reviewer": "A1",
       "status": "READY",
       "blockedReason": null,
       "dependsOn": [
@@ -85,13 +83,14 @@
       ],
       "size": 3,
       "targetVersion": "0.1.0-alpha",
-      "file": "agents/tasks/T301.md"
+      "file": "agents/tasks/T301.md",
+      "assignedTo": "companero-1",
+      "branch": "task/T301"
     },
     {
       "id": "T302",
       "title": "Fixtures de integración y límites del detector",
       "owner": "A3",
-      "reviewer": "A1",
       "status": "BLOCKED",
       "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
       "dependsOn": [
@@ -106,7 +105,6 @@
       "id": "T401",
       "title": "Integrar laboratorio y resultados",
       "owner": "PRODUCTOR",
-      "reviewer": "A3",
       "status": "BLOCKED",
       "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
       "dependsOn": [
@@ -122,7 +120,6 @@
       "id": "T402",
       "title": "Aceptación especializada del MVP",
       "owner": "A3",
-      "reviewer": "A1",
       "status": "BLOCKED",
       "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
       "dependsOn": [
@@ -136,7 +133,6 @@
       "id": "T403",
       "title": "Preparar y verificar publicación GitHub Pages",
       "owner": "PRODUCTOR",
-      "reviewer": "A3",
       "status": "BLOCKED",
       "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
       "dependsOn": [
@@ -150,7 +146,6 @@
       "id": "T404",
       "title": "Redactar informe académico con evidencia",
       "owner": "PRODUCTOR",
-      "reviewer": "A1",
       "status": "BLOCKED",
       "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
       "dependsOn": [
@@ -164,7 +159,6 @@
       "id": "T405",
       "title": "Caso desconocido y razonamiento del estudiante",
       "owner": "A2",
-      "reviewer": "A3",
       "status": "BACKLOG",
       "blockedReason": null,
       "dependsOn": [
@@ -174,5 +168,8 @@
       "targetVersion": "0.2.0",
       "file": "agents/tasks/T405.md"
     }
-  ]
+  ],
+  "workflowVersion": "2.0.0",
+  "codeReviewRequired": false,
+  "claudeAuditRequired": false
 }

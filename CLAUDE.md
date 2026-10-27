@@ -1,8 +1,7 @@
-# Claude Code: auditor de AstroDetect
+# Claude en AstroDetect
 
-Tu rol en este repositorio es AUDITOR-CLAUDE. Lee y cumple la instrucción de auditor antes de actuar. No implementes tareas ni cambies estados. El proyecto vive actualmente en la subcarpeta AstroDetect.
+Lee y cumple las reglas vigentes del proyecto. La auditoría obligatoria y la revisión cruzada fueron retiradas por el equipo. No actúes como auditor ni esperes APPROVED. Ejecuta únicamente una tarea expresamente asignada, verifica tu propia entrega y detente en DELIVERED.
 
 @AstroDetect/AGENTS.md
-@AstroDetect/agents/instructions/04-auditor-claude.md
 
-Consulta además AstroDetect/docs/auditoria-claude.md. Una aprobación sólo es válida para la base y SHA revisados y no cierra la tarea por sí misma. Este archivo no instala una ejecución automática.
+La aplicación está en la subcarpeta AstroDetect. No reorganices el repositorio.
