@@ -62,7 +62,7 @@
       "id": "T202",
       "title": "Animación y curva sincronizadas",
       "owner": "A2",
-      "status": "READY",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T102",
@@ -73,7 +73,11 @@
       "file": "agents/tasks/T202.md",
       "assignedTo": "companero-2",
       "branch": "task/T202",
-      "reservedBy": "PRODUCCION"
+      "reservedBy": "PRODUCCION",
+      "pullRequest": 12,
+      "deliveredHeadSha": "c43f7cb7347f63a0b8685da7e7955804cc85a93e",
+      "integratedCommit": "d903aaa423d788b1094fb71dbf61931ffb6a7cc5",
+      "verification": "CI validate de la entrega satisfactoria; combinacion comprobada con 218 pruebas, 4 recorridos UI y 1 e2e. Sin revision de codigo."
     },
     {
       "id": "T301",
@@ -99,7 +103,7 @@
       "id": "T302",
       "title": "Fixtures de integración y límites del detector",
       "owner": "A3",
-      "status": "READY",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T102",
@@ -110,14 +114,18 @@
       "file": "agents/tasks/T302.md",
       "assignedTo": "companero-1",
       "branch": "task/T302",
-      "reservedBy": "PRODUCCION"
+      "reservedBy": "PRODUCCION",
+      "pullRequest": 11,
+      "deliveredHeadSha": "9499b06b2ab5c447400fa010cd4ebe1641f9d7e4",
+      "integratedCommit": "54b643e46bdd5db81425d069e5f100b901abde26",
+      "verification": "CI validate de la entrega satisfactoria; combinacion comprobada con 218 pruebas, 4 recorridos UI y 1 e2e. Sin revision de codigo."
     },
     {
       "id": "T401",
       "title": "Integrar laboratorio y resultados",
       "owner": "PRODUCTOR",
-      "status": "BLOCKED",
-      "blockedReason": "T301 DONE; espera T202 y T302 DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T202",
         "T301",

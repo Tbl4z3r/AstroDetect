@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-26",
+  "combinedSourceCommit": "54b643e46bdd5db81425d069e5f100b901abde26",
+  "deliveries": {
+    "T202": {
+      "pullRequest": 12,
+      "deliveredHeadSha": "c43f7cb7347f63a0b8685da7e7955804cc85a93e",
+      "integratedCommit": "d903aaa423d788b1094fb71dbf61931ffb6a7cc5"
+    },
+    "T302": {
+      "pullRequest": 11,
+      "deliveredHeadSha": "9499b06b2ab5c447400fa010cd4ebe1641f9d7e4",
+      "integratedCommit": "54b643e46bdd5db81425d069e5f100b901abde26"
+    }
+  },
+  "environment": {
+    "node": "22.12.0",
+    "npm": "10.9.0",
+    "os": "Windows",
+    "shell": "PowerShell"
+  },
+  "checks": [
+    {
+      "command": "npm ci --no-audit --no-fund",
+      "result": "passed",
+      "packagesInstalled": 189
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "passed"
+    },
+    {
+      "command": "npm test -- --run",
+      "result": "passed",
+      "testFiles": 13,
+      "tests": 218
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npx vitest run --config tests/ui/browser.config.ts",
+      "result": "failed",
+      "reason": "Un recorrido excedio el limite local de 5000 ms; tres recorridos pasaron."
+    },
+    {
+      "command": "npx vitest run --config tests/ui/browser.config.ts --testTimeout 30000",
+      "result": "passed",
+      "files": 2,
+      "tests": 4,
+      "durationSeconds": 5.26,
+      "assertionsChanged": false
+    },
+    {
+      "command": "npm run test:e2e",
+      "result": "passed",
+      "tests": 1,
+      "durationSeconds": 4.3
+    }
+  ],
+  "limitations": [
+    "Instalacion offline inicial sin cache suficiente; instalacion normal posterior satisfactoria.",
+    "Aviso de soporte de ESLint existente; no se modificaron dependencias.",
+    "No se ejecuto T401, despliegue o reorganizacion del repositorio.",
+    "CI de main posterior a esta publicacion se comprueba por separado."
+  ]
+}

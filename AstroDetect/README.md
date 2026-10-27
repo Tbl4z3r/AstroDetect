@@ -7,13 +7,13 @@ Repositorio destino: https://github.com/Tbl4z3r/AstroDetect
 
 ## Estado real — 26 de octubre de 2026
 
-T000 está DONE: base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega fue aprobada por A3 e integrada en main mediante el PR #1, con CI aprobada también después de la integración. T101 está DONE: geometría orbital y flujo ideal integrados mediante el PR #3, con revisión A2 y auditoría de Claude aprobadas sobre `e7a9bca`. T201 está DONE: controles y estructura accesible integrados mediante el PR #4, con revisión A3 y auditoría de Claude aprobadas sobre `5f4f6df`. T102 está DONE: serie temporal y ruido reproducible integrados desde el PR #9. T202 sigue asignada a compañero 2; T301 está DONE mediante PR #10 y T302 queda READY para compañero 1, sin revisiones de código. El detector básico está implementado (T301); su conexión a la interfaz corresponde a T401. No hay despliegue.
+T000 está DONE: base React + TypeScript + Vite ejecutable, contratos compartidos v1 y controles de instalación, lint, tipos, pruebas, build y arranque en Chromium. La entrega fue aprobada por A3 e integrada en main mediante el PR #1, con CI aprobada también después de la integración. T101 está DONE: geometría orbital y flujo ideal integrados mediante el PR #3, con revisión A2 y auditoría de Claude aprobadas sobre `e7a9bca`. T201 está DONE: controles y estructura accesible integrados mediante el PR #4, con revisión A3 y auditoría de Claude aprobadas sobre `5f4f6df`. T102 está DONE: serie temporal y ruido reproducible integrados desde el PR #9. T202 y T302 están DONE mediante PR #12 y PR #11; T301 está DONE mediante PR #10. Las tareas se entregan sin revisión cruzada ni auditoría. T401 está READY y pendiente de asignación tras organizar el repositorio. El detector básico está implementado (T301); su conexión a la interfaz corresponde a T401. No hay despliegue.
 
 El código de T000 está integrado en main desde `c30aed6f45f3e969189136c50ca6a2c69c2004d2`. Para comenzar las tareas READY, actualizar main y registrar su SHA real con este cierre incluido. Las carreras, asignación de responsabilidades humanas y fecha de entrega siguen pendientes de información.
 
 Desde esta carpeta, con Node 22.12.0 y npm 10.9.0: ejecutar `npm ci` y `npm run dev`; abrir la dirección local con la subruta `/AstroDetect/`. Para comprobar la base: `npm run lint`, `npm run typecheck`, `npm test -- --run`, `npm run build`, `npx playwright install chromium` y `npm run test:e2e`.
 
-Entrega y evidencia: [cierre de producción de T000, intento 04](agents/reports/T000-PRODUCTOR-attempt-04.md). La pantalla de arranque sólo informa del estado de preparación.
+Entrega y evidencia: [cierre de producción de T000, intento 04](agents/reports/T000-PRODUCTOR-attempt-04.md). La pantalla ya ofrece controles, animación y curvas sincronizadas; el botón y los resultados del detector se conectarán en T401.
 
 ## Empezar
 

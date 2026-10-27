@@ -1,39 +1,17 @@
-# Asignaciones de la siguiente ronda
+# Cierre de la ronda T202 y T302
 
-Política vigente: sin revisión cruzada ni auditoría de Claude. Cada autor verifica su propia entrega, publica reporte y propone DELIVERED. Producción integra y registra DONE. No reorganizar el repositorio durante estas tareas.
+Política vigente: sin revisión cruzada ni auditoría. Cada autor verifica su entrega; producción integra y registra DONE.
 
-## Compañero 1 — T302 — Casos de integración y límites del detector
+## Entregas terminadas
 
-- Rol funcional: A3. T301 está DONE; no volver a implementarla.
-- Rama exclusiva: task/T302, reservada por producción para esta asignación.
-- Dependencias: T102 y T301 DONE.
-- Instrucción: agents/instructions/03-analisis-calidad.md.
-- Ficha: agents/tasks/T302.md.
-- Escritura: tests/fixtures, tests/analysis, tests/simulation/integration.test.ts y reporte/evidencia de T302.
-- Resultado: fixtures independientes y casos simulados de señal clara, débil y ruido; resultados reproducibles y límites documentados. No cambiar algoritmos, interfaz, contratos o dependencias.
+- Compañero 1, rol A3: T301 integrada en PR #10 y T302 integrada en PR #11. Ambas DONE.
+- Compañero 2, rol A2: T202 integrada en PR #12. DONE.
+- Las ramas originales y reportes se conservan como historial; no reutilizarlas para otro ID.
 
-No realizar revisión de código, no implementar T401 y no reorganizar el repositorio.
+## Siguiente paso
 
-## Compañero 2 — T202 — Animación y curva
+T401 está READY porque T202, T301 y T302 están DONE. Corresponde a producción conectar el detector con el laboratorio cuando se asigne. Todavía no se inicia ni se reserva otra tarea.
 
-- Rol funcional: A2.
-- Rama exclusiva: task/T202, reservada por producción para esta asignación.
-- Dependencias: T102 y T201 DONE. No comenzar si el registro remoto aún no muestra ambas satisfechas.
-- Instrucción: agents/instructions/02-interfaz.md.
-- Ficha: agents/tasks/T202.md.
-- Escritura: archivos de app, componentes, estilos y pruebas UI que la ficha permite, más su reporte/evidencia.
-- Resultado: una animación y curva SVG con el mismo reloj y serie real, pausa, reinicio, ruido reproducible y accesibilidad.
+Antes de esa implementación, el paso acordado con el usuario es ordenar el repositorio, conservando código, reportes e historial y las verificaciones de la combinación. Esta integración no mueve carpetas ni borra ramas.
 
-No implementar el detector, T401, casos desconocidos, fórmulas científicas duplicadas o una revisión de otro agente.
-
-## Reserva y comienzo
-
-Producción reserva estas ramas antes de compartir los prompts. La persona asignada debe actualizar GitHub, comprobar la asignación y usar su rama existente. Si contiene cambios desconocidos o parece estar trabajando otra persona, detenerse y comunicarlo; no crear otra rama con sufijos ni reemplazar trabajo.
-
-La referencia inicial debe conservar las reglas de flujo 2.0.0 y las dependencias integradas. Registrar en el reporte el SHA real desde el que se comienza.
-
-## Después de entregar
-
-Publicar sólo la rama propia y un PR identificado por tarea, con reporte y resultados reales. El PR es el mecanismo de integración, sin revisión obligatoria de código. Informar a producción el enlace y detenerse. No marcar DONE ni tomar otra tarea.
-
-T302 ya está asignada; producción habilitará T401 cuando T202 y T302 estén DONE. La organización general del repositorio queda para después de esta ronda.
+Los compañeros deben detenerse hasta una nueva asignación explícita. T402 espera T401; T403 y T404 siguen pendientes de sus dependencias. T405 permanece fuera del MVP actual.
