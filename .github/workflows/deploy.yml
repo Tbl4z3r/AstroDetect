@@ -1,0 +1,73 @@
+name: Publish AstroDetect Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'AstroDetect/**'
+      - '.github/workflows/deploy.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: astrodetect-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: AstroDetect
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: npm
+          cache-dependency-path: AstroDetect/package-lock.json
+      - name: Require completed MVP acceptance
+        run: >-
+          node --input-type=module -e
+          "import fs from 'node:fs';
+          const backlog = JSON.parse(fs.readFileSync('agents/tasks/backlog.json', 'utf8'));
+          if (backlog.tasks.find(task => task.id === 'T402')?.status !== 'DONE')
+          throw new Error('T402 must be DONE before publication');"
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test -- --run
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: AstroDetect/dist
+          retention-days: 1
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.PAGES_AUTO_DEPLOY == 'true')
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: false
+      - name: Publish verified artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

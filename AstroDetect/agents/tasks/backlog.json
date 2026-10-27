@@ -141,7 +141,7 @@
       "id": "T402",
       "title": "Aceptación especializada del MVP",
       "owner": "A3",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T401"
@@ -149,33 +149,36 @@
       "size": 3,
       "targetVersion": "0.1.0",
       "file": "agents/tasks/T402.md",
-      "assignedTo": "PRODUCCION-A3"
+      "assignedTo": "PRODUCCION-A3",
+      "verification": "222 pruebas, siete recorridos UI y cuatro e2e; diez contextos locales sin errores; mediciones puras de 5001 puntos bajo objetivo local."
     },
     {
       "id": "T403",
       "title": "Preparar y verificar publicación GitHub Pages",
       "owner": "PRODUCTOR",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "IN_PROGRESS",
+      "blockedReason": null,
       "dependsOn": [
         "T402"
       ],
       "size": 2,
       "targetVersion": "0.1.0",
-      "file": "agents/tasks/T403.md"
+      "file": "agents/tasks/T403.md",
+      "assignedTo": "PRODUCCION"
     },
     {
       "id": "T404",
       "title": "Redactar informe académico con evidencia",
       "owner": "PRODUCTOR",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "IN_PROGRESS",
+      "blockedReason": null,
       "dependsOn": [
         "T402"
       ],
       "size": 3,
       "targetVersion": "0.1.0",
-      "file": "agents/tasks/T404.md"
+      "file": "agents/tasks/T404.md",
+      "assignedTo": "PRODUCCION"
     },
     {
       "id": "T405",

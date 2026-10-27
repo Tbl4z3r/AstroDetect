@@ -1,0 +1,92 @@
+{
+  "sampleCount": 5001,
+  "iterationsPerCase": 50,
+  "warmupPerCase": 5,
+  "runtime": "v22.12.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "units": "milliseconds",
+  "measuredScope": "synchronous pure functions; excludes rendering and network",
+  "targetMs": 200,
+  "targetMetOnEveryRecordedCall": true,
+  "cases": [
+    {
+      "name": "predeterminado",
+      "scenario": {
+        "starRadiusSolar": 1,
+        "planetRadiusEarth": 10,
+        "periodDays": 5,
+        "noisePpm": 500,
+        "seed": 42
+      },
+      "sampleCount": 5001,
+      "generation": {
+        "minMs": 3.251800000000003,
+        "medianMs": 4.077299999999923,
+        "p95Ms": 5.432299999999941,
+        "maxMs": 5.82549999999992
+      },
+      "detection": {
+        "minMs": 3.0756000000000085,
+        "medianMs": 3.937000000000012,
+        "p95Ms": 4.980099999999993,
+        "maxMs": 5.244000000000028
+      },
+      "events": 5,
+      "periodDays": 5,
+      "status": "candidate"
+    },
+    {
+      "name": "señal clara",
+      "scenario": {
+        "starRadiusSolar": 1,
+        "planetRadiusEarth": 20,
+        "periodDays": 5,
+        "noisePpm": 500,
+        "seed": 42
+      },
+      "sampleCount": 5001,
+      "generation": {
+        "minMs": 3.1773000000000593,
+        "medianMs": 3.9119000000000597,
+        "p95Ms": 4.951899999999796,
+        "maxMs": 5.182999999999993
+      },
+      "detection": {
+        "minMs": 2.8663000000001375,
+        "medianMs": 3.5303999999998723,
+        "p95Ms": 4.5275000000001455,
+        "maxMs": 5.15319999999997
+      },
+      "events": 5,
+      "periodDays": 5,
+      "status": "candidate"
+    },
+    {
+      "name": "señal débil",
+      "scenario": {
+        "starRadiusSolar": 2,
+        "planetRadiusEarth": 1,
+        "periodDays": 5,
+        "noisePpm": 5000,
+        "seed": 42
+      },
+      "sampleCount": 5001,
+      "generation": {
+        "minMs": 3.1436999999998534,
+        "medianMs": 3.9878000000001066,
+        "p95Ms": 4.979599999999891,
+        "maxMs": 5.815900000000056
+      },
+      "detection": {
+        "minMs": 2.8095999999998185,
+        "medianMs": 3.3459000000000287,
+        "p95Ms": 4.112099999999828,
+        "maxMs": 5.452799999999797
+      },
+      "events": 0,
+      "periodDays": null,
+      "status": "no-evidence"
+    }
+  ]
+}
