@@ -5,6 +5,7 @@ import TransitAnimation from '../components/TransitAnimation';
 import LightCurve from '../components/LightCurve';
 import PlaybackControls from '../components/PlaybackControls';
 import DetectionPanel from '../components/DetectionPanel';
+import Logo from '../components/Logo';
 import { DEFAULT_SCENARIO } from '../contracts';
 import type { DetectionResult, Scenario } from '../contracts';
 import { simulate } from '../simulation';
@@ -37,7 +38,7 @@ export default function App() {
   }
   return <>
     <a className="skip-link" href="#configuracion">Ir a la configuración</a>
-    <header><p>Simulación educativa</p><h1>AstroDetect</h1><p>Explora cómo los tamaños y el ruido influyen en la observación de un posible tránsito.</p></header>
+    <header className="site-header"><Logo size={72} /><div className="brand"><p className="eyebrow">Simulación educativa</p><h1>AstroDetect</h1><p className="tagline">Explora cómo los tamaños y el ruido influyen en la observación de un posible tránsito.</p></div></header>
     <main>
       <ScenarioControls onScenarioChange={changeScenario} />
       {!valid && <p role="alert">Corrige los campos indicados. La observación y la curva están suspendidas; no se generan datos con entradas inválidas.</p>}
