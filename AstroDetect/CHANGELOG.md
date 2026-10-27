@@ -12,6 +12,8 @@ Se retiran revisión cruzada, auditoría de Claude y dictámenes obligatorios. C
 - No se implementaron funcionalidades de las tareas de A1, A2 o A3.
 - T101: `validateScenario`, `positionAt` y `fluxAt` con órbita circular de Kepler e intersección exacta de discos, integrados mediante el PR #3 (`9ca3d7d`). Revisión A2 y auditoría de Claude aprobadas sobre `e7a9bca`. Producción registra T101 DONE y habilita T102 como READY.
 - T201: controles accesibles de los cinco parámetros, estructura educativa y panel de apoyo, integrados mediante el PR #4 (`5e597a1`). Revisión A3 y auditoría de Claude aprobadas sobre `5f4f6df`. Producción registra T201 DONE; T202 espera T102.
+- T102, T202, T301, T302, T401 y T402 integrados con entrega directa (PR #9 a #12 y commits de producción hasta `724a687`): serie con ruido reproducible, animación y curva sincronizadas, detector aislado, casos de integración, laboratorio completo y aceptación del MVP. Flujo de publicación preparado sin desplegar (T403).
+- T404: borrador del informe académico (10 páginas, Times New Roman 12, interlineado 1,5) con capturas reales y análisis del detector sobre 320 simulaciones; pendiente de datos de portada.
 
 ## 0.0.0 — 2026-10-26
 

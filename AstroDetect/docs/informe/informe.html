@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>AstroDetect: informe</title>
+<style>
+@page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 2.5cm; }
+body { font-family: "Times New Roman", Times, serif; font-size: 12pt; line-height: 1.5; color: #000; margin: 0; }
+h1 { font-size: 18pt; text-align: center; margin: 0 0 6pt; }
+h2 { font-size: 14pt; margin: 18pt 0 6pt; page-break-after: avoid; }
+h3 { font-size: 12pt; margin: 12pt 0 4pt; page-break-after: avoid; }
+p { margin: 0 0 8pt; text-align: justify; }
+.cover { height: 22cm; display: flex; flex-direction: column; justify-content: center; text-align: center; page-break-after: always; }
+.cover p { text-align: center; margin: 4pt 0; }
+.pend { background: #fff2b3; padding: 0 3pt; }
+figure { margin: 10pt 0; page-break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; max-height: 8.5cm; border: 1px solid #999; }
+figcaption { font-size: 10.5pt; line-height: 1.3; margin-top: 4pt; text-align: center; }
+table { border-collapse: collapse; width: 100%; font-size: 10.5pt; line-height: 1.3; margin: 8pt 0; page-break-inside: avoid; }
+th, td { border: 1px solid #555; padding: 3pt 5pt; text-align: center; }
+th { background: #eee; }
+.formula { text-align: center; font-style: italic; margin: 6pt 0 10pt; }
+ul { margin: 0 0 8pt 18pt; padding: 0; }
+li { margin-bottom: 3pt; text-align: justify; }
+.refs p { text-indent: -1.2cm; padding-left: 1.2cm; text-align: left; }
+.note { font-size: 10.5pt; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <h1>AstroDetect: un laboratorio web para comprender la detección de exoplanetas por tránsito</h1>
+  <p>Informe del prototipo, versión 0.1.0-alpha</p>
+  <p style="margin-top:28pt">Bastián Echeverría · Alexander Ferias · Emiliano Toledo</p>
+  <p><span class="pend">[Carreras de cada integrante: pendiente de confirmar]</span></p>
+  <p><span class="pend">[Curso, sección y docente: pendiente de confirmar]</span></p>
+  <p><span class="pend">[Institución: pendiente de confirmar]</span></p>
+  <p><span class="pend">[Fecha de entrega: pendiente de confirmar]</span></p>
+  <p style="margin-top:28pt">Repositorio: https://github.com/Tbl4z3r/AstroDetect</p>
+</section>
+
+<h2>1. Introducción</h2>
+<p>La mayoría de los planetas conocidos fuera del Sistema Solar no se han visto directamente. Se infieren a partir de efectos medibles sobre la luz de su estrella. Uno de los métodos más productivos es el de tránsito: cuando un planeta pasa por delante de su estrella, bloquea una fracción pequeña de su luz y el brillo medido disminuye durante unas horas. Misiones como Kepler y TESS han usado esta idea para identificar miles de candidatos (Borucki et al., 2010; Ricker et al., 2015). Sin embargo, entender por qué una curva de brillo con ruido puede sugerir la presencia de un planeta, y por qué no basta para confirmarlo, no es evidente para quien se acerca por primera vez al tema.</p>
+<p>AstroDetect es una aplicación web educativa, sin fines de lucro, que permite experimentar con ese razonamiento. El estudiante configura una estrella y un planeta, observa una animación del tránsito sincronizada con la curva de luz simulada y ejecuta un detector básico que busca disminuciones repetidas. La aplicación se ejecuta completamente en el navegador, sin servidor ni cuentas de usuario.</p>
+<p><b>Objetivo general.</b> Construir un prototipo funcional que relacione la geometría de un tránsito con la curva de luz medida y que permita distinguir una señal compatible con un tránsito de una confirmación planetaria.</p>
+<p><b>Objetivos específicos.</b></p>
+<ul>
+  <li>Relacionar la razón entre los radios del planeta y de la estrella con la profundidad del tránsito, verificando que duplicar el radio planetario cuadruplica la profundidad.</li>
+  <li>Distinguir señal y ruido comparando la misma realización aleatoria con distinta amplitud de ruido, sin alterar la curva ideal.</li>
+  <li>Evaluar la repetición de eventos contrastando el período configurado con el estimado por un detector que no conoce el escenario.</li>
+  <li>Comunicar los resultados con cautela: una detección es una señal compatible, y una no detección no demuestra ausencia.</li>
+</ul>
+<p><span class="pend">[Aporte de cada carrera del equipo al proyecto: pendiente de confirmar las carreras para redactar este párrafo sin suposiciones.]</span></p>
+
+<h2>2. Fundamento astronómico</h2>
+<p>Un tránsito ocurre cuando, desde la posición del observador, el disco del planeta se superpone al disco de la estrella. Si se supone una estrella de brillo superficial uniforme y un planeta opaco, la fracción de luz bloqueada es el área de superposición dividida por el área del disco estelar. En el centro de un tránsito central, con el planeta completamente dentro del disco, la profundidad es aproximadamente</p>
+<p class="formula">δ = (r / R)²</p>
+<p>donde r es el radio del planeta y R el de la estrella (Seager &amp; Mallén-Ornelas, 2003). Un planeta de diez radios terrestres frente a una estrella como el Sol produce una disminución de 0,84 %, unas 8.400 partes por millón (ppm). Un planeta como la Tierra produce sólo 84 ppm, lo que explica por qué los planetas pequeños son difíciles de detectar.</p>
+<p>La curva no es rectangular. Durante el ingreso y el egreso el planeta cubre parcialmente el borde de la estrella y el flujo cambia de forma continua. Para modelarlo con exactitud se usa el área de intersección de dos círculos de radios R y r separados por una distancia d, con ramas explícitas para discos separados (área cero) y para el planeta contenido en la estrella (área πr²). Modelos más realistas incluyen el oscurecimiento de limbo, por el que el centro de la estrella es más brillante que el borde (Mandel &amp; Agol, 2002); AstroDetect lo omite deliberadamente para que la relación entre geometría y profundidad sea transparente.</p>
+<p>El primer tránsito de un exoplaneta observado, el de HD 209458 b, mostró exactamente este tipo de disminución periódica (Charbonneau et al., 2000). Una sola disminución, sin embargo, también puede deberse a manchas estelares, binarias eclipsantes de fondo o efectos instrumentales. Por eso la comunidad distingue entre candidato y planeta confirmado, y exige observaciones independientes antes de confirmar.</p>
+
+<h2>3. Fundamento técnico</h2>
+<h3>3.1 Órbita y posición</h3>
+<p>El modelo fija la masa de la estrella en una masa solar nominal, la inclinación en 90° y la excentricidad en cero. El semieje mayor se deriva del período mediante la tercera ley de Kepler:</p>
+<p class="formula">a = [ μ (86400 · P)² / (4π²) ]<sup>1/3</sup></p>
+<p>con μ = 1,3271244 × 10²⁰ m³/s² y P en días. Las constantes de conversión (radio solar 695.700 km, radio terrestre 6.378,1 km) son los valores nominales de la Unión Astronómica Internacional (Prša et al., 2016). La fase es θ = 2π(t − P/2)/P; la posición proyectada es x = a·sen θ y el planeta está delante de la estrella sólo cuando z = a·cos θ es positivo, lo que evita un falso eclipse cuando pasa por detrás. La duración total del tránsito se contrasta con T₁₄ = (P/π)·arcsen[(R + r)/a].</p>
+<h3>3.2 Serie temporal y ruido reproducible</h3>
+<p>Cada simulación genera 5.001 muestras entre t = 0 y t = 5P, con cadencia P/1000, de modo que siempre aparecen cinco tránsitos centrados en 0,5P, 1,5P, …, 4,5P. Al flujo limpio se suma ruido gaussiano de desviación σ = ruido(ppm) × 10⁻⁶. Para que la misma semilla reproduzca exactamente los mismos datos en cualquier navegador, el generador es xorshift32 (Marsaglia, 2003) y la transformación a normal estándar es la de Box y Muller (1958), usando dos uniformes por muestra. Los datos observados no se recortan: una medición mayor que 1 es una consecuencia normal del ruido, no un error.</p>
+<h3>3.3 Detector</h3>
+<p>El detector recibe únicamente los tiempos y el flujo observado, nunca el período verdadero, los radios ni la curva limpia. Estima la línea base con la mediana y la dispersión con la desviación absoluta mediana (MAD) escalada por 1,4826, un estimador robusto que no se deja arrastrar por las propias caídas (Leys et al., 2013). Un evento es un tramo de al menos tres muestras consecutivas por debajo de la línea base menos 4σ. Si hay al menos tres eventos con separaciones compatibles, dentro del máximo entre dos cadencias y el 10 % del período, propone un período igual a la mediana de las separaciones. Es un método deliberadamente simple comparado con los usados en investigación, como el ajuste de pulsos cuadrados de Kovács, Zucker y Mazeh (2002), y no entrega probabilidades ni significancia calibrada.</p>
+
+<h2>4. Diseño del sistema</h2>
+<p>La aplicación usa React, TypeScript en modo estricto, Vite y gráficos SVG nativos. El código se organiza en tres módulos con contratos de datos congelados antes de implementar (versión 1.0.0): simulación (validación, posición, flujo y serie temporal), análisis (detector aislado) e interfaz. El adaptador de la interfaz entrega al detector solamente pares de tiempo y flujo observado; una prueba automática verifica que no pueda leer la curva limpia ni los parámetros del escenario.</p>
+<p>La pantalla sigue cinco bloques en el orden del razonamiento: configuración, observación, medición, interpretación y apoyo. Cada cambio válido de parámetros regenera los datos de forma determinista, vuelve al inicio del tiempo y descarta resultados de detección anteriores. Un único reloj de simulación mueve el planeta en la animación y el cursor sobre la curva. La reproducción respeta la preferencia de movimiento reducido del sistema operativo y todos los controles funcionan con teclado.</p>
+<p>El trabajo se dividió en tareas acotadas con criterios de aceptación medibles: geometría y flujo (T101), serie temporal y ruido (T102), controles accesibles (T201), animación y curva sincronizadas (T202), detector (T301), casos de integración (T302), integración del laboratorio (T401) y aceptación del MVP (T402). Cada tarea se entregó con pruebas automáticas e integración continua en GitHub Actions. Las tareas T101, T102 y T201 tuvieron además una revisión cruzada y una auditoría independiente; desde el 26 de octubre el equipo optó por entrega directa sin revisión cruzada para las tareas restantes.</p>
+
+<h2>5. Prototipo</h2>
+<p>Las figuras siguientes son capturas reales del prototipo compilado desde la versión integrada en la rama principal (commit 724a687), con los valores iniciales: estrella de 1 radio solar, planeta de 10 radios terrestres, período de 5 días, ruido de 500 ppm y semilla 42.</p>
+<figure><img src="../../agents/evidence/T404/observacion-transito.png" alt="Vista del observador durante el tránsito"><figcaption>Figura 1. Vista del observador en t = 2,5 días: el planeta está delante del centro de la estrella. La proporción entre los radios es real; la distancia orbital no se dibuja.</figcaption></figure>
+<figure><img src="../../agents/evidence/T404/curva.png" alt="Curva de luz simulada"><figcaption>Figura 2. Curva de luz: 5.001 mediciones simuladas con ruido (línea continua), flujo ideal (línea discontinua) y cursor del tiempo compartido con la animación.</figcaption></figure>
+<figure><img src="../../agents/evidence/T404/deteccion.png" alt="Resultados del detector"><figcaption>Figura 3. Parte superior del resultado de «Buscar posibles tránsitos»: cinco eventos y período estimado de 5 días. Más abajo, la interfaz lista cada evento y advierte que una señal candidata no confirma un planeta.</figcaption></figure>
+<p>En la vista del observador las escalas visuales se ajustan al encuadre, pero se conserva la razón r/R; el texto lo indica expresamente. La curva tiene ejes rotulados «Tiempo (días)» y «Flujo normalizado» y amplía la escala vertical para que la caída sea visible, informando el intervalo mostrado.</p>
+
+<h2>6. Análisis de resultados</h2>
+<h3>6.1 Verificación del modelo</h3>
+<p>La versión integrada pasa 222 pruebas unitarias e integradas, 4 pruebas de extremo a extremo y 7 recorridos de interfaz en Chromium, además de lint, verificación de tipos y compilación, ejecutados el 26 de octubre de 2026 en Windows 11 con Node 22.12.0. Las pruebas usan oráculos independientes de la implementación: el flujo central coincide con 1 − (r/R)² dentro de 10⁻¹⁰; el área de ocultación parcial coincide con una integración numérica separada; la duración medida coincide con T₁₄ dentro de 10⁻⁶ días; y las 5.001 muestras del generador de ruido se reprodujeron con un programa independiente en Python con un error máximo de 5 × 10⁻¹⁵. Con un planeta de 5 radios terrestres la profundidad es 2.101 ppm y con 10 radios es 8.405 ppm: exactamente el cuádruple, como predice δ = (r/R)².</p>
+<h3>6.2 Desempeño del detector</h3>
+<p>Para evaluar el detector se ejecutó una grilla de escenarios con estrella de 1 radio solar y período de 5 días, variando el radio del planeta y el ruido, con 20 semillas distintas por combinación (320 simulaciones). Para cada una se registró si el detector declaró un candidato, cuántos de los cinco tránsitos reales encontró y si el período estimado quedó dentro del 1 % de 5 días. La tabla resume los resultados; la columna S/R es la profundidad dividida por el ruido de una sola muestra.</p>
+<table>
+<thead><tr><th>Radio planeta (R⊕)</th><th>Ruido (ppm)</th><th>Profundidad (ppm)</th><th>S/R por muestra</th><th>Candidato (de 20)</th><th>5 tránsitos hallados (de 20)</th><th>Período correcto (de 20)</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>100</td><td>336</td><td>3,4</td><td>10</td><td>0</td><td>0</td></tr>
+<tr><td>2</td><td>500</td><td>336</td><td>0,7</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>5</td><td>100</td><td>2.101</td><td>21,0</td><td>20</td><td>20</td><td>20</td></tr>
+<tr><td>5</td><td>500</td><td>2.101</td><td>4,2</td><td>20</td><td>9</td><td>0</td></tr>
+<tr><td>5</td><td>1.000</td><td>2.101</td><td>2,1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>10</td><td>500</td><td>8.405</td><td>16,8</td><td>20</td><td>20</td><td>20</td></tr>
+<tr><td>10</td><td>1.000</td><td>8.405</td><td>8,4</td><td>20</td><td>20</td><td>20</td></tr>
+<tr><td>10</td><td>5.000</td><td>8.405</td><td>1,7</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>20</td><td>1.000</td><td>33.620</td><td>33,6</td><td>20</td><td>20</td><td>20</td></tr>
+<tr><td>20</td><td>5.000</td><td>33.620</td><td>6,7</td><td>20</td><td>20</td><td>11</td></tr>
+</tbody>
+</table>
+<p class="note">Tabla 1. Selección de 10 de las 16 combinaciones ejecutadas; las seis restantes (radio 2 con 1.000 y 5.000 ppm; radio 5 con 5.000 ppm; radios 10 y 20 con 100 y 500 ppm) siguen el mismo patrón: sin candidatos cuando S/R &lt; 1 y detección completa cuando S/R &gt; 16. Datos completos en agents/evidence/T404/detector-grid.json.</p>
+<p>Se observan tres regímenes. Cuando la señal por muestra supera unas ocho veces el ruido, el detector encuentra los cinco tránsitos y estima el período correcto en todas las semillas. Cuando la señal es menor que unas dos veces el ruido, no declara ningún candidato. Entre ambos extremos el comportamiento depende de la semilla: con un planeta de 2 radios terrestres y 100 ppm, la mitad de las simulaciones produce un candidato, pero ninguna encuentra los cinco tránsitos; con 5 radios y 500 ppm siempre hay candidato, pero el período nunca se estima, porque el ruido fragmenta cada tránsito en tramos cortos y las separaciones dejan de ser regulares. En ninguna de las 320 simulaciones apareció un evento lejos de un tránsito real. Las pruebas de la tarea T302 confirman también que con ruido puro, sin planeta, el detector responde «sin evidencia» en las cinco semillas probadas, y que una caída artificial no planetaria se marca como candidata, ilustrando que el detector no distingue la causa física de una disminución.</p>
+<h3>6.3 Rendimiento</h3>
+<p>Generar una serie de 5.001 muestras tomó una mediana de 4,1 ms y analizarla 3,9 ms en un procesador Intel Core i5-12450H, muy por debajo del objetivo de 200 ms. Diez sesiones independientes abiertas en paralelo en una vista previa local terminaron sin errores en 1,3 s en total. Esta prueba fue local y no mide la capacidad del alojamiento público.</p>
+
+<h2>7. Discusión crítica</h2>
+<p>El valor educativo del prototipo depende de que sus simplificaciones sean visibles. La inclinación fija de 90° garantiza un tránsito en todos los escenarios, cuando en la realidad la probabilidad geométrica de observarlo es del orden de R/a, apenas un 8 % para los parámetros iniciales. La estrella de brillo uniforme produce caídas de fondo plano, mientras que las estrellas reales muestran fondos curvos por el oscurecimiento de limbo. El ruido es blanco e independiente, cuando los datos reales incluyen variabilidad estelar y ruido correlacionado que generan caídas espurias más convincentes. Y el radio estelar se cambia a masa fija, lo que no corresponde a ninguna secuencia de estrellas reales.</p>
+<p>El detector muestra con claridad dos ideas centrales de la inferencia indirecta. Primero, una detección es compatible con un tránsito, no una prueba: la caída artificial de la tarea T302 se detecta igual que un planeta. Segundo, no detectar no demuestra ausencia: en la Tabla 1 hay planetas presentes en todas las simulaciones de la fila de 2 radios terrestres con 500 ppm, y el detector nunca los encuentra. Estas dos afirmaciones aparecen en la interfaz junto a cada resultado.</p>
+<p>El umbral fijo de 4σ y el requisito de tres muestras consecutivas son decisiones de diseño, no valores calibrados. Un umbral menor encontraría planetas más pequeños a costa de más falsos positivos; la grilla sugiere que el detector actual es conservador, ya que no produjo eventos espurios. Su principal debilidad es la fragmentación de tránsitos con ruido moderado, que impide estimar el período aunque los eventos estén presentes. Métodos que integran la señal a lo largo de todos los tránsitos, como el ajuste de pulsos cuadrados plegados en fase, son más sensibles precisamente en ese régimen (Kovács et al., 2002).</p>
+<p>En lo metodológico, fijar contratos de datos antes de implementar permitió que tres personas trabajaran en paralelo sobre módulos distintos sin interfaces incompatibles, y las pruebas con oráculos independientes detectaron errores de redondeo antes de integrar. La decisión de retirar la revisión cruzada en la segunda mitad aceleró la entrega, pero dejó las últimas tareas verificadas sólo por sus propios autores y por la integración continua.</p>
+
+<h2>8. Impacto educativo, conclusiones y trabajo futuro</h2>
+<p>AstroDetect cumple el objetivo general: el prototipo funciona de principio a fin en el navegador, relaciona la geometría con la curva de luz mediante un modelo verificado y comunica sus resultados con cautela. Los cuatro objetivos específicos tienen evidencia ejecutada: la cuadruplicación de la profundidad, la conservación de la curva ideal al cambiar el ruido con la misma semilla, la estimación correcta del período cuando la señal es suficiente, y los mensajes que separan candidato de confirmación.</p>
+<p>La propuesta educativa sigue un ciclo de predecir, experimentar, comparar, analizar y argumentar. Todavía no se ha aplicado con estudiantes, por lo que no se afirma ninguna mejora de aprendizaje; una evaluación simple consistiría en una predicción antes del uso y una justificación después, con preguntas anónimas.</p>
+<p><b>Estado de publicación.</b> El flujo de publicación en GitHub Pages está preparado y verificado hasta la compilación, pero el sitio aún no está publicado: falta habilitar Pages en la configuración del repositorio y ejecutar la primera publicación. La dirección prevista, https://tbl4z3r.github.io/AstroDetect/, no debe considerarse activa hasta registrar esa publicación. <span class="pend">[Actualizar este párrafo cuando se publique.]</span></p>
+<p><b>Trabajo futuro.</b> Un modo de caso desconocido, en el que el estudiante infiere los parámetros sin ver la curva ideal (tarea T405); oscurecimiento de limbo e inclinación variable; ruido correlacionado; y un detector por plegado en fase que permita comparar métodos.</p>
+
+<h2>Referencias</h2>
+<div class="refs">
+<p>Borucki, W. J., Koch, D., Basri, G., et al. (2010). Kepler planet-detection mission: Introduction and first results. <i>Science, 327</i>(5968), 977–980.</p>
+<p>Box, G. E. P., &amp; Muller, M. E. (1958). A note on the generation of random normal deviates. <i>The Annals of Mathematical Statistics, 29</i>(2), 610–611.</p>
+<p>Charbonneau, D., Brown, T. M., Latham, D. W., &amp; Mayor, M. (2000). Detection of planetary transits across a Sun-like star. <i>The Astrophysical Journal, 529</i>(1), L45–L48.</p>
+<p>Kovács, G., Zucker, S., &amp; Mazeh, T. (2002). A box-fitting algorithm in the search for periodic transits. <i>Astronomy &amp; Astrophysics, 391</i>, 369–377.</p>
+<p>Leys, C., Ley, C., Klein, O., Bernard, P., &amp; Licata, L. (2013). Detecting outliers: Do not use standard deviation around the mean, use absolute deviation around the median. <i>Journal of Experimental Social Psychology, 49</i>(4), 764–766.</p>
+<p>Mandel, K., &amp; Agol, E. (2002). Analytic light curves for planetary transit searches. <i>The Astrophysical Journal, 580</i>(2), L171–L175.</p>
+<p>Marsaglia, G. (2003). Xorshift RNGs. <i>Journal of Statistical Software, 8</i>(14), 1–6.</p>
+<p>NASA. (s. f.). <i>What's a transit?</i> Recuperado el 26 de octubre de 2026 de https://science.nasa.gov/exoplanets/whats-a-transit/</p>
+<p>Prša, A., Harmanec, P., Torres, G., et al. (2016). Nominal values for selected solar and planetary quantities: IAU 2015 Resolution B3. <i>The Astronomical Journal, 152</i>(2), 41.</p>
+<p>Ricker, G. R., Winn, J. N., Vanderspek, R., et al. (2015). Transiting Exoplanet Survey Satellite. <i>Journal of Astronomical Telescopes, Instruments, and Systems, 1</i>(1), 014003.</p>
+<p>Seager, S., &amp; Mallén-Ornelas, G. (2003). A unique solution of planet and star parameters from an extrasolar planet transit light curve. <i>The Astrophysical Journal, 585</i>(2), 1038–1055.</p>
+<p>Tbl4z3r/AstroDetect. (2026). <i>AstroDetect</i> [Código fuente, commit 724a687]. GitHub. https://github.com/Tbl4z3r/AstroDetect</p>
+</div>
+</body>
+</html>
