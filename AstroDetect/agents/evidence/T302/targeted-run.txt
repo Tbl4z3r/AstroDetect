@@ -64,5 +64,3 @@ stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detec
       Tests  16 passed (16)
    Start at  21:32:06
    Duration  860ms (tests 75%, transform 12%, import 11%, worker 2%)
-
-
