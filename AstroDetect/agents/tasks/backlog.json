@@ -32,7 +32,7 @@
       "id": "T102",
       "title": "Serie temporal y ruido reproducible",
       "owner": "A1",
-      "status": "DELIVERED",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T101"
@@ -41,7 +41,9 @@
       "targetVersion": "0.1.0-alpha",
       "file": "agents/tasks/T102.md",
       "pullRequest": 9,
-      "deliveredHeadSha": "a78f6708e20b1fb01df4e6ad5bc89b39465e14fe"
+      "deliveredHeadSha": "a78f6708e20b1fb01df4e6ad5bc89b39465e14fe",
+      "integratedCommit": "dd746b7a7f1e2b73644520cd1aca9594932bbc09",
+      "verification": "CI validate satisfactoria en la entrega a78f6708e20b1fb01df4e6ad5bc89b39465e14fe; sin revision de codigo por politica vigente"
     },
     {
       "id": "T201",
@@ -60,8 +62,8 @@
       "id": "T202",
       "title": "Animación y curva sincronizadas",
       "owner": "A2",
-      "status": "BLOCKED",
-      "blockedReason": "T201 DONE; espera T102 DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T102",
         "T201"
@@ -70,7 +72,8 @@
       "targetVersion": "0.1.0-alpha",
       "file": "agents/tasks/T202.md",
       "assignedTo": "companero-2",
-      "branch": "task/T202"
+      "branch": "task/T202",
+      "reservedBy": "PRODUCCION"
     },
     {
       "id": "T301",
@@ -85,7 +88,8 @@
       "targetVersion": "0.1.0-alpha",
       "file": "agents/tasks/T301.md",
       "assignedTo": "companero-1",
-      "branch": "task/T301"
+      "branch": "task/T301",
+      "reservedBy": "PRODUCCION"
     },
     {
       "id": "T302",
