@@ -1,0 +1,74 @@
+{
+  "url": "https://tbl4z3r.github.io/AstroDetect/",
+  "date": "2026-10-27T01:32:25.253Z",
+  "browser": "156.0.8078.4",
+  "checks": {
+    "httpStatus": 200,
+    "https": true,
+    "detectionText": "Señal compatible con un posible tránsito. Eventos identificados: 5.",
+    "periodText": "Período estimado: 5 días. Es una estimación a partir de las separaciones entre candidatos.",
+    "reloadOk": true,
+    "requestHosts": [
+      "tbl4z3r.github.io"
+    ],
+    "failedRequests": [],
+    "consoleErrors": [],
+    "mobile360NoHorizontalScroll": true,
+    "mobileReloadOk": true,
+    "tenIndependentContexts": {
+      "totalMs": 1073,
+      "sessions": [
+        {
+          "index": 0,
+          "durationMs": 507,
+          "errors": []
+        },
+        {
+          "index": 1,
+          "durationMs": 523,
+          "errors": []
+        },
+        {
+          "index": 2,
+          "durationMs": 601,
+          "errors": []
+        },
+        {
+          "index": 3,
+          "durationMs": 634,
+          "errors": []
+        },
+        {
+          "index": 4,
+          "durationMs": 628,
+          "errors": []
+        },
+        {
+          "index": 5,
+          "durationMs": 592,
+          "errors": []
+        },
+        {
+          "index": 6,
+          "durationMs": 564,
+          "errors": []
+        },
+        {
+          "index": 7,
+          "durationMs": 538,
+          "errors": []
+        },
+        {
+          "index": 8,
+          "durationMs": 566,
+          "errors": []
+        },
+        {
+          "index": 9,
+          "durationMs": 527,
+          "errors": []
+        }
+      ]
+    }
+  }
+}
