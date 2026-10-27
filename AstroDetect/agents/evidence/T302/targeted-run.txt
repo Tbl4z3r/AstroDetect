@@ -1,0 +1,68 @@
+
+ RUN  v5.0.5 C:/Users/marga/OneDrive/Desktop/Documentos/ChatGPT/trabajo inter paseo por el u/work/T302/AstroDetect
+
+stdout | tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 1
+{"fixture":"independent-noise","seed":1,"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 7
+{"fixture":"independent-noise","seed":7,"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 1 55ms
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 7 45ms
+stdout | tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 42
+{"fixture":"independent-noise","seed":42,"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 2026
+{"fixture":"independent-noise","seed":2026,"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > checks the predefined outcome for clear-clean
+{"fixture":"clear-clean","scenario":{"starRadiusSolar":1,"planetRadiusEarth":20,"periodDays":5,"noisePpm":0,"seed":42},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"cadenceDays":0.005,"sampleCount":5001,"result":{"status":"candidate","events":[{"startDays":2.425,"endDays":2.575,"centerDays":2.5,"depth":0.033620071508900784,"sampleCount":31},{"startDays":7.425,"endDays":7.575,"centerDays":7.5,"depth":0.033620071508900784,"sampleCount":31},{"startDays":12.425,"endDays":12.575,"centerDays":12.5,"depth":0.033620071508900784,"sampleCount":31},{"startDays":17.425,"endDays":17.575,"centerDays":17.5,"depth":0.033620071508900784,"sampleCount":31},{"startDays":22.425,"endDays":22.575,"centerDays":22.5,"depth":0.033620071508900784,"sampleCount":31}],"estimatedPeriodDays":5,"warnings":["Una señal candidata no confirma un planeta."]}}
+
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > checks the predefined outcome for clear-clean 104ms
+stdout | tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 123456
+{"fixture":"independent-noise","seed":123456,"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > accepts periodic instrument-like dimming despite having no planet model
+{"fixture":"artificial-instrument-dimming","options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"candidate","events":[{"startDays":0.98,"endDays":1.02,"centerDays":1,"depth":0.010000000000000009,"sampleCount":5},{"startDays":1.98,"endDays":2.02,"centerDays":2,"depth":0.010000000000000009,"sampleCount":5},{"startDays":2.98,"endDays":3.02,"centerDays":3,"depth":0.010000000000000009,"sampleCount":5}],"estimatedPeriodDays":1,"warnings":["Una señal candidata no confirma un planeta."]}}
+
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 42 29ms
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 2026 28ms
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > records the noise-only outcome fixed in advance for seed 123456 23ms
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > accepts periodic instrument-like dimming despite having no planet model 5ms
+ ✓ tests/analysis/limits.test.ts > T302 independent controls and interpretation limits > preserves the independent missing-event control 1ms
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > checks the predefined outcome for clear-noisy
+{"fixture":"clear-noisy","scenario":{"starRadiusSolar":1,"planetRadiusEarth":20,"periodDays":5,"noisePpm":500,"seed":42},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"cadenceDays":0.005,"sampleCount":5001,"result":{"status":"candidate","events":[{"startDays":2.43,"endDays":2.57,"centerDays":2.5,"depth":0.033363148489282235,"sampleCount":29},{"startDays":7.43,"endDays":7.57,"centerDays":7.5,"depth":0.03326819833503891,"sampleCount":29},{"startDays":12.43,"endDays":12.57,"centerDays":12.5,"depth":0.03319639502061689,"sampleCount":29},{"startDays":17.43,"endDays":17.57,"centerDays":17.5,"depth":0.03336811676407159,"sampleCount":29},{"startDays":22.43,"endDays":22.57,"centerDays":22.5,"depth":0.03317595800427364,"sampleCount":29}],"estimatedPeriodDays":5,"warnings":["Una señal candidata no confirma un planeta."]}}
+
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > checks the predefined outcome for weak-noisy
+{"fixture":"weak-noisy","scenario":{"starRadiusSolar":2,"planetRadiusEarth":1,"periodDays":5,"noisePpm":5000,"seed":42},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"cadenceDays":0.005,"sampleCount":5001,"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > checks the predefined outcome for clear-noisy 55ms
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > checks the predefined outcome for weak-noisy 51ms
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 1
+{"fixture":"simulator-residual-noise","scenario":{"starRadiusSolar":1,"planetRadiusEarth":10,"periodDays":5,"noisePpm":5000,"seed":1},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 7
+{"fixture":"simulator-residual-noise","scenario":{"starRadiusSolar":1,"planetRadiusEarth":10,"periodDays":5,"noisePpm":5000,"seed":7},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 1 55ms
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 7 52ms
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 42
+{"fixture":"simulator-residual-noise","scenario":{"starRadiusSolar":1,"planetRadiusEarth":10,"periodDays":5,"noisePpm":5000,"seed":42},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 2026
+{"fixture":"simulator-residual-noise","scenario":{"starRadiusSolar":1,"planetRadiusEarth":10,"periodDays":5,"noisePpm":5000,"seed":2026},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+stdout | tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 123456
+{"fixture":"simulator-residual-noise","scenario":{"starRadiusSolar":1,"planetRadiusEarth":10,"periodDays":5,"noisePpm":5000,"seed":123456},"options":{"thresholdSigma":4,"minSamples":3,"minEventsForPeriod":3,"periodToleranceFraction":0.1,"noiseFloor":1e-8},"result":{"status":"no-evidence","events":[],"estimatedPeriodDays":null,"warnings":["No hay suficientes eventos para estimar repetición."]}}
+
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 42 32ms
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 2026 32ms
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > records signal-removed simulator noise for fixed seed 123456 37ms
+ ✓ tests/simulation/integration.test.ts > T302 simulator to isolated detector > does not let the adapter read the clean curve or scenario metadata 2ms
+
+ Test Files  2 passed (2)
+      Tests  16 passed (16)
+   Start at  21:32:06
+   Duration  860ms (tests 75%, transform 12%, import 11%, worker 2%)
+
+
