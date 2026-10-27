@@ -22,3 +22,28 @@ a { color: #164b82; }
 legend { max-width: 100%; overflow-wrap: anywhere; }
 .skip-link { max-width: calc(100% - 2rem); }
 header { overflow-wrap: anywhere; }
+figure { margin: 0; min-width: 0; }
+figure svg { display: block; width: 100%; height: auto; overflow: hidden; }
+.transit-figure svg { max-height: 22rem; background: #e5edf6; border-radius: .5rem; }
+figcaption { font-size: .95rem; }
+.playback-buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-block: 1rem; }
+button:disabled { cursor: default; background: #556374; border-color: #556374; }
+input[type="range"] { padding: .75rem 0; accent-color: #183f69; }
+output { display: block; font-variant-numeric: tabular-nums; }
+.light-curve svg { font: 24px system-ui, sans-serif; background: #fcfdff; }
+.axis-label { font-weight: 650; margin-block: .5rem; }
+.light-curve > .axis-label:nth-of-type(2) { text-align: center; }
+.axis-line { fill: none; stroke: #34465b; stroke-width: 1.5; }
+.grid-line { stroke: #c2ccd8; stroke-width: 1; }
+.observed-line { fill: none; stroke: #185aaa; stroke-width: 1.4; }
+.clean-line { fill: none; stroke: #a94100; stroke-width: 2.5; stroke-dasharray: 7 4; }
+.cursor-line { stroke: #752c83; stroke-width: 2; }
+.curve-legend { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
+.curve-legend span { display: inline-flex; align-items: center; gap: .5rem; }
+.curve-legend i { display: inline-block; flex: 0 0 1.5rem; border-top: 3px solid; }
+.observed-key { color: #185aaa; }
+.clean-key { color: #a94100; border-top-style: dashed !important; }
+.cursor-key { color: #752c83; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto; animation: none; transition: none; }
+}

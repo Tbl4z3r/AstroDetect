@@ -5,7 +5,7 @@ import App from '../../src/app/App';
 test('presenta estructura educativa y cinco controles etiquetados sin resultados ficticios', () => {
   const html = renderToStaticMarkup(<App />);
   expect(html.match(/type="number"/g)).toHaveLength(5);
-  expect(html.match(/<label /g)).toHaveLength(5);
+  expect(html.match(/<label /g)).toHaveLength(6);
   expect(html.match(/<h2 /g)).toHaveLength(5);
   expect(html).toContain('Simulación educativa');
   expect(html).toContain('masa estelar fija de una masa solar');

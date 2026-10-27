@@ -71,12 +71,12 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
   await page.keyboard.press('Tab');
   await page.keyboard.press('Enter');
   expect(await page.locator('#seed').inputValue()).toBe('42');
-  expect(await page.getByRole('status').textContent()).toContain('restablecida');
+  expect(await page.locator('p[role="status"]').textContent()).toContain('restablecida');
   for (const width of [360, 180, 1280]) {
     await page.setViewportSize({ width, height: 800 });
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), { message: String(width) }).toBe(true);
   }
-  expect(await page.getByRole('button').count()).toBe(1);
+  expect(await page.getByRole('button').count()).toBe(4);
   expect(await page.getByRole('heading', { level: 2 }).count()).toBe(5);
   expect(await page.getByText(/No hay resultados de detección/).isVisible()).toBe(true);
 });
