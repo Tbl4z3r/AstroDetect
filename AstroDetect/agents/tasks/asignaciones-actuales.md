@@ -2,17 +2,17 @@
 
 Política vigente: sin revisión cruzada ni auditoría de Claude. Cada autor verifica su propia entrega, publica reporte y propone DELIVERED. Producción integra y registra DONE. No reorganizar el repositorio durante estas tareas.
 
-## Compañero 1 — T301 — Detector básico
+## Compañero 1 — T302 — Casos de integración y límites del detector
 
-- Rol funcional para esta tarea: A3. La asignación previa de esta persona como A1 no obliga a conservar esa especialidad.
-- Rama exclusiva: task/T301, reservada por producción para esta asignación.
-- Dependencia: T000 DONE.
+- Rol funcional: A3. T301 está DONE; no volver a implementarla.
+- Rama exclusiva: task/T302, reservada por producción para esta asignación.
+- Dependencias: T102 y T301 DONE.
 - Instrucción: agents/instructions/03-analisis-calidad.md.
-- Ficha: agents/tasks/T301.md.
-- Escritura: src/analysis, tests/analysis y su propio reporte/evidencia.
-- Resultado: detectTransits según el contrato, sin usar datos verdaderos del simulador; fixtures y verificaciones propios.
+- Ficha: agents/tasks/T302.md.
+- Escritura: tests/fixtures, tests/analysis, tests/simulation/integration.test.ts y reporte/evidencia de T302.
+- Resultado: fixtures independientes y casos simulados de señal clara, débil y ruido; resultados reproducibles y límites documentados. No cambiar algoritmos, interfaz, contratos o dependencias.
 
-No implementar T302, interfaz, simulación o revisión de tareas ajenas.
+No realizar revisión de código, no implementar T401 y no reorganizar el repositorio.
 
 ## Compañero 2 — T202 — Animación y curva
 
@@ -36,4 +36,4 @@ La referencia inicial debe conservar las reglas de flujo 2.0.0 y las dependencia
 
 Publicar sólo la rama propia y un PR identificado por tarea, con reporte y resultados reales. El PR es el mecanismo de integración, sin revisión obligatoria de código. Informar a producción el enlace y detenerse. No marcar DONE ni tomar otra tarea.
 
-Producción asignará T302 y T401 cuando sus dependencias estén integradas. La organización general del repositorio queda para después de esta ronda.
+T302 ya está asignada; producción habilitará T401 cuando T202 y T302 estén DONE. La organización general del repositorio queda para después de esta ronda.

@@ -79,7 +79,7 @@
       "id": "T301",
       "title": "Detector básico aislado y auditable",
       "owner": "A3",
-      "status": "READY",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T000"
@@ -89,28 +89,35 @@
       "file": "agents/tasks/T301.md",
       "assignedTo": "companero-1",
       "branch": "task/T301",
-      "reservedBy": "PRODUCCION"
+      "reservedBy": "PRODUCCION",
+      "pullRequest": 10,
+      "deliveredHeadSha": "b28687fad6c38ab8a61b3f645f103fe3ab9ae3bf",
+      "integratedCommit": "82c1167d526640467da982fac8eb19580cdfda95",
+      "verification": "CI validate completada con success en el SHA entregado; flujo directo sin revision de codigo."
     },
     {
       "id": "T302",
       "title": "Fixtures de integración y límites del detector",
       "owner": "A3",
-      "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "status": "READY",
+      "blockedReason": null,
       "dependsOn": [
         "T102",
         "T301"
       ],
       "size": 2,
       "targetVersion": "0.1.0-alpha",
-      "file": "agents/tasks/T302.md"
+      "file": "agents/tasks/T302.md",
+      "assignedTo": "companero-1",
+      "branch": "task/T302",
+      "reservedBy": "PRODUCCION"
     },
     {
       "id": "T401",
       "title": "Integrar laboratorio y resultados",
       "owner": "PRODUCTOR",
       "status": "BLOCKED",
-      "blockedReason": "Dependencias pendientes; no asignar hasta confirmar DONE",
+      "blockedReason": "T301 DONE; espera T202 y T302 DONE",
       "dependsOn": [
         "T202",
         "T301",
