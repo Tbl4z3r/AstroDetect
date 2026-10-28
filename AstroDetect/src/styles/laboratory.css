@@ -113,6 +113,10 @@ figure { margin: 0; min-width: 0; }
 figure svg { display: block; width: 100%; height: auto; overflow: hidden; }
 .transit-figure svg { max-height: 22rem; background: var(--space); border-radius: .75rem; border: 1px solid var(--panel-border); }
 figcaption { font-size: .95rem; color: var(--muted); }
+.orbit-3d { margin-top: 1.25rem; display: grid; gap: .6rem; }
+.orbit-3d-stage { width: 100%; border-radius: .75rem; overflow: hidden; border: 1px solid var(--panel-border); background: var(--space); }
+.orbit-3d-stage canvas { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; cursor: grab; touch-action: none; }
+.orbit-3d-stage canvas:active { cursor: grabbing; }
 .playback-buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-block: 1rem; }
 input[type="range"] { padding: .75rem 0; accent-color: var(--star); background: transparent; border: 0; }
 output { display: block; font-variant-numeric: tabular-nums; color: var(--star); font-weight: 650; }

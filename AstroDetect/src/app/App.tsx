@@ -6,6 +6,7 @@ import LightCurve from '../components/LightCurve';
 import PlaybackControls from '../components/PlaybackControls';
 import DetectionPanel from '../components/DetectionPanel';
 import Logo from '../components/Logo';
+import Orbit3D from '../components/Orbit3D';
 import { DEFAULT_SCENARIO } from '../contracts';
 import type { DetectionResult, Scenario } from '../contracts';
 import { simulate } from '../simulation';
@@ -45,6 +46,7 @@ export default function App() {
       <section aria-labelledby="observacion"><h2 id="observacion">2. Observación</h2>
         {valid ? <>
           <TransitAnimation scenario={dataset.scenario} timeDays={playback.timeDays} />
+          <Orbit3D scenario={dataset.scenario} timeDays={playback.timeDays} reducedMotion={playback.reducedMotion} />
           <PlaybackControls timeDays={playback.timeDays} durationDays={dataset.result.durationDays} cadenceDays={dataset.result.cadenceDays}
             playing={playback.isPlaying} reducedMotion={playback.reducedMotion} onPlay={playback.play} onPause={playback.pause} onRestart={playback.restart} onSeek={playback.seek} />
           <p>Semilla vigente: {dataset.scenario.seed}. La reproducción conserva esta misma serie.</p>
