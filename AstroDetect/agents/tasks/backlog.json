@@ -197,7 +197,7 @@
       "id": "T406",
       "title": "Identidad visual y tema espacial",
       "owner": "PRODUCTOR",
-      "status": "DELIVERED",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T403"
@@ -205,6 +205,19 @@
       "size": 1,
       "targetVersion": "0.1.1",
       "file": "agents/tasks/T406.md"
+    },
+    {
+      "id": "T407",
+      "title": "Vista orbital en 3D",
+      "owner": "PRODUCTOR",
+      "status": "DELIVERED",
+      "blockedReason": null,
+      "dependsOn": [
+        "T406"
+      ],
+      "size": 2,
+      "targetVersion": "0.2.0",
+      "file": "agents/tasks/T407.md"
     }
   ],
   "workflowVersion": "2.0.0",
