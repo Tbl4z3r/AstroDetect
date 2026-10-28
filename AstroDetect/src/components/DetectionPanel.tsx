@@ -19,7 +19,7 @@ interface DetectionPanelProps {
 
 export default function DetectionPanel({ result, error, disabled, onDetect }: DetectionPanelProps) {
   return <section aria-labelledby="interpretacion">
-    <h2 id="interpretacion">4. Interpretación</h2>
+    <p className="section-index">Interpretación</p><h2 id="interpretacion">¿La huella se repite?</h2>
     <p>Busca disminuciones de brillo y comprueba si se repiten. El algoritmo analiza únicamente los tiempos y el flujo medido, sin consultar los parámetros del escenario ni la curva ideal.</p>
     <button type="button" onClick={onDetect} disabled={disabled} aria-describedby="detection-help">Buscar posibles tránsitos</button>
     <p id="detection-help">{disabled ? 'Corrige la configuración para habilitar el análisis.' : 'La búsqueda conserva las mediciones, el tiempo y el estado de reproducción.'}</p>
@@ -34,7 +34,7 @@ export default function DetectionPanel({ result, error, disabled, onDetect }: De
         ? <p>No se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.</p>
         : <p>Período estimado: <strong>{time.format(result.estimatedPeriodDays)} días</strong>. Es una estimación a partir de las separaciones entre candidatos.</p>}
       {result.events.length > 0 && <>
-        <h3>Posibles tránsitos</h3>
+        <details className="event-details"><summary>Ver las mediciones de {result.events.length} posibles tránsitos</summary>
         <p>La duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.</p>
         <ol className="detection-events" aria-label="Eventos candidatos">{result.events.map((event, index) => <li key={index}>
           <h4>Evento {index + 1}</h4>
@@ -46,6 +46,7 @@ export default function DetectionPanel({ result, error, disabled, onDetect }: De
             <div><dt>Muestras del evento</dt><dd>{event.sampleCount}</dd></div>
           </dl>
         </li>)}</ol>
+        </details>
       </>}
       {result.warnings.length > 0 && <div className="detection-warnings"><h3>Advertencias del análisis</h3><ul>{result.warnings.map((warning, index) => <li key={index}>{warning}</li>)}</ul></div>}
     </div>}

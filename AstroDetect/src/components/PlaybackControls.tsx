@@ -8,6 +8,7 @@ interface Props {
   onPause: () => void;
   onRestart: () => void;
   onSeek: (timeDays: number) => void;
+  onTransit?: () => void;
 }
 
 export default function PlaybackControls(props: Props) {
@@ -16,6 +17,7 @@ export default function PlaybackControls(props: Props) {
       <button type="button" onClick={props.playing ? props.onPause : props.onPlay} disabled={props.reducedMotion}>{props.playing ? 'Pausar' : 'Reproducir'}</button>
       <button type="button" onClick={props.onRestart}>Volver al inicio</button>
       <button type="button" onClick={() => props.onSeek(props.timeDays + props.cadenceDays)} disabled={props.timeDays >= props.durationDays}>Avanzar una muestra</button>
+      {props.onTransit && <button type="button" onClick={props.onTransit}>Ir al primer tránsito</button>}
     </div>
     <p>Velocidad de visualización: recorrido completo en 30 segundos; no modifica el período orbital.</p>
     {props.reducedMotion && <p>Movimiento reducido activo: reproducción continua desactivada. Usa el control de tiempo o avanza una muestra con el teclado.</p>}

@@ -1,0 +1,13 @@
+import { DEFAULT_SCENARIO } from '../contracts';
+import type { Scenario } from '../contracts';
+import HelpPanel from './HelpPanel';
+
+export default function ScienceGuide({ onExperiment }: { onExperiment: (scenario: Scenario) => void }) {
+  return <div className="reading-view"><div className="reading-introduction"><p className="eyebrow">De la sombra a la evidencia</p><h2>Leer lo que cuenta una estrella</h2><p>El gráfico representa la luz que llega desde una dirección fija. El esquema 3D te ayuda a entender la órbita; su cámara no redefine esa medición.</p></div>
+    <div className="reading-grid"><article><span className="reading-number">01</span><h3>¿Qué significa flujo normalizado?</h3><p>Es el brillo recibido dividido por el brillo de referencia sin ocultación.</p><p className="formula">f(t) = F(t) / F₀</p><p><strong>1</strong> es el brillo de referencia; <strong>0,99</strong> representa una caída del 1 %. El ruido puede llevar una medición por encima de 1. La escala vertical se amplía automáticamente: compara los valores, además de las formas.</p></article>
+      <article><span className="reading-number">02</span><h3>El tamaño deja una huella</h3><p>Si el planeta está completamente frente al disco de una estrella de brillo uniforme, la profundidad es la proporción de superficie que oculta.</p><p className="formula">δ = (Rₚ / R★)²</p><p>Ambos radios deben estar en la misma unidad. Duplicar el radio planetario cuadruplica la caída. Durante el ingreso y el egreso se calcula la intersección de los discos.</p><button type="button" className="secondary-button" onClick={() => onExperiment({ ...DEFAULT_SCENARIO, noisePpm: 0 })}>Explorar sin ruido →</button></article>
+      <article><span className="reading-number">03</span><h3>La órbita fija el ritmo</h3><p>La tercera ley de Kepler relaciona el período y la distancia orbital para la masa estelar fijada.</p><p className="formula">a³ = GM★ P² / (4π²)</p><p>El motor convierte las unidades a metros y segundos. Cada observación cubre cinco períodos y contiene 5.001 muestras; por eso cambiar el período también cambia la ventana y la cadencia.</p></article>
+      <article><span className="reading-number">04</span><h3>Una pista requiere interpretación</h3><p>El detector recibe únicamente tiempos y brillo observado. Estima la línea base con la mediana y las fluctuaciones mediante la MAD; busca al menos tres muestras consecutivas bajo el umbral de cuatro veces esa dispersión.</p><p>Estimar un período exige al menos tres eventos con separaciones compatibles. La duración bajo ese umbral puede ser menor que la duración física completa. Una caída tampoco identifica por sí sola su causa.</p></article></div>
+    <HelpPanel />
+  </div>;
+}

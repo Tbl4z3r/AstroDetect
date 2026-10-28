@@ -53,7 +53,10 @@ test('un reloj conecta motor, planeta y cursor sin regenerar ruido durante repro
   expect(await curve.getAttribute('data-time-days')).toBe('2.5');
   expect(await page.getByTestId('planet').getAttribute('cx')).toBe('240');
   expect(Number(await page.getByTestId('planet').getAttribute('r')) / Number(await page.getByTestId('star').getAttribute('r'))).toBeCloseTo(0.09167888457668535, 10);
-  expect(Number(await page.getByTestId('time-cursor').getAttribute('x1'))).toBeCloseTo(165.5);
+  const grid = page.locator('.light-curve .grid-line').first();
+  const axisStart = Number(await grid.getAttribute('x1'));
+  const axisEnd = Number(await grid.getAttribute('x2'));
+  expect((Number(await page.getByTestId('time-cursor').getAttribute('x1')) - axisStart) / (axisEnd - axisStart)).toBeCloseTo(0.1);
   await page.getByRole('button', { name: 'Volver al inicio', exact: true }).click();
   expect(await animation.getAttribute('data-time-days')).toBe('0');
   expect(await curvePaths()).toEqual(initialPaths);

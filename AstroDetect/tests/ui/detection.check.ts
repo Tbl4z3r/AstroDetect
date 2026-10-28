@@ -36,6 +36,7 @@ test('el laboratorio analiza la serie real y conserva mediciones, reloj y result
   const results = page.getByTestId('detection-results');
   await expect.poll(() => results.textContent()).toContain('Eventos identificados: 5');
   expect(await results.textContent()).toContain('Período estimado: 5 días');
+  await results.getByText('Ver las mediciones de 5 posibles tránsitos', { exact: true }).click();
   expect(await results.getByRole('list', { name: 'Eventos candidatos' }).getByRole('listitem').count()).toBe(5);
   expect(await results.textContent()).toContain('Profundidad medida');
   expect(await results.textContent()).toContain('Duración bajo umbral');

@@ -6,7 +6,11 @@ test('presenta estructura educativa y cinco controles etiquetados sin resultados
   const html = renderToStaticMarkup(<App />);
   expect(html.match(/type="number"/g)).toHaveLength(5);
   expect(html.match(/<label /g)).toHaveLength(6);
-  expect(html.match(/<h2 /g)).toHaveLength(5);
+  expect(html).toContain('Vistas del cuaderno');
+  expect(html).toContain('id="view-laboratory"');
+  expect(html).toContain('id="view-guide" hidden=""');
+  expect(html).toContain('id="view-experiments" hidden=""');
+  expect(html).toContain('Referencia del modelo');
   expect(html).toContain('Simulación educativa');
   expect(html).toContain('masa estelar fija de una masa solar');
   expect(html).toContain('inclinación fija de 90°');

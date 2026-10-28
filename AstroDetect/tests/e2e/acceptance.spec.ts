@@ -2,8 +2,17 @@ import { test, expect } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { cpus, platform, release } from 'node:os';
+import type { Locator, Page } from '@playwright/test';
 
 test.describe.configure({ mode: 'serial', timeout: 30_000 });
+
+async function tabTo(page: Page, target: Locator) {
+  for (let index = 0; index < 32; index++) {
+    if (await target.evaluate(element => element === document.activeElement)) return;
+    await page.keyboard.press('Tab');
+  }
+  throw new Error('El control esperado no fue alcanzable por teclado.');
+}
 
 test('configurar, reproducir, pausar, agregar ruido y detectar conserva una serie reproducible', async ({ page, context }) => {
   await page.goto('./');
@@ -69,16 +78,16 @@ test('móvil de 360px permite teclado, errores y avance manual con movimiento re
   await page.keyboard.type('1');
   await expect(star).toHaveAttribute('aria-invalid', 'false');
   await expect(page.getByRole('alert')).toHaveCount(0);
-  for (let index = 0; index < 7; index++) await page.keyboard.press('Tab');
+  await tabTo(page, page.getByRole('button', { name: 'Avanzar una muestra', exact: true }));
   await expect(page.getByRole('button', { name: 'Avanzar una muestra', exact: true })).toBeFocused();
   const startClock = await page.getByTestId('clock').textContent();
   await page.keyboard.press('Enter');
   await expect(page.getByTestId('clock')).not.toHaveText(startClock!);
   await expect(page.getByRole('img', { name: 'Vista del tránsito desde el observador' })).toHaveAttribute('data-time-days', '0.005');
-  await page.keyboard.press('Tab');
+  await tabTo(page, page.getByLabel('Tiempo simulado (días)', { exact: true }));
   await expect(page.getByLabel('Tiempo simulado (días)', { exact: true })).toBeFocused();
   await page.keyboard.press('ArrowRight');
-  await page.keyboard.press('Tab');
+  await tabTo(page, page.getByRole('button', { name: 'Buscar posibles tránsitos', exact: true }));
   await expect(page.getByRole('button', { name: 'Buscar posibles tránsitos', exact: true })).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.getByTestId('detection-results')).toBeVisible();

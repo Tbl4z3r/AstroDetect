@@ -4,11 +4,14 @@ import {
   Sprite, SpriteMaterial, SRGBColorSpace, Vector3, WebGLRenderer,
 } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { MIN_VISUAL_PLANET_RATIO } from './orbitPresentation';
 
 export interface OrbitView {
   setBodies: (planetToStarRatio: number, angle: number) => void;
   setReducedMotion: (reduced: boolean) => void;
   resetCamera: () => void;
+  rotateCamera: (direction: number) => void;
+  setActive: (active: boolean) => void;
   dispose: () => void;
 }
 
@@ -138,10 +141,11 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
   let reducedMotion = false;
   let frame = 0;
   let disposed = false;
+  let active = true;
 
   function resize() {
     const width = Math.max(1, container.clientWidth);
-    const height = Math.max(1, Math.round(width * 9 / 16));
+    const height = Math.max(1, container.clientHeight);
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
@@ -157,7 +161,7 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
   resize();
 
   function loop() {
-    if (disposed) return;
+    if (disposed || !active) return;
     if (!reducedMotion) star.rotation.y += 0.0015;
     controls.update();
     renderer.render(scene, camera);
@@ -167,7 +171,7 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
 
   return {
     setBodies(planetToStarRatio, angle) {
-      const radius = Math.max(planetToStarRatio, 0.04);
+      const radius = Math.max(planetToStarRatio, MIN_VISUAL_PLANET_RATIO);
       planet.scale.setScalar(radius);
       planet.position.set(VISUAL_ORBIT_RADIUS * Math.sin(angle), 0, VISUAL_ORBIT_RADIUS * Math.cos(angle));
     },
@@ -175,6 +179,16 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
       reducedMotion = reduced;
     },
     resetCamera,
+    rotateCamera(direction) {
+      camera.position.applyAxisAngle(new Vector3(0, 1, 0), direction * Math.PI / 12);
+      controls.update();
+    },
+    setActive(next) {
+      if (active === next) return;
+      active = next;
+      if (active) loop();
+      else cancelAnimationFrame(frame);
+    },
     dispose() {
       disposed = true;
       cancelAnimationFrame(frame);

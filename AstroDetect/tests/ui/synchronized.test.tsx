@@ -25,6 +25,6 @@ test('la curva conserva todas las muestras y valores observados superiores a uno
   expect(html).toContain('0.970400');
   expect(html).toContain('3 muestras completas');
   expect(html).toContain('data-time-days="1"');
-  expect(html).toContain('x1="367.5"');
-  expect(html.match(/M115\.000,.*?L367\.500,.*?L620\.000,/g)).toHaveLength(2);
+  expect(html).toContain('x1="348"');
+  expect(html.match(/M74\.000,.*?L348\.000,.*?L622\.000,/g)).toHaveLength(2);
 });

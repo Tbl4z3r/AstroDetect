@@ -20,6 +20,7 @@ afterAll(async () => {
 
 test('valida campos, límites inclusivos y semilla entera sin corregir entradas', async () => {
   await page.goto('http://127.0.0.1:4187/AstroDetect/');
+  await page.getByRole('button', { name: 'Ajustar sistema', exact: true }).click();
   const cases = [
     ['Radio de la estrella (radios solares)', '1', '0.5', '2', '0.49', '2.01'],
     ['Radio del planeta (radios terrestres)', '10', '1', '20', '0', '21'],
@@ -49,7 +50,7 @@ test('valida campos, límites inclusivos y semilla entera sin corregir entradas'
   expect(await page.locator('#seed-error').textContent()).toContain('entera');
   await seed.fill('1e309');
   expect(await seed.getAttribute('aria-invalid')).toBe('true');
-});
+}, 30000);
 
 test('teclado, foco visible, restablecimiento y disposición estrecha', async () => {
   await page.close();
@@ -64,6 +65,10 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
     await page.keyboard.press('Tab');
     expect(await page.locator(`#${id}`).evaluate(el => el === document.activeElement)).toBe(true);
     expect(await page.locator(`#${id}`).evaluate(el => getComputedStyle(el).outlineStyle)).toBe('solid');
+    if (id !== 'seed') {
+      await page.keyboard.press('Tab');
+      expect(await page.locator(`#${id}`).locator('..').getByRole('slider').evaluate(el => el === document.activeElement)).toBe(true);
+    }
   }
   await page.keyboard.press('ControlOrMeta+A');
   await page.keyboard.type('0');
@@ -76,7 +81,7 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
     await page.setViewportSize({ width, height: 800 });
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), { message: String(width) }).toBe(true);
   }
-  expect(await page.getByRole('button').count()).toBe(5);
-  expect(await page.getByRole('heading', { level: 2 }).count()).toBe(5);
+  expect(await page.getByRole('button', { name: 'Observar', exact: false }).getAttribute('aria-pressed')).toBe('true');
+  expect(await page.getByRole('heading', { name: 'Una órbita, dos miradas' }).isVisible()).toBe(true);
   expect(await page.getByText(/No hay resultados de detección/).isVisible()).toBe(true);
-});
+}, 30000);

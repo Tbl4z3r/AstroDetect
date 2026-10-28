@@ -1,0 +1,1 @@
+export const MIN_VISUAL_PLANET_RATIO = 0.04;
