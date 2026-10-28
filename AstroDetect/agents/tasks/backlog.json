@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-26",
+  "updated": "2026-10-28",
   "documentVersion": "0.0.0",
-  "note": "Producción mantiene estados y asignaciones. El autor verifica su tarea, propone DELIVERED y se detiene; no hay revisión cruzada ni auditoría. No reorganizar el repositorio en esta ronda.",
+  "note": "Producción mantiene estados y asignaciones. Cada autor verifica su tarea, propone DELIVERED y se detiene. Sólo develop, qa, main y production; desarrollo en develop, publicación desde production. Sin revisión cruzada ni auditoría. Las ramas de tareas cerradas son historial.",
   "tasks": [
     {
       "id": "T000",
@@ -210,17 +210,29 @@
       "id": "T407",
       "title": "Vista orbital en 3D",
       "owner": "PRODUCTOR",
-      "status": "DELIVERED",
+      "status": "DONE",
       "blockedReason": null,
       "dependsOn": [
         "T406"
       ],
       "size": 2,
       "targetVersion": "0.2.0",
-      "file": "agents/tasks/T407.md"
+      "file": "agents/tasks/T407.md",
+      "pullRequest": 16,
+      "deliveredHeadSha": "d18097017e622e83c0cc074164b33d8e7fc55a24",
+      "integratedCommit": "1d1cac9500ddc507613eba8691d7bb51ee9318d7",
+      "verification": "Entrega y verificaciones en agents/reports/T407-PRODUCTOR-attempt-01.md; integrada mediante PR #16."
     }
   ],
-  "workflowVersion": "2.0.0",
+  "workflowVersion": "2.1.0",
   "codeReviewRequired": false,
-  "claudeAuditRequired": false
+  "claudeAuditRequired": false,
+  "permanentBranches": [
+    "develop",
+    "qa",
+    "main",
+    "production"
+  ],
+  "developmentBranch": "develop",
+  "deploymentBranch": "production"
 }

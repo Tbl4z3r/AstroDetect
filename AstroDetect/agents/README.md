@@ -1,9 +1,9 @@
-# Trabajo por tareas sin revisiones
+# Trabajo por tareas y cuatro ramas
 
-La instrucción vigente elimina revisión cruzada y auditoría de Claude. No crear nuevas reservas review/* o audit/*. Las carpetas e informes anteriores se conservan como historial.
+La política vigente conserva entrega directa sin revisión cruzada ni auditoría de Claude. Cada autor verifica su entrega, registra evidencia, propone DELIVERED y se detiene. Sólo producción integra, registra DONE y asigna el siguiente ID.
 
-Cada autor recibe un ID, rol funcional, rama y archivos permitidos. Lee AGENTS, contratos, ficha y registro remoto; comprueba dependencias DONE, implementa, ejecuta sus propias verificaciones, publica reporte y propone DELIVERED. Sólo producción integra y marca DONE. Al entregar se detiene.
+Cada persona recibe un ID, rol funcional, archivos permitidos y criterios de término. Lee AGENTS, contratos, ficha, registro remoto y [protocolo de ramas](../docs/ramas.md). No ejecutes tareas ya terminadas ni tomes otra por iniciativa propia.
 
-Ronda actual: compañero 1 recibe T301 como rol funcional A3 (detector); compañero 2 recibe T202 como rol A2 (animación y curva) cuando T102 esté integrada. Los roles son especialidades, no identidades humanas permanentes. No repetir T101, T102 o T201 si ya están entregadas o DONE.
+Existen sólo `develop`, `qa`, `main` y `production`. Las tareas se implementan en `develop`, desde clones independientes y con archivos coordinados. No crear ramas por tarea, revisión o auditoría; los nombres de ramas de los reportes históricos no deben recrearse. Producción coordina `develop → qa → main → production`; sólo la última publica la web.
 
-Las asignaciones y ramas exactas se publican en agents/tasks/backlog.json y agents/tasks/asignaciones-actuales.md. Usa la rama que producción reserve para ti; si ves cambios desconocidos, no la reemplaces. No reorganices carpetas o historial en esta ronda.
+Las asignaciones se mantienen en `tasks/backlog.json` y `tasks/asignaciones-actuales.md`. Los reportes están en `reports/`, separados de las fichas en `tasks/`. Conservar el historial y no reorganizar archivos como parte de otra tarea.

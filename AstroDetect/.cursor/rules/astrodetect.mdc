@@ -4,6 +4,7 @@ alwaysApply: true
 ---
 
 Lee y cumple AGENTS.md del proyecto.
+Lee docs/ramas.md: sólo develop, qa, main y production; trabaja en develop sin crear ramas por tarea.
 Trabaja exclusivamente la tarea asignada y sus archivos permitidos.
 Lee docs/contratos.md antes de integrar módulos.
 No añadas comentarios ni docstrings al código. Documenta en Markdown.

@@ -1,17 +1,13 @@
-# Cierre de la ronda T202 y T302
+# Estado de las asignaciones — 28 de octubre de 2026
 
-Política vigente: sin revisión cruzada ni auditoría. Cada autor verifica su entrega; producción integra y registra DONE.
+La implementación del MVP, su publicación y el informe académico están integrados. T406 y T407 también se incorporaron mediante los PR #15 y #16. No hay una tarea nueva asignada a los compañeros. T405 permanece en BACKLOG como extensión futura y no debe iniciarse sin una asignación expresa.
 
-## Entregas terminadas
+Política vigente: entrega directa sin revisión cruzada ni auditoría. Cada autor verifica su propia entrega; producción integra y registra DONE.
 
-- Compañero 1, rol A3: T301 integrada en PR #10 y T302 integrada en PR #11. Ambas DONE.
-- Compañero 2, rol A2: T202 integrada en PR #12. DONE.
-- Las ramas originales y reportes se conservan como historial; no reutilizarlas para otro ID.
+## Organización de ramas
 
-## Siguiente paso
+Por instrucción del equipo, el repositorio mantiene sólo `develop`, `qa`, `main` y `production`. El flujo es develop → qa → main → production; sólo production publica GitHub Pages. Las ramas por tarea, revisión o auditoría fueron retiradas conservando sus commits y reportes. Consulta [el protocolo](../../docs/ramas.md).
 
-T401 está READY porque T202, T301 y T302 están DONE. Corresponde a producción conectar el detector con el laboratorio cuando se asigne. Todavía no se inicia ni se reserva otra tarea.
+Los compañeros deben actualizar sus referencias con `git fetch --prune origin`. Con su trabajo guardado y la copia limpia, pasar a develop y actualizar con avance rápido antes de la siguiente asignación. No borrar ramas locales con trabajo ni recrear ramas históricas.
 
-Antes de esa implementación, el paso acordado con el usuario es ordenar el repositorio, conservando código, reportes e historial y las verificaciones de la combinación. Esta integración no mueve carpetas ni borra ramas.
-
-Los compañeros deben detenerse hasta una nueva asignación explícita. T402 espera T401; T403 y T404 siguen pendientes de sus dependencias. T405 permanece fuera del MVP actual.
+Producción debe asignar un único ID activo y archivos separados a cada persona. No se asignan revisores de código; las comprobaciones de QA se realizan sobre una candidata concreta.

@@ -3,10 +3,7 @@ name: Publish AstroDetect Pages
 on:
   workflow_dispatch:
   push:
-    branches: [main]
-    paths:
-      - 'AstroDetect/**'
-      - '.github/workflows/deploy.yml'
+    branches: [production]
 
 permissions:
   contents: read
@@ -17,7 +14,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/production'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     defaults:
@@ -53,7 +50,7 @@ jobs:
           retention-days: 1
 
   deploy:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.PAGES_AUTO_DEPLOY == 'true')
+    if: github.ref == 'refs/heads/production'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10

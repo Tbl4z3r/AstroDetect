@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-28",
+  "repository": "https://github.com/Tbl4z3r/AstroDetect",
+  "baselineMain": "1d1cac9500ddc507613eba8691d7bb51ee9318d7",
+  "branches": [
+    {
+      "branch": "audit/T101-e7a9bca8226f9fc726aba6563cf6f1078a635445",
+      "sha": "080f1d8d3c48a4b60c10685e61c477a86048c1ed",
+      "integratedInMain": false,
+      "archiveTag": "archive/2026-10-28/audit/T101-e7a9bca8226f9fc726aba6563cf6f1078a635445"
+    },
+    {
+      "branch": "audit/T102-a78f6708e20b1fb01df4e6ad5bc89b39465e14fe",
+      "sha": "279fbdb5dd01443d1444efdc1559fed33cc61e6c",
+      "integratedInMain": false,
+      "archiveTag": "archive/2026-10-28/audit/T102-a78f6708e20b1fb01df4e6ad5bc89b39465e14fe"
+    },
+    {
+      "branch": "audit/T201-5f4f6df3e4b7522f6e48a5eed2e5698229f71249",
+      "sha": "ac8b51e05cc5a779138a8575ff74437243621613",
+      "integratedInMain": false,
+      "archiveTag": "archive/2026-10-28/audit/T201-5f4f6df3e4b7522f6e48a5eed2e5698229f71249"
+    },
+    {
+      "branch": "chore/T000-close",
+      "sha": "0df5d90b5788204654a429d0672e32f10dce772c",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "chore/T101-T201-review",
+      "sha": "712138ce220aff369d55f56a5f554cbf70462996",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "chore/T101-close",
+      "sha": "ed8bab466dc1ea86141c61152c9dbc328e7ad074",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "chore/T201-close",
+      "sha": "73b2d5f7c47c09c5059776bc58694cb94dc4b921",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "chore/T403-T404-close",
+      "sha": "9d0ed0ac46cc9362834bd86f2d2f6ad8eecd7a30",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "docs/claude-auditor",
+      "sha": "29988611943bf5236a5463503ac4e1e2ca7018a5",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "review/T101-A2-e7a9bca8226f9fc726aba6563cf6f1078a635445",
+      "sha": "e02934bf0fcdacf8304802dbd0f54f9b06240bcd",
+      "integratedInMain": false,
+      "archiveTag": "archive/2026-10-28/review/T101-A2-e7a9bca8226f9fc726aba6563cf6f1078a635445"
+    },
+    {
+      "branch": "review/T102-A2-a78f6708e20b1fb01df4e6ad5bc89b39465e14fe",
+      "sha": "51865da0416987f5bc7c582166634c73fa5998cf",
+      "integratedInMain": false,
+      "archiveTag": "archive/2026-10-28/review/T102-A2-a78f6708e20b1fb01df4e6ad5bc89b39465e14fe"
+    },
+    {
+      "branch": "review/T201-A3-5f4f6df3e4b7522f6e48a5eed2e5698229f71249",
+      "sha": "aa6e10d74d7f63a42610ae056b218a55d7e6b447",
+      "integratedInMain": false,
+      "archiveTag": "archive/2026-10-28/review/T201-A3-5f4f6df3e4b7522f6e48a5eed2e5698229f71249"
+    },
+    {
+      "branch": "task/T000",
+      "sha": "4cc83189217e819fb6ccb54668f743ec68b5f310",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T101",
+      "sha": "e7a9bca8226f9fc726aba6563cf6f1078a635445",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T102",
+      "sha": "a78f6708e20b1fb01df4e6ad5bc89b39465e14fe",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T201",
+      "sha": "5f4f6df3e4b7522f6e48a5eed2e5698229f71249",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T202",
+      "sha": "c43f7cb7347f63a0b8685da7e7955804cc85a93e",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T301",
+      "sha": "b28687fad6c38ab8a61b3f645f103fe3ab9ae3bf",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T302",
+      "sha": "9499b06b2ab5c447400fa010cd4ebe1641f9d7e4",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T404",
+      "sha": "d2255278aa7f1458108d80b99c6dfa63e38ad2b4",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T406",
+      "sha": "5d5195eb5c4f38f05f587808fb24c7c30ae66bae",
+      "integratedInMain": true,
+      "archiveTag": null
+    },
+    {
+      "branch": "task/T407",
+      "sha": "d18097017e622e83c0cc074164b33d8e7fc55a24",
+      "integratedInMain": true,
+      "archiveTag": null
+    }
+  ]
+}

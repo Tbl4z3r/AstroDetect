@@ -1,8 +1,9 @@
-name: T000 checks
+name: AstroDetect checks
 on:
   pull_request:
+    branches: [develop, qa, main, production]
   push:
-    branches: [main, task/T000]
+    branches: [develop, qa, main, production]
 permissions:
   contents: read
 jobs:

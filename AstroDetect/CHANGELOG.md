@@ -1,4 +1,11 @@
-# Flujo actualizado — 2026-10-26
+# Organización de ramas — 2026-10-28
+
+- Sólo cuatro ramas permanentes: develop → qa → main → production. Main conserva el código terminado y sigue siendo predeterminada; production publica el sitio tras sus verificaciones.
+- CI valida las cuatro ramas. Se retira la dependencia de PAGES_AUTO_DEPLOY y la publicación desde main.
+- Ramas antiguas inventariadas y respaldadas; los seis commits de auditoría y revisión no integrados se conservan mediante etiquetas de archivo.
+- Instrucciones y asignaciones actualizadas sin restaurar revisión cruzada ni auditoría de Claude. No se cambia el código de la aplicación.
+
+## Flujo actualizado — 2026-10-26
 
 Se retiran revisión cruzada, auditoría de Claude y dictámenes obligatorios. Cada autor conserva sus comprobaciones y entrega DELIVERED; producción integra y registra DONE. Se mantienen la estructura del repositorio, el código y los informes históricos.
 
