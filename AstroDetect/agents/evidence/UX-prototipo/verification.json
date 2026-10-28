@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-28",
+  "assignment": "Integracion UX/UI del prototipo, asignada directamente por el usuario",
+  "suggestedStatus": "DELIVERED",
+  "branch": "develop",
+  "base": "ba6d4513d58411ef3859be997b728d9416040f90",
+  "codeReference": "50ae38f67f4325664654b7cb4990f3a8cff855b4",
+  "environment": {
+    "platform": "Windows / PowerShell",
+    "node": "22.12.0",
+    "npm": "10.9.0",
+    "playwright": "1.64.1"
+  },
+  "finalChecks": {
+    "install": { "passed": true, "auditedPackages": 198, "reportedVulnerabilities": 0 },
+    "lint": "passed",
+    "typecheck": "passed",
+    "unit": { "files": 15, "passed": 224, "failed": 0 },
+    "build": { "passed": true, "modules": 43, "deferred3dChunkWarning": true },
+    "browserUi": { "files": 3, "passed": 7, "failed": 0, "durationSeconds": 7.92 },
+    "e2e": { "passed": 6, "failed": 0, "durationSeconds": 9.0, "concurrentContexts": 10, "concurrentTestSeconds": 3.1 },
+    "diffCheck": "passed"
+  },
+  "observedInLocalBrowser": {
+    "defaultEvents": 5,
+    "defaultEstimatedPeriodDays": 5,
+    "cameraPreservesObservedCurve": true,
+    "highNoiseCase": "no-evidence",
+    "mobileViewportWidth": 360,
+    "mobileDocumentClientWidth": 345,
+    "mobileDocumentScrollWidth": 345,
+    "consoleErrors": []
+  },
+  "intermediateFailures": [
+    "Vitest discovery: acceso al token temporal; repeticion con permisos apropiados aprobada",
+    "Diez contextos: timeout de 30 s; pausa del 3D fuera de pantalla incorporada; repeticion final aprobada",
+    "Validacion larga de controles: timeout implicito de 5 s; presupuesto explicito de 30 s coherente con los otros recorridos; repeticion final aprobada"
+  ],
+  "screenshots": ["escritorio.png", "medicion.png", "movil.png"],
+  "remoteCi": "Pendiente de consulta tras el push; no se declara aprobada en este archivo",
+  "promotion": "No ejecutada; corresponde a produccion",
+  "sharedTaskRegisterChanged": false
+}
