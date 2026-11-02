@@ -5,7 +5,7 @@ import type { Scenario } from '../../src/contracts';
 import { simulate } from '../../src/simulation';
 import ScienceGuide from '../../src/components/ScienceGuide';
 import ModelReference from '../../src/components/ModelReference';
-import { experimentQuantities, formatExperimentNumber } from '../../src/components/experimentMath';
+import { experimentQuantities, formatExperimentNumber, formatExperimentOperand } from '../../src/components/experimentMath';
 
 test('explica unidades y magnitudes con valores nominales y contactos calculados independientemente', () => {
   const result = simulate(DEFAULT_SCENARIO);
@@ -75,4 +75,27 @@ test('el formato conserva la distinción entre cero y un ruido positivo muy pequ
   expect(formatExperimentNumber(0, 8)).toBe('0');
   expect(formatExperimentNumber(1e-12, 8)).not.toBe('0');
   expect(formatExperimentNumber(1e-12, 8)).toContain('12');
+});
+
+test('las sustituciones conservan los operandos aceptados y distinguen resultados redondeados', () => {
+  const scenario = { ...DEFAULT_SCENARIO, starRadiusSolar: 1.00000001, planetRadiusEarth: 10.123456789, periodDays: 5.000001 };
+  const html = renderToStaticMarkup(<ScienceGuide scenario={scenario} result={simulate(scenario)} detection={null} valid onExperiment={() => {}} />);
+  const text = html.replace(/<[^>]+>/g, '');
+  expect(text).toContain('estrella de 1,00000001 R☉');
+  expect(text).toContain('planeta de 10,123456789 R⊕');
+  expect(text).toContain('período de 5,000001 días');
+  expect(text).toContain('R★ = 1,00000001 × 695.700.000 ≈ 695.700.006,96 m');
+  expect(text).toContain('Rₚ = 10,123456789 × 6.378.100 ≈ 64.568.419,75 m');
+  expect(text).toContain('Pₛ = 5,000001 × 86.400 ≈ 432.000,0864 s');
+  expect(text).toContain('μ = 1,3271244E+20 m³/s²');
+  expect(text).toContain('432.000,0864² / (4π²)');
+  expect(text).not.toContain('δ = (0,09281072)²');
+});
+
+test('los operandos conservan exactamente el valor numérico aceptado incluso en límites de precisión', () => {
+  for (const value of [0, Number.MIN_VALUE, 1e-12, 1.0000000000000002, 1.00000001, 10.123456789, 5.000001, 29.999999999999996, 4294967295]) {
+    const text = formatExperimentOperand(value);
+    expect(Number(text.replaceAll('.', '').replace(',', '.'))).toBe(value);
+  }
+  expect(formatExperimentOperand(1.3271244e20, true)).toBe('1,3271244E+20');
 });

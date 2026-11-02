@@ -28,3 +28,10 @@ export function formatExperimentNumber(value: number, maximumFractionDigits = 4)
     return value.toLocaleString('es-CL', { notation: 'scientific', maximumFractionDigits: 4 });
   return value.toLocaleString('es-CL', { maximumFractionDigits });
 }
+
+export function formatExperimentOperand(value: number, scientific = false): string {
+  const [mantissa, exponent] = (scientific ? value.toExponential() : String(value)).split('e');
+  const [integer, fraction] = mantissa.split('.');
+  const localizedInteger = integer.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return `${localizedInteger}${fraction === undefined ? '' : `,${fraction}`}${exponent === undefined ? '' : `E${exponent}`}`;
+}

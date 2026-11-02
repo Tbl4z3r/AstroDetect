@@ -76,13 +76,20 @@ export default function GuidedTour({ onClose, onStepChange }: { onClose: () => v
       const roomLeft = bounds.left >= panelWidth + 32;
       const sidePlacement = viewportWidth >= 700 && (roomRight || roomLeft);
       const availableHeight = sidePlacement ? viewportHeight - 32 : viewportHeight - panelHeight - 48;
-      if (scrollToTarget) {
+      const availableBottom = 16 + availableHeight;
+      const visibleHeight = Math.max(0, Math.min(bounds.bottom, availableBottom) - Math.max(bounds.top, 16));
+      const minimumVisibleHeight = Math.min(80, bounds.height, availableHeight);
+      if (scrollToTarget || visibleHeight < minimumVisibleHeight - 1) {
         const desiredTop = 16 + Math.max(0, (availableHeight - bounds.height) / 2);
-        window.scrollBy({ top: bounds.top - desiredTop, behavior: 'instant' });
-        bounds = target.getBoundingClientRect();
+        const distance = bounds.top - desiredTop;
+        if (Math.abs(distance) > 1) {
+          window.scrollBy({ top: distance, behavior: 'instant' });
+          bounds = target.getBoundingClientRect();
+        }
       }
-      const visibleTop = clamp(bounds.top - 8, 8, viewportHeight - 16);
-      const visibleBottom = clamp(bounds.bottom + 8, visibleTop + 8, sidePlacement ? viewportHeight - 8 : Math.max(visibleTop + 8, viewportHeight - panelHeight - 32));
+      const highlightBottom = sidePlacement ? viewportHeight - 8 : availableBottom;
+      const visibleTop = clamp(bounds.top - 8, 8, Math.max(8, highlightBottom - 8));
+      const visibleBottom = clamp(bounds.bottom + 8, visibleTop + 8, highlightBottom);
       const visibleLeft = clamp(bounds.left - 8, 8, viewportWidth - 16);
       const visibleRight = clamp(bounds.right + 8, visibleLeft + 8, viewportWidth - 8);
       const panelLeft = sidePlacement ? (roomRight ? bounds.right + 20 : bounds.left - panelWidth - 20) : (viewportWidth - panelWidth) / 2;
@@ -97,16 +104,20 @@ export default function GuidedTour({ onClose, onStepChange }: { onClose: () => v
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => measure());
     }
+    function resize() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => measure(true));
+    }
     measure(true);
     frame = requestAnimationFrame(() => measure(true));
-    window.addEventListener('resize', schedule);
+    window.addEventListener('resize', resize);
     window.addEventListener('scroll', schedule, true);
     const observer = new ResizeObserver(schedule);
     if (caption.current) observer.observe(caption.current);
     if (target) observer.observe(target);
     return () => {
       cancelAnimationFrame(frame);
-      window.removeEventListener('resize', schedule);
+      window.removeEventListener('resize', resize);
       window.removeEventListener('scroll', schedule, true);
       observer.disconnect();
     };

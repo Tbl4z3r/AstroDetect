@@ -65,3 +65,37 @@ test('en móvil la guía contiene el foco, cabe en la pantalla y restaura la vis
   await page.getByRole('button', { name: 'Cerrar guía', exact: true }).click();
   await expect(page.getByRole('dialog')).toHaveCount(0);
 });
+
+test('la guía mantiene visible la órbita al redimensionar y desplazar la página', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto('./');
+  await page.getByRole('button', { name: 'Guía', exact: true }).click();
+  const dialog = page.getByRole('dialog');
+  for (let step = 1; step < 7; step++) await dialog.getByRole('button', { name: 'Siguiente', exact: true }).click();
+  await expect(dialog.getByRole('heading', { name: 'Perspectiva libre de la órbita', exact: true })).toBeVisible();
+  async function layoutIsUsable() {
+    return page.evaluate(() => {
+      const target = document.querySelector<HTMLElement>('[data-guide="orbit"]')!.getBoundingClientRect();
+      const panel = document.querySelector<HTMLElement>('.tour-caption')!.getBoundingClientRect();
+      const highlight = document.querySelector<HTMLElement>('.tour-highlight')!.getBoundingClientRect();
+      const sameColumns = Math.min(target.right, panel.right) > Math.max(target.left, panel.left);
+      const freeBottom = sameColumns ? panel.top - 8 : innerHeight - 8;
+      const visibleHeight = Math.max(0, Math.min(target.bottom, freeBottom) - Math.max(target.top, 8));
+      const overlap = Math.max(0, Math.min(highlight.right, panel.right) - Math.max(highlight.left, panel.left))
+        * Math.max(0, Math.min(highlight.bottom, panel.bottom) - Math.max(highlight.top, panel.top));
+      return visibleHeight >= Math.min(80, target.height) - 1 && highlight.height > 16 && overlap <= 1
+        && panel.left >= 0 && panel.top >= 0 && panel.right <= innerWidth && panel.bottom <= innerHeight;
+    });
+  }
+  for (const viewport of [{ width: 1280, height: 900 }, { width: 320, height: 640 }, { width: 640, height: 320 }, { width: 360, height: 800 }]) {
+    await page.setViewportSize(viewport);
+    await expect.poll(layoutIsUsable).toBe(true);
+    await page.mouse.wheel(0, 200);
+    await expect.poll(layoutIsUsable).toBe(true);
+    await page.evaluate(() => new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve()))));
+    expect(await layoutIsUsable()).toBe(true);
+  }
+  await page.keyboard.press('Escape');
+  await expect(dialog).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Guía', exact: true })).toBeFocused();
+});

@@ -63,3 +63,29 @@ test('Entender usa los parámetros y resultados vigentes y retira cálculos cuan
   await expect(guide).not.toContainText('864.000');
   await expect(guide).not.toContainText('Tu escenario:');
 });
+
+test('las conversiones de Entender preservan los operandos precisos y declaran sus aproximaciones', async ({ page }) => {
+  await page.goto('./');
+  await page.getByLabel('Radio de la estrella (radios solares)', { exact: true }).fill('1.00000001');
+  await page.getByLabel('Radio del planeta (radios terrestres)', { exact: true }).fill('10.123456789');
+  await page.getByLabel('Período orbital (días)', { exact: true }).fill('5.000001');
+  await page.getByRole('button', { name: 'Entender', exact: false }).click();
+  const summary = page.locator('.scenario-summary');
+  await expect(summary).toContainText('estrella de 1,00000001 R☉');
+  await expect(summary).toContainText('planeta de 10,123456789 R⊕');
+  await expect(summary).toContainText('período de 5,000001 días');
+  const card = page.getByRole('heading', { name: 'De los radios a la profundidad', exact: true }).locator('..');
+  const conversions = await card.locator('ol li').allTextContents();
+  const decode = (value: string) => Number(value.replaceAll('.', '').replace(',', '.'));
+  for (const [index, accepted] of [[0, 1.00000001], [1, 10.123456789]]) {
+    const equation = conversions[index].match(/=\s*([\d.,]+)\s*×\s*([\d.,]+)\s*≈\s*([\d.,]+)/);
+    expect(equation).not.toBeNull();
+    const [operand, unit, result] = equation!.slice(1).map(decode);
+    expect(operand).toBe(accepted);
+    expect(Math.abs(operand * unit - result)).toBeLessThanOrEqual(0.005);
+  }
+  const kepler = page.getByRole('heading', { name: 'La tercera ley de Kepler', exact: true }).locator('..');
+  await expect(kepler).toContainText('Pₛ = 5,000001 × 86.400 ≈ 432.000,0864 s');
+  await expect(kepler).toContainText('1,3271244E+20');
+  await expect(kepler).toContainText('432.000,0864² / (4π²)');
+});
