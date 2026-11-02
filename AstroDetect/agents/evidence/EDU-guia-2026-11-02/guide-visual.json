@@ -1,0 +1,578 @@
+{
+  "date": "2026-11-02T06:13:27.944Z",
+  "source": "working tree educational guide",
+  "cases": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "checks": [
+        {
+          "step": 1,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 326.484375,
+            "width": 288,
+            "height": 297.515625
+          },
+          "spotlight": {
+            "x": 25,
+            "y": 86.125,
+            "width": 270,
+            "height": 153.625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 2,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 326.484375,
+            "width": 288,
+            "height": 297.515625
+          },
+          "spotlight": {
+            "x": 25,
+            "y": 86.75,
+            "width": 270,
+            "height": 153.625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 3,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 348.8125,
+            "width": 288,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 25,
+            "y": 97.375,
+            "width": 270,
+            "height": 153.625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 4,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 348.8125,
+            "width": 288,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 25,
+            "y": 98,
+            "width": 270,
+            "height": 153.625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 5,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 348.8125,
+            "width": 288,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 25,
+            "y": 103.625,
+            "width": 270,
+            "height": 141.390625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 6,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 304.15625,
+            "width": 288,
+            "height": 319.84375
+          },
+          "spotlight": {
+            "x": 25,
+            "y": 8.21875,
+            "width": 270,
+            "height": 279.9375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 7,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 326.484375,
+            "width": 288,
+            "height": 297.515625
+          },
+          "spotlight": {
+            "x": 37,
+            "y": 8.421875,
+            "width": 246,
+            "height": 302.0625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 8,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 348.8125,
+            "width": 288,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 37,
+            "y": 30.375,
+            "width": 246,
+            "height": 288.984375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 9,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 280.234375,
+            "width": 288,
+            "height": 343.765625
+          },
+          "spotlight": {
+            "x": 21,
+            "y": 8,
+            "width": 278,
+            "height": 256.234375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 10,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 304.15625,
+            "width": 288,
+            "height": 319.84375
+          },
+          "spotlight": {
+            "x": 21,
+            "y": 8,
+            "width": 278,
+            "height": 280.15625
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 11,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 302.5625,
+            "width": 288,
+            "height": 321.4375
+          },
+          "spotlight": {
+            "x": 21,
+            "y": 8.28125,
+            "width": 278,
+            "height": 278.28125
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        },
+        {
+          "step": 12,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 16,
+            "y": 280.234375,
+            "width": 288,
+            "height": 343.765625
+          },
+          "spotlight": {
+            "x": 8,
+            "y": 107.9375,
+            "width": 304,
+            "height": 65.046875
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 320,
+          "viewport": {
+            "width": 320,
+            "height": 640
+          }
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "checks": [
+        {
+          "step": 1,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 299,
+            "y": 318.78125,
+            "width": 360,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 33,
+            "y": 310.78125,
+            "width": 254,
+            "height": 129.484375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 2,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 299,
+            "y": 384.265625,
+            "width": 360,
+            "height": 252.859375
+          },
+          "spotlight": {
+            "x": 33,
+            "y": 376.265625,
+            "width": 254,
+            "height": 146.84375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 3,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 299,
+            "y": 393.109375,
+            "width": 360,
+            "height": 252.859375
+          },
+          "spotlight": {
+            "x": 33,
+            "y": 385.109375,
+            "width": 254,
+            "height": 129.484375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 4,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 299,
+            "y": 393.59375,
+            "width": 360,
+            "height": 252.859375
+          },
+          "spotlight": {
+            "x": 33,
+            "y": 385.59375,
+            "width": 254,
+            "height": 129.484375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 5,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 299,
+            "y": 399.078125,
+            "width": 360,
+            "height": 252.859375
+          },
+          "spotlight": {
+            "x": 33,
+            "y": 391.078125,
+            "width": 254,
+            "height": 117.25
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 6,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 299,
+            "y": 239.53125,
+            "width": 360,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 33,
+            "y": 231.53125,
+            "width": 254,
+            "height": 437.609375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 7,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 460,
+            "y": 608.8125,
+            "width": 360,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 349.796875,
+            "y": 36.625,
+            "width": 673.203125,
+            "height": 534.875
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 8,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 651,
+            "y": 190.625,
+            "width": 360,
+            "height": 252.859375
+          },
+          "spotlight": {
+            "x": 1023,
+            "y": 182.625,
+            "width": 208,
+            "height": 534.875
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 9,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 460,
+            "y": 608.8125,
+            "width": 360,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 333.796875,
+            "y": 197.078125,
+            "width": 913.203125,
+            "height": 215.171875
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 10,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 460,
+            "y": 586.484375,
+            "width": 360,
+            "height": 297.515625
+          },
+          "spotlight": {
+            "x": 333.796875,
+            "y": 74.59375,
+            "width": 913.203125,
+            "height": 437.125
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 11,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 460,
+            "y": 608.8125,
+            "width": 360,
+            "height": 275.1875
+          },
+          "spotlight": {
+            "x": 333.796875,
+            "y": 460.703125,
+            "width": 913.203125,
+            "height": 132.109375
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        },
+        {
+          "step": 12,
+          "status": "passed",
+          "modal": true,
+          "panel": {
+            "x": 460,
+            "y": 584.890625,
+            "width": 360,
+            "height": 299.109375
+          },
+          "spotlight": {
+            "x": 16,
+            "y": 136.65625,
+            "width": 1130.59375,
+            "height": 88.96875
+          },
+          "shadow": "rgba(2, 4, 12, 0.85) 0px 0px 0px 9999px",
+          "pageWidth": 1280,
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          }
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    }
+  ]
+}
