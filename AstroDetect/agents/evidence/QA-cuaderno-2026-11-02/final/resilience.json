@@ -1,0 +1,49 @@
+{
+  "candidate": "72f5b5ffc39fb96b6aa346b8a36f74bbaa497a6f",
+  "fromWorkingTree": false,
+  "url": "http://127.0.0.1:4182/AstroDetect/",
+  "started": "2026-11-02T05:07:53.298Z",
+  "checks": [
+    {
+      "name": "camara por teclado conserva tiempos y curvas",
+      "status": "passed",
+      "ms": 1163,
+      "errors": []
+    },
+    {
+      "name": "preferencia de movimiento reducido en vivo pausa y permite avance manual",
+      "status": "passed",
+      "ms": 1627,
+      "errors": []
+    },
+    {
+      "name": "fin del recorrido, reinicio y cambio de vistas pausa",
+      "status": "passed",
+      "ms": 1431,
+      "errors": []
+    },
+    {
+      "name": "sin conexion tras carga: parametros, datos y deteccion funcionan",
+      "status": "passed",
+      "ms": 1136,
+      "errors": []
+    },
+    {
+      "name": "recorrido continuo completo de 30 segundos termina y conserva datos",
+      "status": "passed",
+      "ms": 31311,
+      "errors": []
+    },
+    {
+      "name": "perdida del contexto WebGL conserva medicion y comunica o recupera la vista",
+      "status": "passed",
+      "ms": 1762,
+      "errors": []
+    },
+    {
+      "name": "WebGL indisponible desde inicio muestra fallback y detector operativo",
+      "status": "passed"
+    }
+  ],
+  "completed": "2026-11-02T05:08:32.972Z"
+}

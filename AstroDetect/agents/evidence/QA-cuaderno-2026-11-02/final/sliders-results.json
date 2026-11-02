@@ -1,0 +1,38 @@
+[
+  {
+    "label": "Ruido de medición (ppm)",
+    "status": "pass",
+    "original": 25,
+    "slider": 25,
+    "advanced": 75,
+    "minimum": 0,
+    "maximum": 5000
+  },
+  {
+    "label": "Radio de la estrella (radios solares)",
+    "status": "pass",
+    "original": 1.234,
+    "slider": 1.234,
+    "advanced": 1.249,
+    "minimum": 0.5,
+    "maximum": 2
+  },
+  {
+    "label": "Radio del planeta (radios terrestres)",
+    "status": "pass",
+    "original": 1.234,
+    "slider": 1.234,
+    "advanced": 1.424,
+    "minimum": 1,
+    "maximum": 20
+  },
+  {
+    "label": "Período orbital (días)",
+    "status": "pass",
+    "original": 1.234,
+    "slider": 1.234,
+    "advanced": 1.524,
+    "minimum": 1,
+    "maximum": 30
+  }
+]

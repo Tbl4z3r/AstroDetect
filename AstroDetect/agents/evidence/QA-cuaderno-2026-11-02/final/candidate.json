@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-02T05:05:43.5725056Z",
+  "candidate": "working tree basado en bf96ad5e8d2f9110c4e9279004737afb986acfd3 con correcciones de deslizadores y recuperación WebGL",
+  "testedURL": "http://127.0.0.1:4182/AstroDetect/",
+  "limitations": [
+    "Chromium local",
+    "No certificación completa de accesibilidad",
+    "Sin pruebas de capacidad del sitio público"
+  ],
+  "evidence": [
+    "adversarial-results.json",
+    "science-product-results.json",
+    "curve-layout-results.json",
+    "sliders-results.json"
+  ],
+  "candidateCodeCommit": "72f5b5ffc39fb96b6aa346b8a36f74bbaa497a6f"
+}

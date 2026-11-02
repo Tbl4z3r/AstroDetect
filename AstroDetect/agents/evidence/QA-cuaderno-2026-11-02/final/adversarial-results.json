@@ -1,0 +1,198 @@
+{
+  "date": "2026-11-02T05:05:48.250Z",
+  "base": "http://127.0.0.1:4182/AstroDetect/",
+  "browser": "156.0.8078.4",
+  "results": [
+    {
+      "name": "carga inicial y resultado independiente P=5 días, 5 eventos",
+      "status": "pass",
+      "durationMs": 667
+    },
+    {
+      "name": "límite válido star=0.5",
+      "status": "pass",
+      "durationMs": 490
+    },
+    {
+      "name": "límite válido star=2",
+      "status": "pass",
+      "durationMs": 467
+    },
+    {
+      "name": "límite válido planet=1",
+      "status": "pass",
+      "durationMs": 517
+    },
+    {
+      "name": "límite válido planet=20",
+      "status": "pass",
+      "durationMs": 470
+    },
+    {
+      "name": "límite válido period=1",
+      "status": "pass",
+      "durationMs": 469
+    },
+    {
+      "name": "límite válido period=30",
+      "status": "pass",
+      "durationMs": 470
+    },
+    {
+      "name": "límite válido noise=0",
+      "status": "pass",
+      "durationMs": 485
+    },
+    {
+      "name": "límite válido noise=5000",
+      "status": "pass",
+      "durationMs": 462
+    },
+    {
+      "name": "límite válido seed=0",
+      "status": "pass",
+      "durationMs": 493
+    },
+    {
+      "name": "límite válido seed=4294967295",
+      "status": "pass",
+      "durationMs": 467
+    },
+    {
+      "name": "límite válido seed=1e3",
+      "status": "pass",
+      "durationMs": 498
+    },
+    {
+      "name": "entrada inválida star=\"\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 748
+    },
+    {
+      "name": "entrada inválida star=\"-1\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 715
+    },
+    {
+      "name": "entrada inválida star=\"0.49999\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 673
+    },
+    {
+      "name": "entrada inválida star=\"2.00001\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 697
+    },
+    {
+      "name": "entrada inválida planet=\"0\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 770
+    },
+    {
+      "name": "entrada inválida planet=\"20.001\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 628
+    },
+    {
+      "name": "entrada inválida period=\"0.99\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 654
+    },
+    {
+      "name": "entrada inválida period=\"30.001\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 699
+    },
+    {
+      "name": "entrada inválida noise=\"-0.1\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 686
+    },
+    {
+      "name": "entrada inválida noise=\"5000.1\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 699
+    },
+    {
+      "name": "entrada inválida seed=\"-1\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 713
+    },
+    {
+      "name": "entrada inválida seed=\"4294967296\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 750
+    },
+    {
+      "name": "entrada inválida seed=\"1.5\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 734
+    },
+    {
+      "name": "entrada inválida noise=\"1e309\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 748
+    },
+    {
+      "name": "entrada inválida period=\"1e-300\" suspende y recupera",
+      "status": "pass",
+      "durationMs": 818
+    },
+    {
+      "name": "reproducibilidad de semilla incluyendo cero",
+      "status": "pass",
+      "durationMs": 583
+    },
+    {
+      "name": "cambios rápidos, análisis repetido y vistas no dejan resultados obsoletos",
+      "status": "pass",
+      "durationMs": 8664
+    },
+    {
+      "name": "disposición 320px y parámetros plegables",
+      "status": "pass",
+      "durationMs": 1101
+    },
+    {
+      "name": "disposición 360px y parámetros plegables",
+      "status": "pass",
+      "durationMs": 919
+    },
+    {
+      "name": "disposición 768px y parámetros plegables",
+      "status": "pass",
+      "durationMs": 881
+    },
+    {
+      "name": "disposición 1024px y parámetros plegables",
+      "status": "pass",
+      "durationMs": 903
+    },
+    {
+      "name": "texto ampliado al 200% en escritorio y móvil",
+      "status": "pass",
+      "durationMs": 861
+    },
+    {
+      "name": "32 esquinas del dominio válido sin fallos y detección finita",
+      "status": "pass",
+      "durationMs": 8216
+    },
+    {
+      "name": "40 regeneraciones por entrada inválida no agotan ni bloquean 3D",
+      "status": "pass",
+      "durationMs": 12221
+    },
+    {
+      "name": "reproducción, cambio de vista y recuperación desde error",
+      "status": "pass",
+      "durationMs": 1252
+    },
+    {
+      "name": "sin fallos JavaScript durante los recorridos",
+      "status": "pass",
+      "durationMs": 0
+    }
+  ],
+  "pageErrors": []
+}

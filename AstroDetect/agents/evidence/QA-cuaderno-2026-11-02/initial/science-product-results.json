@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-02T05:02:18.078Z",
+  "base": "http://127.0.0.1:4182/AstroDetect/",
+  "results": [
+    {
+      "name": "5001 vértices; cinco centros delanteros y seis traseros sin caída",
+      "status": "pass"
+    },
+    {
+      "name": "profundidad reconstruida de SVG frente a razón de áreas independiente",
+      "status": "pass"
+    },
+    {
+      "name": "observador: detrás en t=0, delante y concéntrico en t=2.5, escala de radios física",
+      "status": "pass"
+    },
+    {
+      "name": "duplicar radio planeta 5 a 10 cuadruplica caída ideal visible",
+      "status": "pass"
+    }
+  ],
+  "evidence": {
+    "vertices": 5001,
+    "centers": [
+      500,
+      1500,
+      2500,
+      3500,
+      4500
+    ],
+    "fiveDipStarts": [
+      {
+        "x": 157.592,
+        "y": 36.603
+      },
+      {
+        "x": 329.592,
+        "y": 36.603
+      },
+      {
+        "x": 501.592,
+        "y": 36.603
+      },
+      {
+        "x": 673.592,
+        "y": 36.603
+      },
+      {
+        "x": 845.592,
+        "y": 36.603
+      }
+    ],
+    "flux": {
+      "low": 0.990923,
+      "high": 1.000672,
+      "measuredMin": 0.9915953698617022,
+      "measuredMax": 0.9999996301382978,
+      "expectedMin": 0.9915949821227747,
+      "tolerance": 0.000001
+    },
+    "geometry": {
+      "radii": {
+        "star": 72,
+        "planet": 6.600879689521346
+      },
+      "expectedRatio": 0.09167888457668535,
+      "frontTime": 2.5,
+      "rearTime": 0
+    },
+    "depth": {
+      "small": 2101.25,
+      "large": 8405.02,
+      "expectedLarge": 8405.017877225197,
+      "ratio": 4.000009518143962
+    }
+  }
+}

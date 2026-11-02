@@ -1,0 +1,26 @@
+[
+  {
+    "label": "Ruido de medición (ppm)",
+    "input": "25",
+    "slider": "50",
+    "invalid": "false"
+  },
+  {
+    "label": "Radio de la estrella (radios solares)",
+    "input": "1.234",
+    "slider": "1.23",
+    "invalid": "false"
+  },
+  {
+    "label": "Radio del planeta (radios terrestres)",
+    "input": "1.234",
+    "slider": "1.23",
+    "invalid": "false"
+  },
+  {
+    "label": "Período orbital (días)",
+    "input": "1.234",
+    "slider": "1.23",
+    "invalid": "false"
+  }
+]
