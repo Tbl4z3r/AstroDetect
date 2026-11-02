@@ -1,0 +1,24 @@
+{
+  "candidate": "4a7ae4f94dce831e5c27cc61fba5538551b972d3",
+  "date": "2026-11-02",
+  "timezone": "America/Santiago",
+  "environment": { "os": "Windows", "node": "22.12.0", "npm": "10.9.0", "browser": "Chromium" },
+  "commands": [
+    { "command": "npm ci", "status": "passed", "installedPackages": 197, "auditedPackages": 198, "seconds": 9, "moderateDevelopmentAdvisories": 11 },
+    { "command": "npm run lint", "status": "passed", "sourceCommentsCheck": "passed" },
+    { "command": "npm run typecheck", "status": "passed" },
+    { "command": "npm test -- --run", "status": "passed", "files": 16, "tests": 232, "seconds": 2.41 },
+    { "command": "npm run build", "status": "passed", "modules": 46, "milliseconds": 405, "warning": "3D module over 500 kB" },
+    { "command": "npx vitest run --config tests/ui/browser.config.ts", "attempt": 1, "status": "failed", "passed": 6, "failed": 1, "cause": "beforeEach hook timeout after 10000 ms on the first detection page" },
+    { "command": "npx vitest run --config tests/ui/browser.config.ts", "attempt": 2, "status": "passed", "files": 3, "tests": 7, "seconds": 9.42, "expectationsOrTimeoutsChanged": false },
+    { "command": "npm run test:e2e", "status": "passed", "tests": 19, "seconds": 17.5 },
+    { "command": "npm audit --omit=dev --json", "status": "passed", "vulnerabilities": 0 }
+  ],
+  "renderingRegression": {
+    "before": { "candidate": "509e48e44d47a4a748c9dac783c5a2ada9457fca", "status": "failed", "expectedWarmStarPixelsAbove": 100, "actual": 0, "step": "Guide step 7, resize 1280x900 to 1100x900", "pollTimeoutMs": 5000 },
+    "after": { "candidate": "4a7ae4f94dce831e5c27cc61fba5538551b972d3", "status": "passed", "targetedTestsIncludingExistingResilience": 6, "seconds": 9.5 }
+  },
+  "exploratory": { "precisionPassed": 8, "validBoundaryCombinations": 32, "guidePassed": 12, "guideResizePassed": 6 },
+  "ci": { "branch": "qa", "sha": "4a7ae4f94dce831e5c27cc61fba5538551b972d3", "conclusion": "success", "url": "https://github.com/Tbl4z3r/AstroDetect/actions/runs/41471190849" },
+  "limitations": ["Chromium local and Linux CI; no physical mobile devices", "Original user-tab load failure has no retained trace", "No production promotion or public capacity certification"]
+}

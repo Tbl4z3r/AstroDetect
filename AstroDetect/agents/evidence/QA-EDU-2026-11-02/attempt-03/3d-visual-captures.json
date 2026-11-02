@@ -1,0 +1,73 @@
+{
+  "candidate": "4a7ae4f94dce831e5c27cc61fba5538551b972d3",
+  "cameraRotationsRight": 2,
+  "records": [
+    {
+      "name": "3d-guide-paused-desktop",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "target": {
+        "top": 44.625,
+        "left": 357.796875,
+        "bottom": 563.5,
+        "right": 1015,
+        "width": 657.203125,
+        "height": 518.875
+      },
+      "canvas": {
+        "top": 70.40625,
+        "left": 357.796875,
+        "bottom": 481.15625,
+        "right": 1015,
+        "width": 657.203125,
+        "height": 410.75
+      },
+      "caption": {
+        "top": 608.8125,
+        "left": 460,
+        "bottom": 884,
+        "right": 820,
+        "width": 360,
+        "height": 275.1875
+      },
+      "clock": "0.0000 / 25 días",
+      "scrollY": 230
+    },
+    {
+      "name": "3d-guide-paused-narrow",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "target": {
+        "top": 16.421875,
+        "left": 45,
+        "bottom": 359.375,
+        "right": 275,
+        "width": 230,
+        "height": 342.953125
+      },
+      "canvas": {
+        "top": 42.203125,
+        "left": 45,
+        "bottom": 185.953125,
+        "right": 275,
+        "width": 230,
+        "height": 143.75
+      },
+      "caption": {
+        "top": 326.484375,
+        "left": 16,
+        "bottom": 624,
+        "right": 304,
+        "width": 288,
+        "height": 297.515625
+      },
+      "clock": "0.0000 / 25 días",
+      "scrollY": 1821
+    }
+  ],
+  "errors": []
+}
