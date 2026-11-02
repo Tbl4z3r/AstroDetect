@@ -6,7 +6,7 @@ import { semiMajorAxisMetres } from '../simulation/geometry';
 import type { OrbitView } from './orbitScene';
 import { MIN_VISUAL_PLANET_RATIO } from './orbitPresentation';
 
-type Status = 'loading' | 'ready' | 'unavailable';
+type Status = 'loading' | 'ready' | 'lost' | 'unavailable';
 
 function orbitalAngle(scenario: Scenario, timeDays: number): number {
   const position = positionAt(scenario, timeDays);
@@ -28,6 +28,11 @@ export default function Orbit3D({ scenario, timeDays, reducedMotion, active = tr
   const angle = orbitalAngle(scenario, timeDays);
   useEffect(() => {
     let cancelled = false;
+    const canvas = canvasRef.current;
+    function contextLost() { setStatus('lost'); }
+    function contextRestored() { setStatus('ready'); }
+    canvas?.addEventListener('webglcontextlost', contextLost);
+    canvas?.addEventListener('webglcontextrestored', contextRestored);
     import('./orbitScene').then(({ createOrbitView }) => {
       if (cancelled || !canvasRef.current || !containerRef.current) return;
       try {
@@ -39,6 +44,8 @@ export default function Orbit3D({ scenario, timeDays, reducedMotion, active = tr
     }, () => { if (!cancelled) setStatus('unavailable'); });
     return () => {
       cancelled = true;
+      canvas?.removeEventListener('webglcontextlost', contextLost);
+      canvas?.removeEventListener('webglcontextrestored', contextRestored);
       viewRef.current?.dispose();
       viewRef.current = null;
     };
@@ -53,12 +60,13 @@ export default function Orbit3D({ scenario, timeDays, reducedMotion, active = tr
     observer.observe(container);
     return () => observer.disconnect();
   }, []);
-  useEffect(() => { viewRef.current?.setActive(active && visible); }, [active, visible, status]);
+  useEffect(() => { viewRef.current?.setActive(active && visible && status === 'ready'); }, [active, visible, status]);
 
   return <figure className="orbit-3d">
     <div className="orbit-3d-stage" ref={containerRef} hidden={status === 'unavailable'}>
       <canvas ref={canvasRef} role="img" aria-label="Esquema orbital en 3D: la estrella iluminando al planeta, que recorre su órbita al mismo tiempo que la vista del observador y la curva." />
     </div>
+    {status === 'lost' && <p role="status">Se interrumpió temporalmente la vista 3D. Se reanudará cuando el navegador recupere el contexto gráfico. La vista del observador, la curva y el detector siguen disponibles.</p>}
     {status === 'unavailable' && <p>Tu navegador no permite la vista 3D (WebGL). La vista del observador y la curva siguen disponibles.</p>}
     {status !== 'unavailable' && <div className="camera-buttons" aria-label="Controles de cámara"><button type="button" disabled={status !== 'ready'} onClick={() => viewRef.current?.rotateCamera(-1)}>Girar a la izquierda</button><button type="button" disabled={status !== 'ready'} onClick={() => viewRef.current?.rotateCamera(1)}>Girar a la derecha</button><button type="button" disabled={status !== 'ready'} onClick={() => viewRef.current?.resetCamera()}>Centrar cámara</button></div>}
     <figcaption>Esquema 3D con distancia orbital comprimida. {ratio < MIN_VISUAL_PLANET_RATIO ? `Planeta ampliado ×${(MIN_VISUAL_PLANET_RATIO / ratio).toLocaleString('es-CL', { maximumFractionDigits: 1 })} para hacerlo visible.` : 'Proporción real entre los radios.'} Arrastra para girar, usa la rueda o dos dedos para acercarte. Los colores y el sombreado son ilustrativos.</figcaption>

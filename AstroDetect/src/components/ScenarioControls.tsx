@@ -42,7 +42,7 @@ export default function ScenarioControls({ onScenarioChange, initialScenario = D
           <input id={key} type="number" required min={min} max={max} step={key === 'seed' ? 1 : 'any'} value={raw}
             aria-invalid={Boolean(error)} aria-describedby={`${key}-help ${key}-error`}
             onChange={event => updateValues({ ...values, [key]: event.target.value })} />
-          {key !== 'seed' && <input type="range" min={min} max={max} step={key === 'noisePpm' ? 50 : 0.01}
+          {key !== 'seed' && <input type="range" min={min} max={max} step="any"
             value={Number.isFinite(value) ? value : DEFAULT_SCENARIO[key]} aria-label={`Ajustar ${label.toLocaleLowerCase('es-CL')} con deslizador`}
             onChange={event => updateValues({ ...values, [key]: event.target.value })} />}
           <p className="field-error" id={`${key}-error`} aria-live="polite">{error}</p>
