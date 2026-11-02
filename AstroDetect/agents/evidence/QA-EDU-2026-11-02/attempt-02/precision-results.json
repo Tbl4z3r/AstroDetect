@@ -1,0 +1,450 @@
+{
+  "candidate": "509e48e44d47a4a748c9dac783c5a2ada9457fca",
+  "url": "http://127.0.0.1:4182/AstroDetect/",
+  "started": "2026-11-02T15:19:42.491Z",
+  "checks": [
+    {
+      "name": "las conversiones aproximadas conservan operandos válidos de alta precisión",
+      "status": "passed",
+      "ms": 1402
+    },
+    {
+      "name": "un ruido positivo diminuto sigue siendo distinguible de cero en la fórmula",
+      "status": "passed",
+      "ms": 872
+    },
+    {
+      "name": "las 32 esquinas de parámetros producen datos finitos y análisis operable",
+      "status": "passed",
+      "ms": 7037
+    },
+    {
+      "name": "cinco centros delanteros y seis traseros conservan fase y profundidad de área independiente",
+      "status": "passed",
+      "ms": 714
+    },
+    {
+      "name": "última página y muestra5001 con P30 conservan cursor y datos",
+      "status": "passed",
+      "ms": 1054
+    },
+    {
+      "name": "cambio de parámetros retira inferencias y cálculos anteriores, e inválidos se recuperan",
+      "status": "passed",
+      "ms": 1662
+    },
+    {
+      "name": "planeta pequeño con ruidoalto comunica no evidencia sin concluir ausencia",
+      "status": "passed",
+      "ms": 871
+    },
+    {
+      "name": "operandos cercanos a límites del doble conservan ida y vuelta y P5.000001 produce conversión coherente",
+      "status": "passed",
+      "ms": 1552
+    }
+  ],
+  "findings": [],
+  "errors": [],
+  "precision": {
+    "entered": {
+      "starRadiusSolar": 1.00000001,
+      "planetRadiusEarth": 10.123456789,
+      "periodDays": 5.00000001,
+      "noisePpm": 0
+    },
+    "scenario": "Tu escenario: estrella de 1,00000001 R☉, planeta de 10,123456789 R⊕, período de 5,00000001 días, ruido de 0 ppm y semilla 42.Masa estelar: 1 M☉, fija. El radio cambia la geometría; no se deducen masa, temperatura o luminosidad a partir de él.",
+    "steps": [
+      "R★ = 1,00000001 × 695.700.000 ≈ 695.700.006,96 m.",
+      "Rₚ = 10,123456789 × 6.378.100 ≈ 64.568.419,75 m.",
+      "Rₚ / R★ ≈ 0,09281072.",
+      "δ ≈ (0,09281072)² ≈ 0,00861383 ≈ 0,8614 % ≈ 8.613,83 ppm."
+    ],
+    "orbitSteps": [
+      "Pₛ = 5,00000001 × 86.400 ≈ 432.000,000864 s.",
+      "M★ = 1 M☉ y μ = 1,3271244E+20 m³/s², constantes del modelo.",
+      "a ≈ ∛[(1,3271244E+20) × 432.000,000864² / (4π²)].",
+      "a ≈ 8.560.644,54 km ≈ 8,5606 millones de km."
+    ],
+    "starArithmetic": {
+      "displayedOperand": 1.00000001,
+      "displayedUnit": 695700000,
+      "displayedResult": 695700006.96,
+      "displayedArithmeticErrorMetres": 0.003000020980834961,
+      "acceptedOperand": 1.00000001
+    }
+  },
+  "tinyNoise": "06 · De órbita a mediciones\nVentana, muestras y ruido\n\nUna muestra es una medición en un instante. La simulación observa 5 vueltas con 5000 intervalos y 5001 muestras, incluyendo ambos extremos.\n\nVentana = 5P; Δt = P/1000\n\nTu ventana abarca de 0 a 25 días aproximadamente. Δt ≈ 0,005 días ≈ 432 segundos. Al aumentar el período también crecen ventana y cadencia: es una decisión didáctica, no un resultado del análisis.\n\nf observado,j = f limpio,j + σ Zⱼ\n\nσ = 1E-8 × 10⁻⁶ ≈ 1E-14 de flujo normalizado. Zⱼ representa una fluctuación gaussiana con media cero y desviación estándar uno. El ruido afecta la medición, no la órbita.\n\nQué hace la semilla 42",
+  "extremes": [
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,481 a 0,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 2Centro1,5 díasIntervalo bajo umbral1,481 a 1,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 3Centro2,5 díasIntervalo bajo umbral2,481 a 2,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 4Centro3,5 díasIntervalo bajo umbral3,481 a 3,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 5Centro4,5 díasIntervalo bajo umbral4,481 a 4,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,481 a 0,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 2Centro1,5 díasIntervalo bajo umbral1,481 a 1,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 3Centro2,5 díasIntervalo bajo umbral2,481 a 2,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 4Centro3,5 díasIntervalo bajo umbral3,481 a 3,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Evento 5Centro4,5 díasIntervalo bajo umbral4,481 a 4,519 díasDuración bajo umbral0,038 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento39Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,97 a 15,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 2Centro45 díasIntervalo bajo umbral44,97 a 45,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 3Centro75 díasIntervalo bajo umbral74,97 a 75,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 4Centro105 díasIntervalo bajo umbral104,97 a 105,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 5Centro135 díasIntervalo bajo umbral134,97 a 135,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,97 a 15,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 2Centro45 díasIntervalo bajo umbral44,97 a 45,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 3Centro75 díasIntervalo bajo umbral74,97 a 75,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 4Centro105 díasIntervalo bajo umbral104,97 a 105,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Evento 5Centro135 díasIntervalo bajo umbral134,97 a 135,03 díasDuración bajo umbral0,06 díasProfundidad medida0,000336 de flujo normalizado (336,2 ppm)Muestras del evento3Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,475 a 0,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 2Centro1,5 díasIntervalo bajo umbral1,475 a 1,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 3Centro2,5 díasIntervalo bajo umbral2,475 a 2,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 4Centro3,5 díasIntervalo bajo umbral3,475 a 3,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 5Centro4,5 díasIntervalo bajo umbral4,475 a 4,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,475 a 0,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 2Centro1,5 díasIntervalo bajo umbral1,475 a 1,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 3Centro2,5 díasIntervalo bajo umbral2,475 a 2,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 4Centro3,5 díasIntervalo bajo umbral3,475 a 3,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Evento 5Centro4,5 díasIntervalo bajo umbral4,475 a 4,525 díasDuración bajo umbral0,05 díasProfundidad medida0,129120 de flujo normalizado (129.120 ppm)Muestras del evento51Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1,00025 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,499 díasIntervalo bajo umbral0,477 a 0,521 díasDuración bajo umbral0,044 díasProfundidad medida0,127958 de flujo normalizado (127.958,1 ppm)Muestras del evento45Evento 2Centro1,5 díasIntervalo bajo umbral1,478 a 1,522 díasDuración bajo umbral0,044 díasProfundidad medida0,127707 de flujo normalizado (127.707,2 ppm)Muestras del evento45Evento 3Centro2,501 díasIntervalo bajo umbral2,479 a 2,523 díasDuración bajo umbral0,044 díasProfundidad medida0,128052 de flujo normalizado (128.052,1 ppm)Muestras del evento45Evento 4Centro3,5005 díasIntervalo bajo umbral3,478 a 3,523 díasDuración bajo umbral0,045 díasProfundidad medida0,130808 de flujo normalizado (130.807,5 ppm)Muestras del evento46Evento 5Centro4,4995 díasIntervalo bajo umbral4,477 a 4,522 díasDuración bajo umbral0,045 díasProfundidad medida0,130085 de flujo normalizado (130.085,4 ppm)Muestras del evento46Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,4995 díasIntervalo bajo umbral0,477 a 0,522 díasDuración bajo umbral0,045 díasProfundidad medida0,128057 de flujo normalizado (128.056,5 ppm)Muestras del evento46Evento 2Centro1,5005 díasIntervalo bajo umbral1,479 a 1,522 díasDuración bajo umbral0,043 díasProfundidad medida0,127299 de flujo normalizado (127.298,6 ppm)Muestras del evento44Evento 3Centro2,5 díasIntervalo bajo umbral2,479 a 2,521 díasDuración bajo umbral0,042 díasProfundidad medida0,128293 de flujo normalizado (128.292,9 ppm)Muestras del evento43Evento 4Centro3,5 díasIntervalo bajo umbral3,478 a 3,522 díasDuración bajo umbral0,044 díasProfundidad medida0,128210 de flujo normalizado (128.210,5 ppm)Muestras del evento45Evento 5Centro4,5 díasIntervalo bajo umbral4,478 a 4,522 díasDuración bajo umbral0,044 díasProfundidad medida0,131954 de flujo normalizado (131.953,7 ppm)Muestras del evento45Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,94 a 15,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 2Centro45 díasIntervalo bajo umbral44,94 a 45,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 3Centro75 díasIntervalo bajo umbral74,94 a 75,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 4Centro105 díasIntervalo bajo umbral104,94 a 105,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 5Centro135 díasIntervalo bajo umbral134,94 a 135,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,94 a 15,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 2Centro45 díasIntervalo bajo umbral44,94 a 45,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 3Centro75 díasIntervalo bajo umbral74,94 a 75,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 4Centro105 díasIntervalo bajo umbral104,94 a 105,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Evento 5Centro135 díasIntervalo bajo umbral134,94 a 135,06 díasDuración bajo umbral0,12 díasProfundidad medida0,134480 de flujo normalizado (134.480,3 ppm)Muestras del evento5Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,94 a 15,06 díasDuración bajo umbral0,12 díasProfundidad medida0,131732 de flujo normalizado (131.732,3 ppm)Muestras del evento5Evento 2Centro45 díasIntervalo bajo umbral44,94 a 45,06 díasDuración bajo umbral0,12 díasProfundidad medida0,128844 de flujo normalizado (128.843,8 ppm)Muestras del evento5Evento 3Centro75 díasIntervalo bajo umbral74,94 a 75,06 díasDuración bajo umbral0,12 díasProfundidad medida0,127945 de flujo normalizado (127.945,1 ppm)Muestras del evento5Evento 4Centro105 díasIntervalo bajo umbral104,94 a 105,06 díasDuración bajo umbral0,12 díasProfundidad medida0,135136 de flujo normalizado (135.135,7 ppm)Muestras del evento5Evento 5Centro135 díasIntervalo bajo umbral134,94 a 135,06 díasDuración bajo umbral0,12 díasProfundidad medida0,130569 de flujo normalizado (130.569,1 ppm)Muestras del evento5Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 0.5,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,94 a 15,06 díasDuración bajo umbral0,12 díasProfundidad medida0,133486 de flujo normalizado (133.485,6 ppm)Muestras del evento5Evento 2Centro45 díasIntervalo bajo umbral44,94 a 45,06 díasDuración bajo umbral0,12 díasProfundidad medida0,127217 de flujo normalizado (127.216,6 ppm)Muestras del evento5Evento 3Centro75 díasIntervalo bajo umbral74,94 a 75,06 díasDuración bajo umbral0,12 díasProfundidad medida0,125725 de flujo normalizado (125.724,7 ppm)Muestras del evento5Evento 4Centro105 díasIntervalo bajo umbral104,94 a 105,06 díasDuración bajo umbral0,12 díasProfundidad medida0,129527 de flujo normalizado (129.526,9 ppm)Muestras del evento5Evento 5Centro135 díasIntervalo bajo umbral134,94 a 135,06 díasDuración bajo umbral0,12 díasProfundidad medida0,138221 de flujo normalizado (138.220,7 ppm)Muestras del evento5Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,421 a 0,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 2Centro1,5 díasIntervalo bajo umbral1,421 a 1,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 3Centro2,5 díasIntervalo bajo umbral2,421 a 2,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 4Centro3,5 díasIntervalo bajo umbral3,421 a 3,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 5Centro4,5 díasIntervalo bajo umbral4,421 a 4,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,421 a 0,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 2Centro1,5 díasIntervalo bajo umbral1,421 a 1,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 3Centro2,5 díasIntervalo bajo umbral2,421 a 2,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 4Centro3,5 díasIntervalo bajo umbral3,421 a 3,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Evento 5Centro4,5 díasIntervalo bajo umbral4,421 a 4,579 díasDuración bajo umbral0,158 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento159Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,79 a 15,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 2Centro45 díasIntervalo bajo umbral44,79 a 45,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 3Centro75 díasIntervalo bajo umbral74,79 a 75,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 4Centro105 díasIntervalo bajo umbral104,79 a 105,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 5Centro135 díasIntervalo bajo umbral134,79 a 135,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,79 a 15,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 2Centro45 díasIntervalo bajo umbral44,79 a 45,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 3Centro75 díasIntervalo bajo umbral74,79 a 75,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 4Centro105 díasIntervalo bajo umbral104,79 a 105,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Evento 5Centro135 díasIntervalo bajo umbral134,79 a 135,21 díasDuración bajo umbral0,42 díasProfundidad medida0,000021 de flujo normalizado (21 ppm)Muestras del evento15Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 1,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,414 a 0,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 2Centro1,5 díasIntervalo bajo umbral1,414 a 1,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 3Centro2,5 díasIntervalo bajo umbral2,414 a 2,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 4Centro3,5 díasIntervalo bajo umbral3,414 a 3,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 5Centro4,5 díasIntervalo bajo umbral4,414 a 4,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 1 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro0,5 díasIntervalo bajo umbral0,414 a 0,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 2Centro1,5 díasIntervalo bajo umbral1,414 a 1,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 3Centro2,5 díasIntervalo bajo umbral2,414 a 2,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 4Centro3,5 díasIntervalo bajo umbral3,414 a 3,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Evento 5Centro4,5 díasIntervalo bajo umbral4,414 a 4,586 díasDuración bajo umbral0,172 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento173Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 1,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 0,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,76 a 15,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 2Centro45 díasIntervalo bajo umbral44,76 a 45,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 3Centro75 díasIntervalo bajo umbral74,76 a 75,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 4Centro105 díasIntervalo bajo umbral104,76 a 105,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 5Centro135 díasIntervalo bajo umbral134,76 a 135,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 0,
+      "seed": 4294967295,
+      "analysis": "Señal compatible con un posible tránsito. Eventos identificados: 5.Repetición de los eventosPeríodo estimado: 30 días. Es una estimación a partir de las separaciones entre candidatos.Ver las mediciones de 5 posibles tránsitosLa duración corresponde al tramo de mediciones bajo el umbral de búsqueda; puede ser menor que la duración física completa del tránsito. La profundidad se mide respecto de la línea base estimada.Evento 1Centro15 díasIntervalo bajo umbral14,76 a 15,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 2Centro45 díasIntervalo bajo umbral44,76 a 45,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 3Centro75 díasIntervalo bajo umbral74,76 a 75,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 4Centro105 díasIntervalo bajo umbral104,76 a 105,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Evento 5Centro135 díasIntervalo bajo umbral134,76 a 135,24 díasDuración bajo umbral0,48 díasProfundidad medida0,008405 de flujo normalizado (8.405 ppm)Muestras del evento17Advertencias del análisisUna señal candidata no confirma un planeta."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 0,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    },
+    {
+      "starRadiusSolar": 2,
+      "planetRadiusEarth": 20,
+      "periodDays": 30,
+      "noisePpm": 5000,
+      "seed": 4294967295,
+      "analysis": "Sin evidencia con los criterios actuales. Eventos identificados: 0.La señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.Repetición de los eventosNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.Advertencias del análisisNo hay suficientes eventos para estimar repetición."
+    }
+  ],
+  "science": {
+    "vertices": 5001,
+    "front": [
+      500,
+      1500,
+      2500,
+      3500,
+      4500
+    ],
+    "rear": [
+      0,
+      1000,
+      2000,
+      3000,
+      4000,
+      5000
+    ],
+    "recovered": 0.9915953698617022,
+    "expected": 0.9915949821227747,
+    "tolerance": 0.000001
+  },
+  "lastSample": "5001150,0000001,000000001,000000000,00Ver en curva",
+  "noEvidence": "Sin evidencia con los criterios actuales. Eventos identificados: 0.\n\nLa señal puede ser demasiado débil o quedar oculta por el ruido. No identificar candidatos no demuestra la ausencia de un planeta.\n\nRepetición de los eventos\n\nNo se pudo estimar un período: faltan eventos suficientes o sus separaciones no son consistentes con los criterios del algoritmo.\n\nAdvertencias del análisis\nNo hay suficientes eventos para estimar repetición.",
+  "roundtrip": [
+    {
+      "values": {
+        "starRadiusSolar": 1.0000000000000002,
+        "planetRadiusEarth": 10.123456789123455,
+        "periodDays": 5.000001,
+        "noisePpm": 1e-8
+      },
+      "summary": "Tu escenario: estrella de 1,0000000000000002 R☉, planeta de 10,123456789123455 R⊕, período de 5,000001 días, ruido de 1E-8 ppm y semilla 42.\n\nMasa estelar: 1 M☉, fija. El radio cambia la geometría; no se deducen masa, temperatura o luminosidad a partir de él.",
+      "parsed": [
+        {
+          "line": "R★ = 1,0000000000000002 × 695.700.000 ≈ 695.700.000 m.",
+          "accepted": 1.0000000000000002,
+          "operand": 1.0000000000000002,
+          "unit": 695700000,
+          "shown": 695700000,
+          "error": 1.1920928955078125e-7,
+          "tolerance": 0.005
+        },
+        {
+          "line": "Rₚ = 10,123456789123455 × 6.378.100 ≈ 64.568.419,75 m.",
+          "accepted": 10.123456789123455,
+          "operand": 10.123456789123455,
+          "unit": 6378100,
+          "shown": 64568419.75,
+          "error": 0.003291688859462738,
+          "tolerance": 0.005
+        },
+        {
+          "line": "Pₛ = 5,000001 × 86.400 ≈ 432.000,0864 s.",
+          "accepted": 5.000001,
+          "operand": 5.000001,
+          "unit": 86400,
+          "shown": 432000.0864,
+          "error": 5.820766091346741e-11,
+          "tolerance": 5e-8
+        }
+      ],
+      "kepler": [
+        "Pₛ = 5,000001 × 86.400 ≈ 432.000,0864 s.",
+        "M★ = 1 M☉ y μ = 1,3271244E+20 m³/s², constantes del modelo.",
+        "a ≈ ∛[(1,3271244E+20) × 432.000,0864² / (4π²)].",
+        "a ≈ 8.560.645,67 km ≈ 8,5606 millones de km."
+      ]
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.9999999999999998,
+        "planetRadiusEarth": 19.999999999999996,
+        "periodDays": 29.999999999999996,
+        "noisePpm": 4999.999999999999
+      },
+      "summary": "Tu escenario: estrella de 1,9999999999999998 R☉, planeta de 19,999999999999996 R⊕, período de 29,999999999999996 días, ruido de 4.999,999999999999 ppm y semilla 42.\n\nMasa estelar: 1 M☉, fija. El radio cambia la geometría; no se deducen masa, temperatura o luminosidad a partir de él.",
+      "parsed": [
+        {
+          "line": "R★ = 1,9999999999999998 × 695.700.000 ≈ 1.391.400.000 m.",
+          "accepted": 1.9999999999999998,
+          "operand": 1.9999999999999998,
+          "unit": 695700000,
+          "shown": 1391400000,
+          "error": 2.384185791015625e-7,
+          "tolerance": 0.005
+        },
+        {
+          "line": "Rₚ = 19,999999999999996 × 6.378.100 ≈ 127.562.000 m.",
+          "accepted": 19.999999999999996,
+          "operand": 19.999999999999996,
+          "unit": 6378100,
+          "shown": 127562000,
+          "error": 2.9802322387695312e-8,
+          "tolerance": 0.005
+        },
+        {
+          "line": "Pₛ = 29,999999999999996 × 86.400 ≈ 2.592.000 s.",
+          "accepted": 29.999999999999996,
+          "operand": 29.999999999999996,
+          "unit": 86400,
+          "shown": 2592000,
+          "error": 4.656612873077393e-10,
+          "tolerance": 5e-8
+        }
+      ],
+      "kepler": [
+        "Pₛ = 29,999999999999996 × 86.400 ≈ 2.592.000 s.",
+        "M★ = 1 M☉ y μ = 1,3271244E+20 m³/s², constantes del modelo.",
+        "a ≈ ∛[(1,3271244E+20) × 2.592.000² / (4π²)].",
+        "a ≈ 28.266.625,43 km ≈ 28,2666 millones de km."
+      ]
+    }
+  ],
+  "completed": "2026-11-02T15:19:58.024Z"
+}

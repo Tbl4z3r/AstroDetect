@@ -1,0 +1,1415 @@
+{
+  "candidate": "509e48e44d47a4a748c9dac783c5a2ada9457fca",
+  "started": "2026-11-02T15:18:44.559Z",
+  "checks": [
+    {
+      "name": "12 pasos, colocación y teclado 320x640",
+      "status": "passed",
+      "durationMs": 2955,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 86.125,
+            "right": 295,
+            "bottom": 239.75
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 86.75,
+            "right": 295,
+            "bottom": 240.375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 97.375,
+            "right": 295,
+            "bottom": 251
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 98,
+            "right": 295,
+            "bottom": 251.625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 103.625,
+            "right": 295,
+            "bottom": 245.015625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 304.15625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.21875,
+            "right": 295,
+            "bottom": 288.15625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 37,
+            "top": 8.421875,
+            "right": 283,
+            "bottom": 310.484375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 37,
+            "top": 30.375,
+            "right": 283,
+            "bottom": 319.359375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 280.234375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 299,
+            "bottom": 264.234375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 304.15625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8.34375,
+            "right": 299,
+            "bottom": 288.15625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 302.5625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 299,
+            "bottom": 286.5625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 280.234375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 8,
+            "top": 107.9375,
+            "right": 312,
+            "bottom": 172.984375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 360x800",
+      "status": "passed",
+      "durationMs": 2256,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 486.484375,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 189.53125,
+            "right": 335,
+            "bottom": 319.015625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 190.015625,
+            "right": 335,
+            "bottom": 319.5
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 531.140625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 200.5,
+            "right": 335,
+            "bottom": 329.984375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 189.984375,
+            "right": 335,
+            "bottom": 319.46875
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 204.46875,
+            "right": 335,
+            "bottom": 304.359375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 486.484375,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 33.5625,
+            "right": 335,
+            "bottom": 452.578125
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 37,
+            "top": 62.171875,
+            "right": 323,
+            "bottom": 446.125
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 531.140625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 37,
+            "top": 128.125,
+            "right": 323,
+            "bottom": 402.421875
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 484.890625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 21,
+            "top": 80.59375,
+            "right": 339,
+            "bottom": 403.640625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 486.484375,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8.40625,
+            "right": 339,
+            "bottom": 470.484375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 21,
+            "top": 182.59375,
+            "right": 339,
+            "bottom": 492.8125
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 462.5625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 8,
+            "top": 198.34375,
+            "right": 352,
+            "bottom": 263.390625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 1280x900",
+      "status": "passed",
+      "durationMs": 2399,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 318.78125,
+            "right": 659,
+            "bottom": 593.96875
+          },
+          "highlight": {
+            "left": 33,
+            "top": 310.78125,
+            "right": 287,
+            "bottom": 440.265625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 384.265625,
+            "right": 659,
+            "bottom": 637.125
+          },
+          "highlight": {
+            "left": 33,
+            "top": 376.265625,
+            "right": 287,
+            "bottom": 523.109375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 393.109375,
+            "right": 659,
+            "bottom": 645.96875
+          },
+          "highlight": {
+            "left": 33,
+            "top": 385.109375,
+            "right": 287,
+            "bottom": 514.59375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 393.59375,
+            "right": 659,
+            "bottom": 646.453125
+          },
+          "highlight": {
+            "left": 33,
+            "top": 385.59375,
+            "right": 287,
+            "bottom": 515.078125
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 399.078125,
+            "right": 659,
+            "bottom": 651.9375
+          },
+          "highlight": {
+            "left": 33,
+            "top": 391.078125,
+            "right": 287,
+            "bottom": 508.328125
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 239.53125,
+            "right": 659,
+            "bottom": 514.71875
+          },
+          "highlight": {
+            "left": 33,
+            "top": 231.53125,
+            "right": 287,
+            "bottom": 669.140625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 349.796875,
+            "top": 36.625,
+            "right": 1023,
+            "bottom": 571.5
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 651,
+            "top": 190.625,
+            "right": 1011,
+            "bottom": 443.484375
+          },
+          "highlight": {
+            "left": 1023,
+            "top": 182.625,
+            "right": 1231,
+            "bottom": 717.5
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 333.796875,
+            "top": 210.078125,
+            "right": 1247,
+            "bottom": 399.40625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 586.484375,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 333.796875,
+            "top": 74.75,
+            "right": 1247,
+            "bottom": 511.875
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 333.796875,
+            "top": 459.859375,
+            "right": 1247,
+            "bottom": 592.8125
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 584.890625,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 16,
+            "top": 136.65625,
+            "right": 1146.59375,
+            "bottom": 225.625
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 640x320",
+      "status": "passed",
+      "durationMs": 2235,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 316,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 324,
+            "top": 8,
+            "right": 615,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.296875,
+            "right": 316,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 324,
+            "top": 8.296875,
+            "right": 615,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 316,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.234375,
+            "right": 615,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 41,
+            "top": 8.25,
+            "right": 439,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 439,
+            "top": 8.25,
+            "right": 599,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.0625,
+            "right": 615,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 615,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.21875,
+            "right": 615,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 8,
+            "top": 31.625,
+            "right": 541.953125,
+            "bottom": 96.671875
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "texto200porciento en móvil y doce pasos",
+      "status": "passed",
+      "durationMs": 2433,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.3125,
+            "right": 303,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.328125,
+            "right": 303,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.0625,
+            "right": 303,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.34375,
+            "right": 303,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.34375,
+            "right": 303,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8,
+            "right": 303,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 81,
+            "top": 8,
+            "right": 279,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 81,
+            "top": 8,
+            "right": 279,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 49,
+            "top": 8.296875,
+            "right": 311,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 49,
+            "top": 8.03125,
+            "right": 311,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 49,
+            "top": 8.40625,
+            "right": 311,
+            "bottom": 328
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 24,
+            "top": 62.15625,
+            "right": 336,
+            "bottom": 281.4375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "veinte aperturas y cierres conservan curva, reloj y resultados",
+      "status": "passed",
+      "durationMs": 7834,
+      "errors": []
+    },
+    {
+      "name": "abrir desde Entender y restaurar vista",
+      "status": "passed",
+      "durationMs": 1132,
+      "errors": []
+    },
+    {
+      "name": "abrir desde Experimentar y restaurar vista",
+      "status": "passed",
+      "durationMs": 1097,
+      "errors": []
+    },
+    {
+      "name": "entradas inválidas, elementos suspendidos y Escape",
+      "status": "passed",
+      "durationMs": 1280,
+      "errors": []
+    },
+    {
+      "name": "reproducción pausa al abrir; fondo inerte y movimiento reducido en vivo",
+      "status": "passed",
+      "durationMs": 1655,
+      "errors": []
+    },
+    {
+      "name": "resize y scroll durante el paso de cámara",
+      "status": "passed",
+      "durationMs": 1461,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 349.796875,
+            "top": 36.625,
+            "right": 1023,
+            "bottom": 571.5
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 37,
+            "top": 8.421875,
+            "right": 283,
+            "bottom": 310.484375
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 41,
+            "top": 8.25,
+            "right": 439,
+            "bottom": 112
+          },
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        }
+      ]
+    },
+    {
+      "name": "la guía funciona sin conexión luego de cargar",
+      "status": "passed",
+      "durationMs": 2294,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "completed": "2026-11-02T15:19:14.172Z"
+}
