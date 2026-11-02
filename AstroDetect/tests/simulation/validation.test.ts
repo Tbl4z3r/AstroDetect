@@ -7,7 +7,7 @@ const api = { validateScenario, positionAt, fluxAt } satisfies Pick<
   SimulationEngine, 'validateScenario' | 'positionAt' | 'fluxAt'
 >;
 
-describe('validación científica del contrato v1', () => {
+describe('validación científica del contrato v1.1', () => {
   it('acepta valores iniciales y no modifica entradas congeladas', () => {
     expect(api.validateScenario(DEFAULT_SCENARIO)).toEqual({ valid: true, errors: [] });
     expect(() => api.positionAt(DEFAULT_SCENARIO, 2.5)).not.toThrow();
@@ -49,10 +49,20 @@ describe('validación científica del contrato v1', () => {
       errors: [{ field: 'seed', message: expect.any(String) }],
     });
     const result = validateScenario({
-      starRadiusSolar: 0, planetRadiusEarth: 21, periodDays: Infinity, noisePpm: -1, seed: -1,
+      starRadiusSolar: 0, starMassSolar: 0, planetRadiusEarth: 21, periodDays: Infinity, noisePpm: -1, seed: -1,
     });
     expect(result.valid).toBe(false);
     expect(result.errors.map(error => error.field).sort()).toEqual(Object.keys(SCENARIO_LIMITS).sort());
+  });
+
+  it('admite masa omitida o undefined como legado solar y rechaza null explícito', () => {
+    const legacy: Scenario = { starRadiusSolar: 1, planetRadiusEarth: 10, periodDays: 5, noisePpm: 500, seed: 42 };
+    expect(validateScenario(legacy)).toEqual({ valid: true, errors: [] });
+    expect(validateScenario({ ...legacy, starMassSolar: undefined })).toEqual({ valid: true, errors: [] });
+    const invalid = { ...legacy, starMassSolar: null } as unknown as Scenario;
+    expect(validateScenario(invalid)).toEqual({ valid: false, errors: [{ field: 'starMassSolar', message: expect.any(String) }] });
+    expect(() => positionAt(invalid, 0)).toThrow('starMassSolar');
+    expect(() => fluxAt(invalid, 0)).toThrow('starMassSolar');
   });
 
   for (const timeDays of [NaN, Infinity, -Infinity]) {

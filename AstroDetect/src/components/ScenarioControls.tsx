@@ -2,9 +2,11 @@ import { useState } from 'react';
 import { DEFAULT_SCENARIO, SCENARIO_LIMITS } from '../contracts';
 import type { Scenario } from '../contracts';
 import { validateScenario } from '../simulation';
+import { STAR_PROFILES, stellarProfileFor } from './stellarProfiles';
 
 const fields: { key: keyof Scenario; label: string; unit: string; help: string }[] = [
-  { key: 'starRadiusSolar', label: 'Radio de la estrella', unit: 'radios solares', help: 'Radio, no diámetro. La masa estelar permanece fija.' },
+  { key: 'starRadiusSolar', label: 'Radio de la estrella', unit: 'radios solares', help: 'Radio, no diámetro. Cambia la fracción de luz que tapa el planeta.' },
+  { key: 'starMassSolar', label: 'Masa de la estrella', unit: 'masas solares', help: 'Cambia la distancia orbital calculada con Kepler para el período elegido.' },
   { key: 'planetRadiusEarth', label: 'Radio del planeta', unit: 'radios terrestres', help: 'Radio, no diámetro. Predice cómo cambiaría la profundidad del tránsito.' },
   { key: 'periodDays', label: 'Período orbital', unit: 'días', help: 'Tiempo que tarda el planeta en completar una órbita.' },
   { key: 'noisePpm', label: 'Ruido de medición', unit: 'ppm', help: 'Desviación estándar en partes por millón del flujo de referencia.' },
@@ -12,22 +14,20 @@ const fields: { key: keyof Scenario; label: string; unit: string; help: string }
 ];
 
 function initialValues(scenario: Readonly<Scenario>): Record<keyof Scenario, string> {
-  return Object.fromEntries(fields.map(({ key }) => [key, String(scenario[key])])) as Record<keyof Scenario, string>;
+  return Object.fromEntries(fields.map(({ key }) => [key, String(scenario[key] ?? DEFAULT_SCENARIO[key] ?? 1)])) as Record<keyof Scenario, string>;
 }
 
 export default function ScenarioControls({ onScenarioChange, initialScenario = DEFAULT_SCENARIO }: { onScenarioChange: (scenario: Scenario | null) => void; initialScenario?: Readonly<Scenario> }) {
   const [values, setValues] = useState(() => initialValues(initialScenario));
   const [notice, setNotice] = useState('');
+  const profile = stellarProfileFor({ starRadiusSolar: Number(values.starRadiusSolar), starMassSolar: Number(values.starMassSolar) });
   function updateValues(next: Record<keyof Scenario, string>) {
     setValues(next);
     setNotice('');
     const scenario = Object.fromEntries(fields.map(({ key }) => [key, Number(next[key])])) as unknown as Scenario;
     onScenarioChange(fields.some(({ key }) => next[key].trim() === '') || !validateScenario(scenario).valid ? null : scenario);
   }
-  return <section aria-labelledby="configuracion">
-    <p className="section-index">Tu experimento</p><h2 id="configuracion" tabIndex={-1}>Diseña el sistema</h2>
-    <fieldset><legend>Parámetros del escenario</legend>
-      <div className="controls-grid">{fields.map(({ key, label, unit, help }) => {
+  function renderField({ key, label, unit, help }: typeof fields[number]) {
         const { min, max } = SCENARIO_LIMITS[key];
         const raw = values[key];
         const value = Number(raw);
@@ -42,11 +42,26 @@ export default function ScenarioControls({ onScenarioChange, initialScenario = D
             aria-invalid={Boolean(error)} aria-describedby={`${key}-help ${key}-error`}
             onChange={event => updateValues({ ...values, [key]: event.target.value })} />
           {key !== 'seed' && <input type="range" min={min} max={max} step="any"
-            value={Number.isFinite(value) ? value : DEFAULT_SCENARIO[key]} aria-label={`Ajustar ${label.toLocaleLowerCase('es-CL')} con deslizador`}
+            value={Number.isFinite(value) ? value : DEFAULT_SCENARIO[key] ?? 1} aria-label={`Ajustar ${label.toLocaleLowerCase('es-CL')} con deslizador`}
             onChange={event => updateValues({ ...values, [key]: event.target.value })} />}
           <p className="field-error" id={`${key}-error`} aria-live="polite">{error}</p>
         </div>;
-      })}</div>
+  }
+  return <section aria-labelledby="configuracion">
+    <p className="section-index">Tu experimento</p><h2 id="configuracion" tabIndex={-1}>Diseña el sistema</h2>
+    <fieldset><legend>Parámetros del escenario</legend>
+      <div className="stellar-system" data-guide="stellar-system"><div className="star-selector">
+        <label htmlFor="star-profile">Modelo de estrella</label>
+        <select id="star-profile" value={profile?.id ?? 'custom'} aria-describedby="star-profile-help" onChange={event => {
+          const selected = STAR_PROFILES.find(item => item.id === event.target.value);
+          if (selected) updateValues({ ...values, starRadiusSolar: String(selected.radiusSolar), starMassSolar: String(selected.massSolar) });
+        }}>
+          <option value="custom" disabled>Configuración libre</option>
+          {STAR_PROFILES.map(item => <option key={item.id} value={item.id}>{item.name} · {item.spectralType}</option>)}
+        </select>
+        <p id="star-profile-help">{profile?.description ?? 'Masa y radio independientes: esta configuración no representa necesariamente una estrella real.'} Modelos educativos; colores ilustrativos.</p>
+      </div><div className="controls-grid">{fields.slice(0, 2).map(renderField)}</div></div>
+      <div className="controls-grid">{fields.slice(2).map(renderField)}</div>
       <button type="button" className="secondary-button" onClick={() => { updateValues(initialValues(DEFAULT_SCENARIO)); setNotice('Configuración restablecida a los valores iniciales y datos regenerados.'); }}>Restablecer configuración</button>
       <p role="status">{notice}</p>
     </fieldset>

@@ -154,7 +154,8 @@ describe('serie temporal limpia y observada', () => {
   });
 
   for (const [field, values] of [
-    ['starRadiusSolar', [0.49, 2.01, NaN, Infinity, -Infinity]],
+    ['starRadiusSolar', [0.19, 2.01, NaN, Infinity, -Infinity]],
+    ['starMassSolar', [0.19, 1.61, NaN, Infinity, -Infinity]],
     ['planetRadiusEarth', [0, 21, NaN, Infinity, -Infinity]],
     ['periodDays', [0, 31, NaN, Infinity, -Infinity]],
     ['noisePpm', [-1, 5001, NaN, Infinity, -Infinity]],

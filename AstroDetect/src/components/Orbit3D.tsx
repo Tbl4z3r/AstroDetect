@@ -5,12 +5,13 @@ import { positionAt } from '../simulation';
 import { semiMajorAxisMetres } from '../simulation/geometry';
 import type { OrbitView } from './orbitScene';
 import { MIN_VISUAL_PLANET_RATIO } from './orbitPresentation';
+import { stellarColorFor } from './stellarProfiles';
 
 type Status = 'loading' | 'ready' | 'lost' | 'unavailable' | 'load-error';
 
 function orbitalAngle(scenario: Scenario, timeDays: number): number {
   const position = positionAt(scenario, timeDays);
-  const semiMajorAxisOverStarRadius = semiMajorAxisMetres(scenario.periodDays)
+  const semiMajorAxisOverStarRadius = semiMajorAxisMetres(scenario.periodDays, scenario.starMassSolar)
     / (scenario.starRadiusSolar * PHYSICAL_CONSTANTS.solarRadiusMetres);
   const sine = Math.max(-1, Math.min(1, position.xOverStarRadius / semiMajorAxisOverStarRadius));
   const cosine = Math.sqrt(1 - sine * sine);
@@ -27,6 +28,7 @@ export default function Orbit3D({ scenario, timeDays, reducedMotion, active = tr
   const ratio = scenario.planetRadiusEarth * PHYSICAL_CONSTANTS.earthRadiusMetres
     / (scenario.starRadiusSolar * PHYSICAL_CONSTANTS.solarRadiusMetres);
   const angle = orbitalAngle(scenario, timeDays);
+  const starColor = stellarColorFor(scenario);
   useEffect(() => {
     let cancelled = false;
     const canvas = canvasRef.current;
@@ -53,6 +55,7 @@ export default function Orbit3D({ scenario, timeDays, reducedMotion, active = tr
   }, [attempt]);
 
   useEffect(() => { viewRef.current?.setBodies(ratio, angle); }, [ratio, angle, status]);
+  useEffect(() => { viewRef.current?.setStarColor(starColor); }, [starColor, status]);
   useEffect(() => { viewRef.current?.setReducedMotion(reducedMotion); }, [reducedMotion, status]);
   useEffect(() => {
     const container = containerRef.current;

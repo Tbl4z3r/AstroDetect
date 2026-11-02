@@ -2,10 +2,11 @@ import { expect, test } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import App from '../../src/app/App';
 
-test('presenta estructura educativa y cinco controles etiquetados sin resultados ficticios', () => {
+test('presenta estructura educativa, selector estelar y seis controles etiquetados sin resultados ficticios', () => {
   const html = renderToStaticMarkup(<App />);
-  expect(html.match(/type="number"/g)).toHaveLength(5);
-  expect(html.match(/<label /g)).toHaveLength(6);
+  expect(html.match(/type="number"/g)).toHaveLength(6);
+  expect(html.match(/<label /g)).toHaveLength(8);
+  expect(html).toContain('Modelo de estrella');
   expect(html).toContain('Vistas del cuaderno');
   expect(html).toContain('id="view-laboratory"');
   expect(html).toContain('id="view-guide" hidden=""');

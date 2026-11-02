@@ -50,7 +50,7 @@ test('Entender usa los parámetros y resultados vigentes y retira cálculos cuan
   const guide = page.locator('#view-guide');
   await expect(guide.getByRole('heading', { name: 'La tercera ley de Kepler', exact: true }).locator('..')).toContainText('864.000 s');
   await expect(guide.getByRole('heading', { name: 'De los radios a la profundidad', exact: true }).locator('..')).toContainText('2.101,25 ppm');
-  await expect(guide).toContainText('Masa estelar: 1 M☉, fija.');
+  await expect(guide).toContainText('Masa estelar: 1 M☉');
   await page.getByRole('button', { name: 'Observar', exact: false }).click();
   await page.getByRole('button', { name: 'Buscar posibles tránsitos', exact: true }).click();
   await page.getByRole('button', { name: 'Entender', exact: false }).click();

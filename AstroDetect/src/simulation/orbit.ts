@@ -16,7 +16,7 @@ export function positionAt(scenario: Scenario, timeDays: number): Position {
   const phase = 2 * Math.PI * (cycle - 0.5);
   const starRadius = scenario.starRadiusSolar * PHYSICAL_CONSTANTS.solarRadiusMetres;
   return {
-    xOverStarRadius: semiMajorAxisMetres(scenario.periodDays) / starRadius * Math.sin(phase),
+    xOverStarRadius: semiMajorAxisMetres(scenario.periodDays, scenario.starMassSolar) / starRadius * Math.sin(phase),
     yOverStarRadius: 0,
     inFront: cycle > 0.25 && cycle < 0.75,
   };

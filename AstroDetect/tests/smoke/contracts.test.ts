@@ -1,8 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_DETECTION_OPTIONS, DEFAULT_SCENARIO, SCENARIO_LIMITS, validateDetectionOptions } from '../../src/contracts';
-describe('contrato v1', () => {
+import { CONTRACT_VERSION, DEFAULT_DETECTION_OPTIONS, DEFAULT_SCENARIO, MODEL_VERSION, SCENARIO_LIMITS, validateDetectionOptions } from '../../src/contracts';
+describe('contrato v1.1', () => {
   it('conserva valores iniciales y límites acordados', () => {
-    expect(DEFAULT_SCENARIO).toEqual({ starRadiusSolar: 1, planetRadiusEarth: 10, periodDays: 5, noisePpm: 500, seed: 42 });
+    expect(DEFAULT_SCENARIO).toEqual({ starRadiusSolar: 1, starMassSolar: 1, planetRadiusEarth: 10, periodDays: 5, noisePpm: 500, seed: 42 });
+    expect(CONTRACT_VERSION).toBe('1.1.0');
+    expect(MODEL_VERSION).toBe('1.1.0');
+    expect(SCENARIO_LIMITS.starMassSolar).toEqual({ min: 0.2, max: 1.6 });
+    expect(SCENARIO_LIMITS.starRadiusSolar).toEqual({ min: 0.2, max: 2 });
     expect(SCENARIO_LIMITS.seed).toEqual({ min: 0, max: 4294967295 });
     expect(validateDetectionOptions(DEFAULT_DETECTION_OPTIONS)).toEqual({ valid: true, errors: [] });
   });

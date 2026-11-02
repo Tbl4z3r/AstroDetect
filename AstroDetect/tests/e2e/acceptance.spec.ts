@@ -68,6 +68,8 @@ test('móvil de 360px permite teclado, errores y avance manual con movimiento re
   await expect(page.getByRole('link', { name: 'Ir a la configuración', exact: true })).toBeFocused();
   await page.keyboard.press('Enter');
   await page.keyboard.press('Tab');
+  await expect(page.getByLabel('Modelo de estrella', { exact: true })).toBeFocused();
+  await page.keyboard.press('Tab');
   const star = page.getByLabel('Radio de la estrella (radios solares)', { exact: true });
   await expect(star).toBeFocused();
   await page.keyboard.press('ControlOrMeta+A');

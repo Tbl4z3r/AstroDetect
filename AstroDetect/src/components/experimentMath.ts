@@ -7,11 +7,15 @@ export function experimentQuantities(scenario: Scenario, result: SimulationResul
   const centralFlux = fluxAt(scenario, scenario.periodDays / 2);
   const starRadiusMetres = scenario.starRadiusSolar * PHYSICAL_CONSTANTS.solarRadiusMetres;
   const planetRadiusMetres = scenario.planetRadiusEarth * PHYSICAL_CONSTANTS.earthRadiusMetres;
-  const orbitMetres = semiMajorAxisMetres(scenario.periodDays);
+  const starMassSolar = scenario.starMassSolar ?? 1;
+  const gravitationalParameter = PHYSICAL_CONSTANTS.solarGravitationalParameter * starMassSolar;
+  const orbitMetres = semiMajorAxisMetres(scenario.periodDays, starMassSolar);
   const durationDays = scenario.periodDays / Math.PI * Math.asin((starRadiusMetres + planetRadiusMetres) / orbitMetres);
   return {
     starRadiusMetres,
     planetRadiusMetres,
+    starMassSolar,
+    gravitationalParameter,
     radiusRatio: planetRadiusMetres / starRadiusMetres,
     periodSeconds: scenario.periodDays * PHYSICAL_CONSTANTS.secondsPerDay,
     orbitMetres,

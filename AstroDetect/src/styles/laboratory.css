@@ -85,7 +85,11 @@ legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-pat
 .field-error { color: #ffb4b0; font-size: .8rem; }
 .control .field-error { grid-column: 1 / -1; grid-row: 4; margin: 0; }
 .field-error:empty { display: none; }
-input { min-width: 0; width: 100%; color: var(--ink); border: 1px solid #5d7095; background: var(--paper); border-radius: .25rem; padding: .4rem .5rem; }
+input, select { min-width: 0; width: 100%; color: var(--ink); border: 1px solid #5d7095; background: var(--paper); border-radius: .25rem; padding: .4rem .5rem; }
+.stellar-system { border-bottom: 1px solid var(--rule); padding-bottom: 1rem; margin-bottom: 1rem; }
+.star-selector { display: grid; gap: .5rem; margin-bottom: 1rem; }
+.star-selector label { font-size: .8rem; font-weight: 600; }
+.star-selector p { font-size: .7rem; color: var(--muted); margin: 0; }
 input[type='number'] { text-align: right; font-variant-numeric: tabular-nums; }
 input[aria-invalid='true'] { border: 2px solid #ffb4b0; }
 input[type='range'] { padding: .3rem 0; border: 0; background: transparent; accent-color: var(--accent); }

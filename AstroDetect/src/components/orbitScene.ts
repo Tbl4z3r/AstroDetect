@@ -8,6 +8,7 @@ import { MIN_VISUAL_PLANET_RATIO } from './orbitPresentation';
 
 export interface OrbitView {
   setBodies: (planetToStarRatio: number, angle: number) => void;
+  setStarColor: (color: string) => void;
   setReducedMotion: (reduced: boolean) => void;
   resetCamera: () => void;
   rotateCamera: (direction: number) => void;
@@ -42,14 +43,14 @@ function starTexture(): CanvasTexture {
   const random = seededRandom(7);
   return paintTexture(512, 256, context => {
     const gradient = context.createLinearGradient(0, 0, 0, 256);
-    gradient.addColorStop(0, '#ffb347');
-    gradient.addColorStop(0.5, '#ffd27a');
-    gradient.addColorStop(1, '#ffb347');
+    gradient.addColorStop(0, '#dcdcdc');
+    gradient.addColorStop(0.5, '#ffffff');
+    gradient.addColorStop(1, '#dcdcdc');
     context.fillStyle = gradient;
     context.fillRect(0, 0, 512, 256);
     for (let index = 0; index < 5000; index++) {
       const radius = 0.6 + random() * 1.8;
-      context.fillStyle = random() > 0.5 ? 'rgba(255, 246, 210, 0.22)' : 'rgba(214, 110, 20, 0.16)';
+      context.fillStyle = random() > 0.5 ? 'rgba(255, 255, 255, 0.22)' : 'rgba(80, 80, 80, 0.16)';
       context.beginPath();
       context.arc(random() * 512, random() * 256, radius, 0, Math.PI * 2);
       context.fill();
@@ -80,9 +81,9 @@ function planetTexture(): CanvasTexture {
 function glowTexture(): CanvasTexture {
   return paintTexture(256, 256, context => {
     const gradient = context.createRadialGradient(128, 128, 0, 128, 128, 128);
-    gradient.addColorStop(0, 'rgba(255, 210, 120, 0.9)');
-    gradient.addColorStop(0.35, 'rgba(255, 180, 80, 0.35)');
-    gradient.addColorStop(1, 'rgba(255, 160, 60, 0)');
+    gradient.addColorStop(0, 'rgba(255, 255, 255, 0.9)');
+    gradient.addColorStop(0.35, 'rgba(255, 255, 255, 0.35)');
+    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
     context.fillStyle = gradient;
     context.fillRect(0, 0, 256, 256);
   });
@@ -128,8 +129,8 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
   controls.target.set(0, 0, 0);
 
   const textures = [starTexture(), planetTexture(), glowTexture()];
-  const star = new Mesh(new SphereGeometry(1, 64, 64), new MeshBasicMaterial({ map: textures[0] }));
-  const glow = new Sprite(new SpriteMaterial({ map: textures[2], blending: AdditiveBlending, depthWrite: false, transparent: true }));
+  const star = new Mesh(new SphereGeometry(1, 64, 64), new MeshBasicMaterial({ map: textures[0], color: '#ffd27a' }));
+  const glow = new Sprite(new SpriteMaterial({ map: textures[2], color: '#ffd27a', blending: AdditiveBlending, depthWrite: false, transparent: true }));
   glow.scale.set(4.2, 4.2, 1);
   const planet = new Mesh(new SphereGeometry(1, 48, 48), new MeshStandardMaterial({ map: textures[1], roughness: 0.85, metalness: 0 }));
   const system = new Group();
@@ -174,6 +175,12 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
   loop();
 
   return {
+    setStarColor(color) {
+      star.material.color.set(color);
+      glow.material.color.set(color);
+      sunlight.color.set(color);
+      if (!active) renderFrame();
+    },
     setBodies(planetToStarRatio, angle) {
       const radius = Math.max(planetToStarRatio, MIN_VISUAL_PLANET_RATIO);
       planet.scale.setScalar(radius);

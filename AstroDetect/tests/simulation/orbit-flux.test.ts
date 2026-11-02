@@ -99,7 +99,7 @@ describe('órbita y flujo ideal', () => {
     expect(largerDepth / smallerDepth).toBeCloseTo(4, 11);
   });
 
-  it.each([0.5, 2])('mantiene salidas finitas con radio estelar límite %s', starRadiusSolar => {
+  it.each([0.2, 2])('mantiene salidas finitas con radio estelar límite %s', starRadiusSolar => {
     for (const planetRadiusEarth of [1, 20]) {
       for (const periodDays of [1, 30]) {
         const input = { ...scenario, starRadiusSolar, planetRadiusEarth, periodDays };
@@ -118,6 +118,7 @@ describe('órbita y flujo ideal', () => {
   });
 
   it.each([
+    [0.2, 20, 1 - (20 * 6378100 / (0.2 * 695700000)) ** 2],
     [0.5, 20, 0.865519713964397],
     [2, 1, 0.999978987455307],
   ])('conserva profundidad de radios extremos %s y %s', (starRadiusSolar, planetRadiusEarth, expectedFlux) => {

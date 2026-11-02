@@ -30,6 +30,13 @@ describe('geometría científica', () => {
     expect(semiMajorAxisMetres(8) / semiMajorAxisMetres(1)).toBeCloseTo(4, 13);
   });
 
+  it('duplica el semieje al multiplicar la masa por ocho con el mismo período', () => {
+    expect(semiMajorAxisMetres(5, 0.2)).toBeCloseTo(5006295288.384674, 3);
+    expect(semiMajorAxisMetres(5, 1.6)).toBeCloseTo(10012590576.769348, 3);
+    expect(semiMajorAxisMetres(5, 1.6) / semiMajorAxisMetres(5, 0.2)).toBeCloseTo(2, 13);
+    expect(semiMajorAxisMetres(5)).toBe(semiMajorAxisMetres(5, 1));
+  });
+
   it('resuelve discos separados, tangencia externa y contención completa', () => {
     expect(diskOverlapArea(1, 0.1, 1.2)).toBe(0);
     expect(diskOverlapArea(1, 0.1, 1.1)).toBe(0);
@@ -53,7 +60,7 @@ describe('geometría científica', () => {
     expect(diskOverlapArea(1000, 1000, 1000) / 1e6).toBeCloseTo(expectedUnitArea, 13);
   });
 
-  it.each([6378100 / (2 * 695700000), 20 * 6378100 / (0.5 * 695700000)])('permanece finita y continua cerca de contactos para r/R=%s', radiusRatio => {
+  it.each([6378100 / (2 * 695700000), 20 * 6378100 / (0.2 * 695700000)])('permanece finita y continua cerca de contactos para r/R=%s', radiusRatio => {
     const maximumArea = Math.PI * radiusRatio * radiusRatio;
     const contacts = [1 - radiusRatio, 1 + radiusRatio];
     for (const contact of contacts) {

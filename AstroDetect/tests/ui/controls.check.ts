@@ -22,7 +22,8 @@ test('valida campos, límites inclusivos y semilla entera sin corregir entradas'
   await page.goto('http://127.0.0.1:4187/AstroDetect/');
   await page.getByRole('button', { name: 'Ajustar sistema', exact: true }).click();
   const cases = [
-    ['Radio de la estrella (radios solares)', '1', '0.5', '2', '0.49', '2.01'],
+    ['Radio de la estrella (radios solares)', '1', '0.2', '2', '0.19', '2.01'],
+    ['Masa de la estrella (masas solares)', '1', '0.2', '1.6', '0.19', '1.61'],
     ['Radio del planeta (radios terrestres)', '10', '1', '20', '0', '21'],
     ['Período orbital (días)', '5', '1', '30', '0', '31'],
     ['Ruido de medición (ppm)', '500', '0', '5000', '-1', '5001'],
@@ -61,7 +62,11 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
   expect(await page.getByRole('link', { name: 'Ir a la configuración' }).evaluate(el => el === document.activeElement)).toBe(true);
   await page.keyboard.press('Enter');
   expect(await page.locator('#configuracion').evaluate(el => el === document.activeElement)).toBe(true);
-  for (const id of ['starRadiusSolar', 'planetRadiusEarth', 'periodDays', 'noisePpm', 'seed']) {
+  await page.keyboard.press('Tab');
+  expect(await page.locator('#star-profile').evaluate(el => el === document.activeElement)).toBe(true);
+  await page.keyboard.press('ArrowDown');
+  expect(await page.locator('#star-profile').inputValue()).toBe('hot-star');
+  for (const id of ['starRadiusSolar', 'starMassSolar', 'planetRadiusEarth', 'periodDays', 'noisePpm', 'seed']) {
     await page.keyboard.press('Tab');
     expect(await page.locator(`#${id}`).evaluate(el => el === document.activeElement)).toBe(true);
     expect(await page.locator(`#${id}`).evaluate(el => getComputedStyle(el).outlineStyle)).toBe('solid');

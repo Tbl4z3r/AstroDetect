@@ -1,12 +1,14 @@
-# Contratos de integración — v1 congelado
+# Contratos de integración — v1.1
+
+Extensión compatible solicitada por el usuario el 2 de noviembre de 2026: `Scenario.starMassSolar?: number`, entre 0.2 y 1.6, con valor 1 si se omite. El radio estelar admite ahora 0.2–2 R☉. El resto del escenario, salidas, muestreo, ruido y detector se conserva. Contrato y modelo 1.1.0; [modelos estelares y migración](modelos-estelares.md). Los párrafos históricos de T000 se interpretan con esta extensión.
 
 Congelado por producción en T000 el 26 de octubre de 2026. Tipos y valores compartidos en src/contracts/index.ts, versión 1.0.0. Las funciones científicas y el detector se implementan en sus tareas; aquí sólo se definen sus firmas. Un cambio requiere solicitud en un reporte, consumidores afectados, migración y aprobación del productor. Ningún agente crea una variante silenciosa.
 
 ## Entradas y unidades
 
-`Scenario`: `starRadiusSolar` número entre 0.5 y 2; `planetRadiusEarth` número entre 1 y 20; `periodDays` número entre 1 y 30; `noisePpm` número entre 0 y 5000; `seed` entero de 0 a 4294967295.
+`Scenario`: `starRadiusSolar` número entre 0.2 y 2; `starMassSolar` opcional entre 0.2 y 1.6; `planetRadiusEarth` número entre 1 y 20; `periodDays` número entre 1 y 30; `noisePpm` número entre 0 y 5000; `seed` entero de 0 a 4294967295.
 
-Valores iniciales: 1, 10, 5, 500 y 42, respectivamente. Masa fija solar, inclinación fija 90°, excentricidad cero. Todos los valores deben ser finitos. Rechazar entrada inválida con mensaje por campo; no corregir silenciosamente. `seed=0` debe ser válido, nunca un generador trabado.
+Valores iniciales: radio estelar 1, masa estelar 1, radio planetario 10, período 5, ruido 500 y semilla 42. La masa solar es el valor inicial o legado; inclinación fija 90°, excentricidad cero. Todos los valores explícitos deben ser finitos. Rechazar entrada inválida con mensaje por campo; no corregir silenciosamente. `seed=0` debe ser válido, nunca un generador trabado.
 
 Derivar el semieje de Kepler con constantes documentadas y validar `a > Rstar + Rp`. No hay un control independiente de semieje. Las unidades internas físicas son SI; los tiempos públicos son días. `t0 = periodDays / 2`. Observación de t=0 a t=5P, con 5000 intervalos uniformes y 5001 muestras incluyendo ambos extremos. Ventana y cadencia dependen del P configurado: son una simplificación didáctica visible, no una inferencia del detector.
 

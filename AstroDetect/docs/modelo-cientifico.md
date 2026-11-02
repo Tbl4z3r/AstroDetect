@@ -1,18 +1,19 @@
 # Modelo científico de AstroDetect
 
-Estado: especificación inicial para implementar y revisar. Fecha: 26 de octubre de 2026. No corresponde a resultados de una aplicación ya construida.
+Modelo 1.1.0, actualizado el 2 de noviembre de 2026 con modelos estelares solicitados por el usuario. Las especificaciones matemáticas no sustituyen los resultados reales de los reportes. Véanse [modelos estelares y compatibilidad](modelos-estelares.md).
 
 ## Propósito y alcance
 
 Relacionar una ocultación geométrica con la disminución del flujo recibido y la interpretación de una curva de luz. El tránsito permite inferir un posible objeto a partir de mediciones indirectas; una disminución por sí sola no confirma un planeta. Esta motivación se apoya en [NASA, «What's a transit?»](https://science.nasa.gov/exoplanets/whats-a-transit/), consultado el 26 de octubre de 2026.
 
-Versión mínima: una estrella esférica de brillo superficial uniforme y constante, un planeta opaco y oscuro, órbita circular, inclinación fija de 90° y tránsito central. La masa estelar se mantiene en una masa solar nominal y la masa planetaria se desprecia en la dinámica. El cambio de radio estelar es una exploración geométrica: no se modelan relaciones entre masa, radio, temperatura y evolución estelar.
+Una estrella esférica de brillo superficial uniforme y constante, un planeta opaco y oscuro, órbita circular, inclinación fija de 90° y tránsito central. La masa estelar es ajustable, solar por defecto; la masa planetaria se desprecia. El selector propone pares de masa y radio de secuencia principal. Ajustarlos por separado es una exploración geométrica; no se modelan temperatura ni evolución estelar.
 
 Quedan fuera el oscurecimiento de limbo, manchas, binarias eclipsantes, reflexión y emisión planetaria, atmósferas, excentricidad, movimiento propio, exposición finita y ruido correlacionado. La geometría fija garantiza tránsitos para los parámetros válidos; no representa la probabilidad de observarlos en sistemas orientados al azar.
 
 ## Entradas, unidades y validación
 
-- `starRadiusSolar`: radio de la estrella en radios solares nominales, número finito entre 0,5 y 2.
+- `starRadiusSolar`: radio de la estrella en radios solares nominales, número finito entre 0,2 y 2.
+- `starMassSolar`: masa en masas solares, entre 0,2 y 1,6; opcional para escenarios anteriores, con valor 1 si se omite.
 - `planetRadiusEarth`: radio del planeta en radios terrestres ecuatoriales nominales, número finito entre 1 y 20.
 - `periodDays`: período orbital en días, número finito entre 1 y 30.
 - `noisePpm`: desviación estándar del ruido aditivo en partes por millón del flujo de referencia, número finito entre 0 y 5000.
@@ -26,7 +27,7 @@ Rechazar entradas fuera del intervalo, NaN, infinitos, semilla fraccionaria y co
 
 ## Órbita y posición observada
 
-La distancia orbital se deriva del período y la masa fija mediante la tercera ley de Kepler:
+La distancia orbital se deriva del período y la masa mediante la tercera ley de Kepler, usando `μ = μ☉ × starMassSolar`:
 
 `a = [μ (86400 P)² / (4π²)]^(1/3)`
 
@@ -50,7 +51,7 @@ Obtener el área A de intersección de dos discos de radios R y r separados por 
 
 `A = R² arccos[(d² + R² − r²)/(2dR)] + r² arccos[(d² + r² − R²)/(2dr)] − 0,5 √[(-d+R+r)(d+R-r)(d-R+r)(d+R+r)]`
 
-Limitar los argumentos del arccos al intervalo [-1,1] y el radicando a un mínimo de cero para evitar errores de redondeo cerca de los contactos. Estas protecciones numéricas no sustituyen la validación de entrada. El flujo limpio es:
+Limitar los argumentos del arccos al intervalo [-1,1]. En el modelo 1.1 se evalúa la expresión equivalente A = R²(α − senα cosα) + r²(β − senβ cosβ), con α y β iguales a los arccos anteriores. Esta suma de segmentos reduce la cancelación de la expresión con raíz cerca de los contactos. Estas protecciones numéricas no sustituyen la validación de entrada. El flujo limpio es:
 
 `f_clean(t) = 1 − A/(πR²)` si z > 0; en otro caso `f_clean(t) = 1`.
 

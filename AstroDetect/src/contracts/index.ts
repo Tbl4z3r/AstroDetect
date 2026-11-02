@@ -1,5 +1,6 @@
 export interface Scenario {
   starRadiusSolar: number;
+  starMassSolar?: number;
   planetRadiusEarth: number;
   periodDays: number;
   noisePpm: number;
@@ -31,17 +32,18 @@ export interface SimulationEngine {
   simulate: (scenario: Scenario) => SimulationResult;
 }
 export type TransitDetector = (observations: Observation[], options: DetectionOptions) => DetectionResult;
-export const CONTRACT_VERSION = '1.0.0';
-export const MODEL_VERSION = '1.0.0';
+export const CONTRACT_VERSION = '1.1.0';
+export const MODEL_VERSION = '1.1.0';
 export const SCENARIO_LIMITS = Object.freeze({
-  starRadiusSolar: Object.freeze({ min: 0.5, max: 2 }),
+  starRadiusSolar: Object.freeze({ min: 0.2, max: 2 }),
+  starMassSolar: Object.freeze({ min: 0.2, max: 1.6 }),
   planetRadiusEarth: Object.freeze({ min: 1, max: 20 }),
   periodDays: Object.freeze({ min: 1, max: 30 }),
   noisePpm: Object.freeze({ min: 0, max: 5000 }),
   seed: Object.freeze({ min: 0, max: 4294967295 }),
 });
 export const DEFAULT_SCENARIO: Readonly<Scenario> = Object.freeze({
-  starRadiusSolar: 1, planetRadiusEarth: 10, periodDays: 5, noisePpm: 500, seed: 42,
+  starRadiusSolar: 1, starMassSolar: 1, planetRadiusEarth: 10, periodDays: 5, noisePpm: 500, seed: 42,
 });
 export const DEFAULT_DETECTION_OPTIONS: Readonly<DetectionOptions> = Object.freeze({
   thresholdSigma: 4, minSamples: 3, minEventsForPeriod: 3, periodToleranceFraction: 0.10, noiseFloor: 1e-8,

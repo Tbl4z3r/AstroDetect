@@ -1,9 +1,9 @@
 import { PHYSICAL_CONSTANTS } from '../contracts';
 
-export function semiMajorAxisMetres(periodDays: number): number {
+export function semiMajorAxisMetres(periodDays: number, starMassSolar = 1): number {
   const periodSeconds = periodDays * PHYSICAL_CONSTANTS.secondsPerDay;
   return Math.cbrt(
-    PHYSICAL_CONSTANTS.solarGravitationalParameter * periodSeconds ** 2 / (4 * Math.PI ** 2),
+    PHYSICAL_CONSTANTS.solarGravitationalParameter * starMassSolar * periodSeconds ** 2 / (4 * Math.PI ** 2),
   );
 }
 
@@ -17,12 +17,9 @@ export function diskOverlapArea(starRadius: number, planetRadius: number, separa
   const planetSquared = planetRadius ** 2;
   const starCosine = (separationSquared + starSquared - planetSquared) / (2 * separation * starRadius);
   const planetCosine = (separationSquared + planetSquared - starSquared) / (2 * separation * planetRadius);
-  const radicand = (-separation + starRadius + planetRadius)
-    * (separation + starRadius - planetRadius)
-    * (separation - starRadius + planetRadius)
-    * (separation + starRadius + planetRadius);
-  const area = starSquared * Math.acos(Math.max(-1, Math.min(1, starCosine)))
-    + planetSquared * Math.acos(Math.max(-1, Math.min(1, planetCosine)))
-    - 0.5 * Math.sqrt(Math.max(0, radicand));
+  const starAngle = Math.acos(Math.max(-1, Math.min(1, starCosine)));
+  const planetAngle = Math.acos(Math.max(-1, Math.min(1, planetCosine)));
+  const area = starSquared * (starAngle - Math.sin(starAngle) * Math.cos(starAngle))
+    + planetSquared * (planetAngle - Math.sin(planetAngle) * Math.cos(planetAngle));
   return Math.max(0, Math.min(maximumArea, area));
 }
