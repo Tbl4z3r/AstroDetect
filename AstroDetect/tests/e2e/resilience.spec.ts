@@ -46,3 +46,21 @@ test('la pérdida temporal de WebGL se comunica y permite recuperar la vista sin
   await expect(page.getByTestId('clock')).toHaveText(clock!);
   await expect(page.getByTestId('observed-curve')).toHaveAttribute('d', curve!);
 });
+
+test('las recuperaciones repetidas liberan los contextos gráficos anteriores', async ({ page }) => {
+  const warnings: string[] = [];
+  page.on('console', message => { if (/too many active webgl contexts/i.test(message.text())) warnings.push(message.text()); });
+  await page.goto('./');
+  const mass = page.getByLabel('Masa de la estrella (masas solares)', { exact: true });
+  const camera = page.getByRole('button', { name: 'Centrar cámara', exact: true });
+  await expect(camera).toBeEnabled();
+  for (let index = 0; index < 24; index++) {
+    await mass.fill('');
+    await expect(page.getByRole('alert')).toBeVisible();
+    await mass.fill('1');
+    await expect(camera).toBeEnabled();
+  }
+  await page.getByRole('button', { name: 'Buscar posibles tránsitos', exact: true }).click();
+  await expect(page.getByTestId('detection-results')).toContainText('Eventos identificados: 5');
+  expect(warnings).toEqual([]);
+});

@@ -217,6 +217,7 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
       glow.material.dispose();
       for (const texture of textures) texture.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
     },
   };
 }

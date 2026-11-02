@@ -99,7 +99,7 @@ export default function App() {
           <span className="navigation-index" aria-hidden="true">0{index + 1}</span><span>{item.label}<small>{item.detail}</small></span>
         </button>)}
       </nav>
-      <button type="button" className="guide-button" ref={guideButton} onClick={openTour} aria-haspopup="dialog"><span aria-hidden="true">?</span> Guía</button></div>
+      <button type="button" className="guide-button" ref={guideButton} onClick={openTour} aria-haspopup="dialog"><svg className="guide-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"><circle cx="12" cy="12" r="10.7" strokeWidth="1.2" /><path d="M9.5 9.3a2.5 2.5 0 0 1 5 0c0 1.8-2.5 1.9-2.5 3.8" /><circle cx="12" cy="17.2" r="0.85" fill="currentColor" stroke="none" /></svg> Guía</button></div>
       <div id="view-laboratory" hidden={view !== 'laboratory'} ref={laboratory} tabIndex={-1} className="laboratory-layout">
         <button type="button" className="settings-toggle secondary-button" aria-expanded={settingsOpen} aria-controls="scenario-panel" onClick={() => setSettingsOpen(!settingsOpen)}>{settingsOpen ? 'Cerrar parámetros' : 'Ajustar sistema'}<span aria-hidden="true">{settingsOpen ? '−' : '+'}</span></button>
         <aside id="scenario-panel" className="scenario-panel" data-open={settingsOpen} aria-label="Parámetros y referencia del modelo">
