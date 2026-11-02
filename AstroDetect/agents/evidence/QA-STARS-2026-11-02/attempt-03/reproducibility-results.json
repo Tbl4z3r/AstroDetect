@@ -1,0 +1,25 @@
+{
+  "candidate": "6acd474f63290d5bf5f6ab129107ab0787febedd",
+  "checks": [
+    {
+      "seed": "0",
+      "status": "passed",
+      "regenerationByChangedSeed": true,
+      "cursorAndDetectionPreserveData": true
+    },
+    {
+      "seed": "4294967295",
+      "status": "passed",
+      "regenerationByChangedSeed": true,
+      "cursorAndDetectionPreserveData": true
+    },
+    {
+      "seed": "19371501",
+      "status": "passed",
+      "regenerationByChangedSeed": true,
+      "cursorAndDetectionPreserveData": true
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

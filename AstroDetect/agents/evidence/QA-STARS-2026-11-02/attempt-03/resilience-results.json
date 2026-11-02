@@ -1,0 +1,37 @@
+{
+  "candidate": "6acd474f63290d5bf5f6ab129107ab0787febedd",
+  "checks": [
+    {
+      "name": "centro visual del signo de pregunta",
+      "status": "passed"
+    },
+    {
+      "name": "cuarenta desmontajes 3D por entrada inválida y recuperación",
+      "status": "passed"
+    },
+    {
+      "name": "tabla completa admite navegación rápida sin índices fuera de rango",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "graphicsWarnings": [],
+  "guideIcon": {
+    "viewport": {
+      "width": 21.59375,
+      "height": 21.59375
+    },
+    "pixelDimensions": {
+      "width": 46,
+      "height": 44
+    },
+    "ink": {
+      "left": 18.5,
+      "right": 28.5,
+      "top": 11.5,
+      "bottom": 31.5
+    },
+    "offsetCssX": 0.25,
+    "offsetCssY": -0.25
+  }
+}

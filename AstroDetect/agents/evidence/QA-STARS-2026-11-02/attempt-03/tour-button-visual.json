@@ -1,0 +1,47 @@
+{
+  "candidate": "6acd474f63290d5bf5f6ab129107ab0787febedd",
+  "dpr": 1,
+  "checks": [
+    {
+      "mode": "normal",
+      "status": "passed",
+      "bounds": {
+        "button": {
+          "x": 1162.59375,
+          "y": 158.140625,
+          "width": 93.40625,
+          "height": 45.984375
+        },
+        "icon": {
+          "x": 1177.984375,
+          "y": 170.328125,
+          "width": 21.59375,
+          "height": 21.59375
+        },
+        "verticalCenterDelta": -0.0078125,
+        "iconAriaHidden": "true"
+      }
+    },
+    {
+      "mode": "text-emulated200",
+      "status": "passed",
+      "bounds": {
+        "button": {
+          "x": 1047.171875,
+          "y": 437.09375,
+          "width": 184.828125,
+          "height": 89.96875
+        },
+        "icon": {
+          "x": 1076.96875,
+          "y": 460.484375,
+          "width": 43.1875,
+          "height": 43.1875
+        },
+        "verticalCenterDelta": 0,
+        "iconAriaHidden": "true"
+      }
+    }
+  ],
+  "errors": []
+}

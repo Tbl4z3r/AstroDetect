@@ -1,0 +1,1468 @@
+{
+  "candidate": "6acd474f63290d5bf5f6ab129107ab0787febedd",
+  "url": "http://127.0.0.1:4182/AstroDetect/",
+  "started": "2026-11-02T19:32:10.744Z",
+  "checks": [
+    {
+      "name": "64 combinaciones extremas válidas: geometría profundidad distancia y tablas",
+      "status": "passed",
+      "ms": 40949,
+      "details": {
+        "count": 64
+      }
+    },
+    {
+      "name": "24 escenarios interiores con precisión no redondeada y ruido reproducible",
+      "status": "passed",
+      "ms": 44709,
+      "details": {
+        "count": 24
+      }
+    },
+    {
+      "name": "30 entradas inválidas se conservan se señalan y retiran simulación/detección",
+      "status": "passed",
+      "ms": 15388,
+      "details": {
+        "count": 30
+      }
+    },
+    {
+      "name": "40 selecciones seguidas conservan parámetros ajenos e invalidan datos anteriores",
+      "status": "passed",
+      "ms": 4561,
+      "details": {
+        "count": 40
+      }
+    },
+    {
+      "name": "fila5001 período30 y extremo del reloj mantienen serie y permiten volver al centro",
+      "status": "passed",
+      "ms": 2332,
+      "details": {
+        "samples": 5001,
+        "finalTimeDays": 150
+      }
+    },
+    {
+      "name": "cambios masa y radio libres no alteran interpretación por color y avisan falta resolución",
+      "status": "passed",
+      "ms": 1969
+    }
+  ],
+  "scenarios": [
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 0
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 0,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 1712128905.0197365,
+      "displayedDistance": "1,71 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 1,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 3424257810.039473,
+      "displayedDistance": "3,42 millones de km",
+      "firstCenterTime": 0.5,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99789875,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 1,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.00002101254469306299,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99997899,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 0.2,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 16530422828.73016,
+      "displayedDistance": "16,53 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.8405017877225195,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.15949821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 2,
+        "starMassSolar": 1.6,
+        "planetRadiusEarth": 20,
+        "periodDays": 30,
+        "noisePpm": 5000,
+        "seed": 4294967295
+      },
+      "expectedDepth": 0.008405017877225196,
+      "expectedOrbitMetres": 33060845657.46032,
+      "displayedDistance": "33,06 millones de km",
+      "firstCenterTime": 15,
+      "firstCenterCleanFlux": 0.99159498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.5857226245105267,
+        "starMassSolar": 1.4261555720586327,
+        "planetRadiusEarth": 10.962460787501186,
+        "periodDays": 10.963189472677186,
+        "noisePpm": 2724.6515871956944,
+        "seed": 1600748723
+      },
+      "expectedDepth": 0.02944223317903164,
+      "expectedOrbitMetres": 16263226420.49527,
+      "displayedDistance": "16,26 millones de km",
+      "firstCenterTime": 5.481595,
+      "firstCenterCleanFlux": 0.97055777,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.7199994820170106,
+        "starMassSolar": 0.9487874453421681,
+        "planetRadiusEarth": 8.504366682842374,
+        "periodDays": 4.721233731834218,
+        "noisePpm": 2141.9745800085366,
+        "seed": 1218163169
+      },
+      "expectedDepth": 0.0117262251418652,
+      "expectedOrbitMetres": 8096297128.814752,
+      "displayedDistance": "8,1 millones de km",
+      "firstCenterTime": 2.360617,
+      "firstCenterCleanFlux": 0.98827377,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.7919332524761558,
+        "starMassSolar": 0.6060001744423061,
+        "planetRadiusEarth": 14.17594006517902,
+        "periodDays": 8.81822232552804,
+        "noisePpm": 4890.063926577568,
+        "seed": 4155575327
+      },
+      "expectedDepth": 0.026931790061725577,
+      "expectedOrbitMetres": 10574781596.161568,
+      "displayedDistance": "10,57 millones de km",
+      "firstCenterTime": 4.409111,
+      "firstCenterCleanFlux": 0.97306821,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.1722877801395952,
+        "starMassSolar": 1.399457164062187,
+        "planetRadiusEarth": 11.402578360401094,
+        "periodDays": 16.615184491267428,
+        "noisePpm": 2208.8445047847927,
+        "seed": 2645413613
+      },
+      "expectedDepth": 0.007951998629559571,
+      "expectedOrbitMetres": 21323072127.177505,
+      "displayedDistance": "21,32 millones de km",
+      "firstCenterTime": 8.307592,
+      "firstCenterCleanFlux": 0.992048,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.4645782310515643,
+        "starMassSolar": 0.7483049102593213,
+        "planetRadiusEarth": 8.616890441160649,
+        "periodDays": 28.54521410469897,
+        "noisePpm": 1440.275046043098,
+        "seed": 1163723
+      },
+      "expectedDepth": 0.002909475031647702,
+      "expectedOrbitMetres": 24826082577.390697,
+      "displayedDistance": "24,83 millones de km",
+      "firstCenterTime": 14.272607,
+      "firstCenterCleanFlux": 0.99709052,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.6315340294502676,
+        "starMassSolar": 0.6707834893371909,
+        "planetRadiusEarth": 12.102570604532957,
+        "periodDays": 14.463328917277977,
+        "noisePpm": 2484.8281615413725,
+        "seed": 4102492217
+      },
+      "expectedDepth": 0.030867423283994617,
+      "expectedOrbitMetres": 15213626760.683203,
+      "displayedDistance": "15,21 millones de km",
+      "firstCenterTime": 7.231664,
+      "firstCenterCleanFlux": 0.96913258,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.2936717795208097,
+        "starMassSolar": 1.4784560652915386,
+        "planetRadiusEarth": 1.1706547518260777,
+        "periodDays": 21.73664046288468,
+        "noisePpm": 3846.9748850911856,
+        "seed": 1761749431
+      },
+      "expectedDepth": 0.001335586056602194,
+      "expectedOrbitMetres": 25977112976.309437,
+      "displayedDistance": "25,98 millones de km",
+      "firstCenterTime": 10.86832,
+      "firstCenterCleanFlux": 0.99866441,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.1072779771871866,
+        "starMassSolar": 1.5221443298738448,
+        "planetRadiusEarth": 1.2874214658513665,
+        "periodDays": 8.174810219323263,
+        "noisePpm": 3935.567287262529,
+        "seed": 1133158853
+      },
+      "expectedDepth": 0.00011362314581170918,
+      "expectedOrbitMetres": 13666695710.560732,
+      "displayedDistance": "13,67 millones de km",
+      "firstCenterTime": 4.087405,
+      "firstCenterCleanFlux": 0.99988638,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.4597653791308403,
+        "starMassSolar": 1.2831489768344908,
+        "planetRadiusEarth": 7.53003661846742,
+        "periodDays": 12.733775423141196,
+        "noisePpm": 2996.926777996123,
+        "seed": 623185891
+      },
+      "expectedDepth": 0.002236488652950204,
+      "expectedOrbitMetres": 17348300874.20692,
+      "displayedDistance": "17,35 millones de km",
+      "firstCenterTime": 6.366888,
+      "firstCenterCleanFlux": 0.99776351,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.9932184587232769,
+        "starMassSolar": 1.5843889994081108,
+        "planetRadiusEarth": 12.26068857870996,
+        "periodDays": 19.532173248706385,
+        "noisePpm": 262.547277379781,
+        "seed": 2308304785
+      },
+      "expectedDepth": 0.012807925715951948,
+      "expectedOrbitMetres": 24754117348.12806,
+      "displayedDistance": "24,75 millones de km",
+      "firstCenterTime": 9.766087,
+      "firstCenterCleanFlux": 0.98719207,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.8444824410602452,
+        "starMassSolar": 0.7912107876036316,
+        "planetRadiusEarth": 4.619922029320151,
+        "periodDays": 7.41227487497963,
+        "noisePpm": 1152.1114967763424,
+        "seed": 3925180495
+      },
+      "expectedDepth": 0.0025155136928724582,
+      "expectedOrbitMetres": 10294174792.949114,
+      "displayedDistance": "10,29 millones de km",
+      "firstCenterTime": 3.706137,
+      "firstCenterCleanFlux": 0.99748449,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.034876971784979,
+        "starMassSolar": 0.36829768936149776,
+        "planetRadiusEarth": 4.2826518369838595,
+        "periodDays": 4.868061275919899,
+        "noisePpm": 4748.495134990662,
+        "seed": 38577565
+      },
+      "expectedDepth": 0.0014394173531484377,
+      "expectedOrbitMetres": 6027864523.217851,
+      "displayedDistance": "6,03 millones de km",
+      "firstCenterTime": 2.434031,
+      "firstCenterCleanFlux": 0.99856058,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.3170295368880034,
+        "starMassSolar": 1.144852887140587,
+        "planetRadiusEarth": 14.333424359094352,
+        "periodDays": 27.964830382959917,
+        "noisePpm": 3817.0978566631675,
+        "seed": 850577147
+      },
+      "expectedDepth": 0.1718063085877657,
+      "expectedOrbitMetres": 28217453302.519573,
+      "displayedDistance": "28,22 millones de km",
+      "firstCenterTime": 13.982415,
+      "firstCenterCleanFlux": 0.82819369,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.0529253131709992,
+        "starMassSolar": 0.302533128997311,
+        "planetRadiusEarth": 13.038392007350922,
+        "periodDays": 17.69992058048956,
+        "noisePpm": 2439.691482577473,
+        "seed": 3131355113
+      },
+      "expectedDepth": 0.01288817952044516,
+      "expectedOrbitMetres": 13348474994.398975,
+      "displayedDistance": "13,35 millones de km",
+      "firstCenterTime": 8.84996,
+      "firstCenterCleanFlux": 0.98711182,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.1185591915622355,
+        "starMassSolar": 0.32697804071940484,
+        "planetRadiusEarth": 7.1576778260059655,
+        "periodDays": 10.415268307784572,
+        "noisePpm": 1435.514884069562,
+        "seed": 1368158183
+      },
+      "expectedDepth": 0.0034416364502822933,
+      "expectedOrbitMetres": 9619362651.279324,
+      "displayedDistance": "9,62 millones de km",
+      "firstCenterTime": 5.207634,
+      "firstCenterCleanFlux": 0.99655836,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.669052277971059,
+        "starMassSolar": 1.341709433076903,
+        "planetRadiusEarth": 12.190830280072987,
+        "periodDays": 18.18208785331808,
+        "noisePpm": 3212.071636226028,
+        "seed": 4054989429
+      },
+      "expectedDepth": 0.027905197735609972,
+      "expectedOrbitMetres": 22327586800.185314,
+      "displayedDistance": "22,33 millones de km",
+      "firstCenterTime": 9.091044,
+      "firstCenterCleanFlux": 0.9720948,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.6162592388689518,
+        "starMassSolar": 0.4601672057528049,
+        "planetRadiusEarth": 3.017404386308044,
+        "periodDays": 4.848469239892438,
+        "noisePpm": 2087.5005470588803,
+        "seed": 2601404179
+      },
+      "expectedDepth": 0.0020150173491265922,
+      "expectedOrbitMetres": 6474925545.477984,
+      "displayedDistance": "6,47 millones de km",
+      "firstCenterTime": 2.424235,
+      "firstCenterCleanFlux": 0.99798498,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.5312444212846459,
+        "starMassSolar": 0.23520313701592388,
+        "planetRadiusEarth": 17.72185375727713,
+        "periodDays": 19.48463541152887,
+        "noisePpm": 2517.990742344409,
+        "seed": 4055085377
+      },
+      "expectedDepth": 0.011258172516374988,
+      "expectedOrbitMetres": 13085862519.5225,
+      "displayedDistance": "13,09 millones de km",
+      "firstCenterTime": 9.742318,
+      "firstCenterCleanFlux": 0.98874183,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.949043739400804,
+        "starMassSolar": 0.24297103569842876,
+        "planetRadiusEarth": 10.414379066321999,
+        "periodDays": 23.590482745552436,
+        "noisePpm": 2610.0020483136177,
+        "seed": 4157364351
+      },
+      "expectedDepth": 0.01012122190589904,
+      "expectedOrbitMetres": 15026892556.949375,
+      "displayedDistance": "15,03 millones de km",
+      "firstCenterTime": 11.795241,
+      "firstCenterCleanFlux": 0.98987878,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.7853558824397624,
+        "starMassSolar": 0.2973314195405692,
+        "planetRadiusEarth": 2.514651878736913,
+        "periodDays": 21.458349225809798,
+        "noisePpm": 2860.5279768817127,
+        "seed": 1297989709
+      },
+      "expectedDepth": 0.0001667419153937874,
+      "expectedOrbitMetres": 15089363989.884005,
+      "displayedDistance": "15,09 millones de km",
+      "firstCenterTime": 10.729175,
+      "firstCenterCleanFlux": 0.99983326,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.7367204610258342,
+        "starMassSolar": 0.23913107146508994,
+        "planetRadiusEarth": 19.69091873196885,
+        "periodDays": 20.823212425457314,
+        "noisePpm": 1811.8026806041598,
+        "seed": 1750003755
+      },
+      "expectedDepth": 0.06004338079337948,
+      "expectedOrbitMetres": 13754251155.227932,
+      "displayedDistance": "13,75 millones de km",
+      "firstCenterTime": 10.411606,
+      "firstCenterCleanFlux": 0.93995662,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.9898422717116773,
+        "starMassSolar": 1.4695225128438323,
+        "planetRadiusEarth": 10.380388785153627,
+        "periodDays": 1.1952147602569312,
+        "noisePpm": 292.20480704680085,
+        "seed": 2909229977
+      },
+      "expectedDepth": 0.00924344556187506,
+      "expectedOrbitMetres": 3748715718.470292,
+      "displayedDistance": "3,75 millones de km",
+      "firstCenterTime": 0.597607,
+      "firstCenterCleanFlux": 0.99075655,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 0.8745099218562247,
+        "starMassSolar": 1.4853556203190237,
+        "planetRadiusEarth": 4.995519295800477,
+        "periodDays": 1.3680462858173996,
+        "noisePpm": 705.1502447575331,
+        "seed": 1195285015
+      },
+      "expectedDepth": 0.0027426503260257053,
+      "expectedOrbitMetres": 4116585464.7946744,
+      "displayedDistance": "4,12 millones de km",
+      "firstCenterTime": 0.684023,
+      "firstCenterCleanFlux": 0.99725735,
+      "finiteVerticesPerCurve": 5001
+    },
+    {
+      "values": {
+        "starRadiusSolar": 1.720533619541675,
+        "starMassSolar": 1.0151033002417533,
+        "planetRadiusEarth": 8.482336618937552,
+        "periodDays": 5.3437856247182935,
+        "noisePpm": 1484.9923155270517,
+        "seed": 2589300517
+      },
+      "expectedDepth": 0.002042882187305402,
+      "expectedOrbitMetres": 8993510075.83645,
+      "displayedDistance": "8,99 millones de km",
+      "firstCenterTime": 2.671893,
+      "firstCenterCleanFlux": 0.99795712,
+      "finiteVerticesPerCurve": 5001
+    }
+  ],
+  "errors": [],
+  "findings": [],
+  "finished": "2026-11-02T19:34:00.938Z",
+  "passed": 6,
+  "failed": 0
+}
