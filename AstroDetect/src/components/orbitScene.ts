@@ -143,17 +143,22 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
   let disposed = false;
   let active = true;
 
+  function renderFrame() {
+    controls.update();
+    renderer.render(scene, camera);
+  }
   function resize() {
     const width = Math.max(1, container.clientWidth);
     const height = Math.max(1, container.clientHeight);
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
+    renderFrame();
   }
   function resetCamera() {
     camera.position.copy(CAMERA_HOME);
     controls.target.set(0, 0, 0);
-    controls.update();
+    renderFrame();
   }
   canvas.addEventListener('dblclick', resetCamera);
   const observer = new ResizeObserver(resize);
@@ -163,8 +168,7 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
   function loop() {
     if (disposed || !active) return;
     if (!reducedMotion) star.rotation.y += 0.0015;
-    controls.update();
-    renderer.render(scene, camera);
+    renderFrame();
     frame = requestAnimationFrame(loop);
   }
   loop();
@@ -174,6 +178,7 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
       const radius = Math.max(planetToStarRatio, MIN_VISUAL_PLANET_RATIO);
       planet.scale.setScalar(radius);
       planet.position.set(VISUAL_ORBIT_RADIUS * Math.sin(angle), 0, VISUAL_ORBIT_RADIUS * Math.cos(angle));
+      if (!active) renderFrame();
     },
     setReducedMotion(reduced) {
       reducedMotion = reduced;
@@ -181,7 +186,7 @@ export function createOrbitView(canvas: HTMLCanvasElement, container: HTMLElemen
     resetCamera,
     rotateCamera(direction) {
       camera.position.applyAxisAngle(new Vector3(0, 1, 0), direction * Math.PI / 12);
-      controls.update();
+      renderFrame();
     },
     setActive(next) {
       if (active === next) return;
