@@ -1,0 +1,2350 @@
+{
+  "candidate": "e87263e2b0d6055340254ad84fa25d18bf8bc06d",
+  "started": "2026-11-02T19:16:53.063Z",
+  "checks": [
+    {
+      "name": "12 pasos, colocación y teclado 180x700",
+      "status": "passed",
+      "durationMs": 27525,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 155,
+            "bottom": 283
+          },
+          "target": {
+            "left": 33,
+            "top": 15.828125,
+            "right": 147,
+            "bottom": 637.328125,
+            "height": 621.5
+          },
+          "visibleTargetHeight": 275.171875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 25,
+            "top": 28.328125,
+            "right": 155,
+            "bottom": 270.734375
+          },
+          "target": {
+            "left": 33,
+            "top": 36.328125,
+            "right": 147,
+            "bottom": 262.734375,
+            "height": 226.40625
+          },
+          "visibleTargetHeight": 226.40625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 25,
+            "top": 45.734375,
+            "right": 155,
+            "bottom": 253.421875
+          },
+          "target": {
+            "left": 33,
+            "top": 53.734375,
+            "right": 147,
+            "bottom": 245.421875,
+            "height": 191.6875
+          },
+          "visibleTargetHeight": 191.6875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 25,
+            "top": 37.421875,
+            "right": 155,
+            "bottom": 262.46875
+          },
+          "target": {
+            "left": 33,
+            "top": 45.421875,
+            "right": 147,
+            "bottom": 254.46875,
+            "height": 209.046875
+          },
+          "visibleTargetHeight": 209.046875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 25,
+            "top": 43.46875,
+            "right": 155,
+            "bottom": 256.28125
+          },
+          "target": {
+            "left": 33,
+            "top": 51.46875,
+            "right": 147,
+            "bottom": 248.28125,
+            "height": 196.8125
+          },
+          "visibleTargetHeight": 196.8125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.3125,
+            "right": 155,
+            "bottom": 283
+          },
+          "target": {
+            "left": 33,
+            "top": 16.3125,
+            "right": 147,
+            "bottom": 776.375,
+            "height": 760.0625
+          },
+          "visibleTargetHeight": 274.6875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 37,
+            "top": 8,
+            "right": 143,
+            "bottom": 283
+          },
+          "target": {
+            "left": 45,
+            "top": 15.96875,
+            "right": 135,
+            "bottom": 483.3125,
+            "height": 467.34375
+          },
+          "visibleTargetHeight": 275.03125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 37,
+            "top": 8.3125,
+            "right": 143,
+            "bottom": 283
+          },
+          "target": {
+            "left": 45,
+            "top": 16.3125,
+            "right": 135,
+            "bottom": 432.265625,
+            "height": 415.953125
+          },
+          "visibleTargetHeight": 274.6875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8.21875,
+            "right": 159,
+            "bottom": 283
+          },
+          "target": {
+            "left": 29,
+            "top": 16.21875,
+            "right": 151,
+            "bottom": 525.953125,
+            "height": 509.734375
+          },
+          "visibleTargetHeight": 274.78125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 159,
+            "bottom": 283
+          },
+          "target": {
+            "left": 29,
+            "top": 15.546875,
+            "right": 151,
+            "bottom": 878,
+            "height": 862.453125
+          },
+          "visibleTargetHeight": 275.453125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 159,
+            "bottom": 283
+          },
+          "target": {
+            "left": 29,
+            "top": 15.578125,
+            "right": 151,
+            "bottom": 974.40625,
+            "height": 958.828125
+          },
+          "visibleTargetHeight": 275.421875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 180,
+            "height": 700
+          },
+          "panel": {
+            "left": 16,
+            "top": 299,
+            "right": 164,
+            "bottom": 684
+          },
+          "highlight": {
+            "left": 8,
+            "top": 88.796875,
+            "right": 172,
+            "bottom": 209.890625
+          },
+          "target": {
+            "left": 16,
+            "top": 96.796875,
+            "right": 164,
+            "bottom": 201.890625,
+            "height": 105.09375
+          },
+          "visibleTargetHeight": 105.09375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 320x640",
+      "status": "passed",
+      "durationMs": 20032,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 304.15625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.125,
+            "right": 295,
+            "bottom": 288.15625
+          },
+          "target": {
+            "left": 33,
+            "top": 16.125,
+            "right": 287,
+            "bottom": 442.703125,
+            "height": 426.578125
+          },
+          "visibleTargetHeight": 280.03125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 86.703125,
+            "right": 295,
+            "bottom": 240.328125
+          },
+          "target": {
+            "left": 33,
+            "top": 94.703125,
+            "right": 287,
+            "bottom": 232.328125,
+            "height": 137.625
+          },
+          "visibleTargetHeight": 137.625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 97.328125,
+            "right": 295,
+            "bottom": 250.953125
+          },
+          "target": {
+            "left": 33,
+            "top": 105.328125,
+            "right": 287,
+            "bottom": 242.953125,
+            "height": 137.625
+          },
+          "visibleTargetHeight": 137.625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 97.953125,
+            "right": 295,
+            "bottom": 251.578125
+          },
+          "target": {
+            "left": 33,
+            "top": 105.953125,
+            "right": 287,
+            "bottom": 243.578125,
+            "height": 137.625
+          },
+          "visibleTargetHeight": 137.625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 103.578125,
+            "right": 295,
+            "bottom": 244.96875
+          },
+          "target": {
+            "left": 33,
+            "top": 111.578125,
+            "right": 287,
+            "bottom": 236.96875,
+            "height": 125.390625
+          },
+          "visibleTargetHeight": 125.390625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 304.15625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.171875,
+            "right": 295,
+            "bottom": 288.15625
+          },
+          "target": {
+            "left": 33,
+            "top": 16.171875,
+            "right": 287,
+            "bottom": 510.953125,
+            "height": 494.78125
+          },
+          "visibleTargetHeight": 279.984375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 37,
+            "top": 8,
+            "right": 283,
+            "bottom": 310.484375
+          },
+          "target": {
+            "left": 45,
+            "top": 15.546875,
+            "right": 275,
+            "bottom": 358.5,
+            "height": 342.953125
+          },
+          "visibleTargetHeight": 302.9375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 348.8125,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 37,
+            "top": 29.5,
+            "right": 283,
+            "bottom": 318.484375
+          },
+          "target": {
+            "left": 45,
+            "top": 37.5,
+            "right": 275,
+            "bottom": 310.484375,
+            "height": 272.984375
+          },
+          "visibleTargetHeight": 272.984375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 280.234375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 299,
+            "bottom": 264.234375
+          },
+          "target": {
+            "left": 29,
+            "top": 15.65625,
+            "right": 291,
+            "bottom": 322.703125,
+            "height": 307.046875
+          },
+          "visibleTargetHeight": 256.578125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 304.15625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8.46875,
+            "right": 299,
+            "bottom": 288.15625
+          },
+          "target": {
+            "left": 29,
+            "top": 16.46875,
+            "right": 291,
+            "bottom": 577.09375,
+            "height": 560.625
+          },
+          "visibleTargetHeight": 279.6875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 302.5625,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 299,
+            "bottom": 286.5625
+          },
+          "target": {
+            "left": 29,
+            "top": 15.875,
+            "right": 291,
+            "bottom": 498.921875,
+            "height": 483.046875
+          },
+          "visibleTargetHeight": 278.6875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 280.234375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 8,
+            "top": 107.9375,
+            "right": 312,
+            "bottom": 172.984375
+          },
+          "target": {
+            "left": 16,
+            "top": 115.9375,
+            "right": 304,
+            "bottom": 164.984375,
+            "height": 49.046875
+          },
+          "visibleTargetHeight": 49.046875,
+          "requiredTargetHeight": 48.046875,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 360x800",
+      "status": "passed",
+      "durationMs": 24250,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 486.484375,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 46.53125,
+            "right": 335,
+            "bottom": 440.828125
+          },
+          "target": {
+            "left": 33,
+            "top": 54.53125,
+            "right": 327,
+            "bottom": 432.828125,
+            "height": 378.296875
+          },
+          "visibleTargetHeight": 378.296875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 189.828125,
+            "right": 335,
+            "bottom": 319.3125
+          },
+          "target": {
+            "left": 33,
+            "top": 197.828125,
+            "right": 327,
+            "bottom": 311.3125,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 113.484375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 531.140625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 201.3125,
+            "right": 335,
+            "bottom": 330.796875
+          },
+          "target": {
+            "left": 33,
+            "top": 209.3125,
+            "right": 327,
+            "bottom": 322.796875,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 113.484375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 189.796875,
+            "right": 335,
+            "bottom": 319.28125
+          },
+          "target": {
+            "left": 33,
+            "top": 197.796875,
+            "right": 327,
+            "bottom": 311.28125,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 113.484375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 204.28125,
+            "right": 335,
+            "bottom": 304.171875
+          },
+          "target": {
+            "left": 33,
+            "top": 212.28125,
+            "right": 327,
+            "bottom": 296.171875,
+            "height": 83.890625
+          },
+          "visibleTargetHeight": 83.890625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 486.484375,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.375,
+            "right": 335,
+            "bottom": 470.484375
+          },
+          "target": {
+            "left": 33,
+            "top": 16.375,
+            "right": 327,
+            "bottom": 511.15625,
+            "height": 494.78125
+          },
+          "visibleTargetHeight": 462.109375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 37,
+            "top": 62.75,
+            "right": 323,
+            "bottom": 446.703125
+          },
+          "target": {
+            "left": 45,
+            "top": 70.75,
+            "right": 315,
+            "bottom": 438.703125,
+            "height": 367.953125
+          },
+          "visibleTargetHeight": 367.953125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 531.140625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 37,
+            "top": 128.703125,
+            "right": 323,
+            "bottom": 403
+          },
+          "target": {
+            "left": 45,
+            "top": 136.703125,
+            "right": 315,
+            "bottom": 395,
+            "height": 258.296875
+          },
+          "visibleTargetHeight": 258.296875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 484.890625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 21,
+            "top": 81.171875,
+            "right": 339,
+            "bottom": 404.21875
+          },
+          "target": {
+            "left": 29,
+            "top": 89.171875,
+            "right": 331,
+            "bottom": 396.21875,
+            "height": 307.046875
+          },
+          "visibleTargetHeight": 307.046875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 486.484375,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 21,
+            "top": 8,
+            "right": 339,
+            "bottom": 470.484375
+          },
+          "target": {
+            "left": 29,
+            "top": 15.984375,
+            "right": 331,
+            "bottom": 541.1875,
+            "height": 525.203125
+          },
+          "visibleTargetHeight": 462.5,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 508.8125,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 21,
+            "top": 182.171875,
+            "right": 339,
+            "bottom": 492.8125
+          },
+          "target": {
+            "left": 29,
+            "top": 190.171875,
+            "right": 331,
+            "bottom": 631.09375,
+            "height": 440.921875
+          },
+          "visibleTargetHeight": 310.640625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 462.5625,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 8,
+            "top": 198.34375,
+            "right": 352,
+            "bottom": 263.390625
+          },
+          "target": {
+            "left": 16,
+            "top": 206.34375,
+            "right": 344,
+            "bottom": 255.390625,
+            "height": 49.046875
+          },
+          "visibleTargetHeight": 49.046875,
+          "requiredTargetHeight": 48.046875,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 1280x900",
+      "status": "passed",
+      "durationMs": 18853,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 251.78125,
+            "right": 659,
+            "bottom": 549.296875
+          },
+          "highlight": {
+            "left": 33,
+            "top": 243.78125,
+            "right": 287,
+            "bottom": 655.4375
+          },
+          "target": {
+            "left": 41,
+            "top": 251.78125,
+            "right": 279,
+            "bottom": 647.4375,
+            "height": 395.65625
+          },
+          "visibleTargetHeight": 395.65625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 384.4375,
+            "right": 659,
+            "bottom": 637.296875
+          },
+          "highlight": {
+            "left": 33,
+            "top": 376.4375,
+            "right": 287,
+            "bottom": 523.28125
+          },
+          "target": {
+            "left": 41,
+            "top": 384.4375,
+            "right": 279,
+            "bottom": 515.28125,
+            "height": 130.84375
+          },
+          "visibleTargetHeight": 130.84375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 393.28125,
+            "right": 659,
+            "bottom": 646.140625
+          },
+          "highlight": {
+            "left": 33,
+            "top": 385.28125,
+            "right": 287,
+            "bottom": 514.765625
+          },
+          "target": {
+            "left": 41,
+            "top": 393.28125,
+            "right": 279,
+            "bottom": 506.765625,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 113.484375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 392.765625,
+            "right": 659,
+            "bottom": 645.625
+          },
+          "highlight": {
+            "left": 33,
+            "top": 384.765625,
+            "right": 287,
+            "bottom": 514.25
+          },
+          "target": {
+            "left": 41,
+            "top": 392.765625,
+            "right": 279,
+            "bottom": 506.25,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 113.484375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 399.25,
+            "right": 659,
+            "bottom": 652.109375
+          },
+          "highlight": {
+            "left": 33,
+            "top": 391.25,
+            "right": 287,
+            "bottom": 508.5
+          },
+          "target": {
+            "left": 41,
+            "top": 399.25,
+            "right": 279,
+            "bottom": 500.5,
+            "height": 101.25
+          },
+          "visibleTargetHeight": 101.25,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 299,
+            "top": 193.703125,
+            "right": 659,
+            "bottom": 491.21875
+          },
+          "highlight": {
+            "left": 33,
+            "top": 185.703125,
+            "right": 287,
+            "bottom": 715.078125
+          },
+          "target": {
+            "left": 41,
+            "top": 193.703125,
+            "right": 279,
+            "bottom": 707.078125,
+            "height": 513.375
+          },
+          "visibleTargetHeight": 513.375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 349.796875,
+            "top": 36.625,
+            "right": 1023,
+            "bottom": 571.5
+          },
+          "target": {
+            "left": 357.796875,
+            "top": 44.625,
+            "right": 1015,
+            "bottom": 563.5,
+            "height": 518.875
+          },
+          "visibleTargetHeight": 518.875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 651,
+            "top": 190.625,
+            "right": 1011,
+            "bottom": 443.484375
+          },
+          "highlight": {
+            "left": 1023,
+            "top": 182.625,
+            "right": 1231,
+            "bottom": 717.5
+          },
+          "target": {
+            "left": 1031,
+            "top": 190.625,
+            "right": 1223,
+            "bottom": 709.5,
+            "height": 518.875
+          },
+          "visibleTargetHeight": 518.875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 333.796875,
+            "top": 210.078125,
+            "right": 1247,
+            "bottom": 399.40625
+          },
+          "target": {
+            "left": 341.796875,
+            "top": 218.078125,
+            "right": 1239,
+            "bottom": 391.40625,
+            "height": 173.328125
+          },
+          "visibleTargetHeight": 173.328125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 586.484375,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 333.796875,
+            "top": 74.75,
+            "right": 1247,
+            "bottom": 511.875
+          },
+          "target": {
+            "left": 341.796875,
+            "top": 82.75,
+            "right": 1239,
+            "bottom": 503.875,
+            "height": 421.125
+          },
+          "visibleTargetHeight": 421.125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 333.796875,
+            "top": 459.859375,
+            "right": 1247,
+            "bottom": 592.8125
+          },
+          "target": {
+            "left": 341.796875,
+            "top": 467.859375,
+            "right": 1239,
+            "bottom": 761.34375,
+            "height": 293.484375
+          },
+          "visibleTargetHeight": 132.953125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 584.890625,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 16,
+            "top": 136.65625,
+            "right": 1146.59375,
+            "bottom": 225.625
+          },
+          "target": {
+            "left": 24,
+            "top": 144.65625,
+            "right": 1138.59375,
+            "bottom": 217.625,
+            "height": 72.96875
+          },
+          "visibleTargetHeight": 72.96875,
+          "requiredTargetHeight": 71.96875,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "12 pasos, colocación y teclado 640x320",
+      "status": "passed",
+      "durationMs": 23724,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 15.8125,
+            "right": 607,
+            "bottom": 247.265625,
+            "height": 231.453125
+          },
+          "visibleTargetHeight": 104.1875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.265625,
+            "right": 316,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 16.265625,
+            "right": 308,
+            "bottom": 129.75,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 103.734375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 324,
+            "top": 8.265625,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 332,
+            "top": 16.265625,
+            "right": 607,
+            "bottom": 129.75,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 103.734375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 316,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 15.75,
+            "right": 308,
+            "bottom": 129.234375,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 104.25,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 324,
+            "top": 8,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 332,
+            "top": 15.75,
+            "right": 607,
+            "bottom": 129.234375,
+            "height": 113.484375
+          },
+          "visibleTargetHeight": 104.25,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.4375,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 16.4375,
+            "right": 607,
+            "bottom": 474.03125,
+            "height": 457.59375
+          },
+          "visibleTargetHeight": 103.5625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 41,
+            "top": 8,
+            "right": 439,
+            "bottom": 112
+          },
+          "target": {
+            "left": 49,
+            "top": 15.625,
+            "right": 431,
+            "bottom": 379.859375,
+            "height": 364.234375
+          },
+          "visibleTargetHeight": 104.375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 439,
+            "top": 8,
+            "right": 599,
+            "bottom": 112
+          },
+          "target": {
+            "left": 447,
+            "top": 15.625,
+            "right": 591,
+            "bottom": 379.859375,
+            "height": 364.234375
+          },
+          "visibleTargetHeight": 104.375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.4375,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 16.4375,
+            "right": 607,
+            "bottom": 189.765625,
+            "height": 173.328125
+          },
+          "visibleTargetHeight": 103.5625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8.109375,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 16.109375,
+            "right": 607,
+            "bottom": 480.609375,
+            "height": 464.5
+          },
+          "visibleTargetHeight": 103.890625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 25,
+            "top": 8,
+            "right": 615,
+            "bottom": 112
+          },
+          "target": {
+            "left": 33,
+            "top": 15.59375,
+            "right": 607,
+            "bottom": 330.140625,
+            "height": 314.546875
+          },
+          "visibleTargetHeight": 104.40625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 8,
+            "top": 31.625,
+            "right": 541.953125,
+            "bottom": 96.671875
+          },
+          "target": {
+            "left": 16,
+            "top": 39.625,
+            "right": 533.953125,
+            "bottom": 88.671875,
+            "height": 49.046875
+          },
+          "visibleTargetHeight": 49.046875,
+          "requiredTargetHeight": 48.046875,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "texto200porciento en móvil y doce pasos",
+      "status": "passed",
+      "durationMs": 18266,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.3125,
+            "right": 303,
+            "bottom": 328
+          },
+          "target": {
+            "left": 65,
+            "top": 16.3125,
+            "right": 295,
+            "bottom": 1563.1875,
+            "height": 1546.875
+          },
+          "visibleTargetHeight": 319.6875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 1 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.1875,
+            "right": 303,
+            "bottom": 328
+          },
+          "target": {
+            "left": 65,
+            "top": 16.1875,
+            "right": 295,
+            "bottom": 630.921875,
+            "height": 614.734375
+          },
+          "visibleTargetHeight": 319.8125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 2 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8,
+            "right": 303,
+            "bottom": 328
+          },
+          "target": {
+            "left": 65,
+            "top": 15.921875,
+            "right": 295,
+            "bottom": 445.203125,
+            "height": 429.28125
+          },
+          "visibleTargetHeight": 320.078125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 3 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.203125,
+            "right": 303,
+            "bottom": 328
+          },
+          "target": {
+            "left": 65,
+            "top": 16.203125,
+            "right": 295,
+            "bottom": 480.203125,
+            "height": 464
+          },
+          "visibleTargetHeight": 319.796875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 4 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8.203125,
+            "right": 303,
+            "bottom": 328
+          },
+          "target": {
+            "left": 65,
+            "top": 16.203125,
+            "right": 295,
+            "bottom": 630.421875,
+            "height": 614.21875
+          },
+          "visibleTargetHeight": 319.796875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 5 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 57,
+            "top": 8,
+            "right": 303,
+            "bottom": 328
+          },
+          "target": {
+            "left": 65,
+            "top": 15.5,
+            "right": 295,
+            "bottom": 1534.734375,
+            "height": 1519.234375
+          },
+          "visibleTargetHeight": 320.5,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 6 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 81,
+            "top": 8,
+            "right": 279,
+            "bottom": 328
+          },
+          "target": {
+            "left": 89,
+            "top": 15.921875,
+            "right": 271,
+            "bottom": 946.09375,
+            "height": 930.171875
+          },
+          "visibleTargetHeight": 320.078125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 81,
+            "top": 8.09375,
+            "right": 279,
+            "bottom": 328
+          },
+          "target": {
+            "left": 89,
+            "top": 16.09375,
+            "right": 271,
+            "bottom": 1502.53125,
+            "height": 1486.4375
+          },
+          "visibleTargetHeight": 319.90625,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 8 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 49,
+            "top": 8.453125,
+            "right": 311,
+            "bottom": 328
+          },
+          "target": {
+            "left": 57,
+            "top": 16.453125,
+            "right": 303,
+            "bottom": 1009,
+            "height": 992.546875
+          },
+          "visibleTargetHeight": 319.546875,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 9 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 49,
+            "top": 8.1875,
+            "right": 311,
+            "bottom": 328
+          },
+          "target": {
+            "left": 57,
+            "top": 16.1875,
+            "right": 303,
+            "bottom": 1486.390625,
+            "height": 1470.203125
+          },
+          "visibleTargetHeight": 319.8125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 10 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 49,
+            "top": 8,
+            "right": 311,
+            "bottom": 328
+          },
+          "target": {
+            "left": 57,
+            "top": 15.5625,
+            "right": 303,
+            "bottom": 1889.140625,
+            "height": 1873.578125
+          },
+          "visibleTargetHeight": 320.4375,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 11 de 12"
+        },
+        {
+          "viewport": {
+            "width": 360,
+            "height": 800
+          },
+          "panel": {
+            "left": 16,
+            "top": 344,
+            "right": 344,
+            "bottom": 784
+          },
+          "highlight": {
+            "left": 24,
+            "top": 62.15625,
+            "right": 336,
+            "bottom": 281.4375
+          },
+          "target": {
+            "left": 32,
+            "top": 70.15625,
+            "right": 328,
+            "bottom": 273.4375,
+            "height": 203.28125
+          },
+          "visibleTargetHeight": 203.28125,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 12 de 12"
+        }
+      ]
+    },
+    {
+      "name": "veinte aperturas y cierres conservan curva, reloj y resultados",
+      "status": "passed",
+      "durationMs": 63334,
+      "errors": []
+    },
+    {
+      "name": "abrir desde Entender y restaurar vista",
+      "status": "passed",
+      "durationMs": 2679,
+      "errors": []
+    },
+    {
+      "name": "abrir desde Experimentar y restaurar vista",
+      "status": "passed",
+      "durationMs": 2586,
+      "errors": []
+    },
+    {
+      "name": "entradas inválidas, elementos suspendidos y Escape",
+      "status": "passed",
+      "durationMs": 2770,
+      "errors": []
+    },
+    {
+      "name": "reproducción pausa al abrir; fondo inerte y movimiento reducido en vivo",
+      "status": "passed",
+      "durationMs": 3506,
+      "errors": []
+    },
+    {
+      "name": "resize y scroll durante el paso de cámara",
+      "status": "passed",
+      "durationMs": 8230,
+      "errors": [],
+      "evidence": [
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "panel": {
+            "left": 460,
+            "top": 608.8125,
+            "right": 820,
+            "bottom": 884
+          },
+          "highlight": {
+            "left": 349.796875,
+            "top": 8,
+            "right": 1023,
+            "bottom": 371.5
+          },
+          "target": {
+            "left": 357.796875,
+            "top": -155.375,
+            "right": 1015,
+            "bottom": 363.5,
+            "height": 518.875
+          },
+          "visibleTargetHeight": 355.5,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 640
+          },
+          "panel": {
+            "left": 16,
+            "top": 326.484375,
+            "right": 304,
+            "bottom": 624
+          },
+          "highlight": {
+            "left": 37,
+            "top": 8,
+            "right": 283,
+            "bottom": 166.5
+          },
+          "target": {
+            "left": 45,
+            "top": -184.453125,
+            "right": 275,
+            "bottom": 158.5,
+            "height": 342.953125
+          },
+          "visibleTargetHeight": 150.5,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        },
+        {
+          "viewport": {
+            "width": 640,
+            "height": 320
+          },
+          "panel": {
+            "left": 140,
+            "top": 128,
+            "right": 500,
+            "bottom": 304
+          },
+          "highlight": {
+            "left": 41,
+            "top": 8,
+            "right": 439,
+            "bottom": 112
+          },
+          "target": {
+            "left": 49,
+            "top": -184.375,
+            "right": 431,
+            "bottom": 179.859375,
+            "height": 364.234375
+          },
+          "visibleTargetHeight": 112,
+          "requiredTargetHeight": 79,
+          "intersect": 0,
+          "missing": false,
+          "progress": "Guía · Paso 7 de 12"
+        }
+      ]
+    },
+    {
+      "name": "la guía funciona sin conexión luego de cargar",
+      "status": "passed",
+      "durationMs": 12284,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "completed": "2026-11-02T19:20:46.028Z"
+}

@@ -1,0 +1,64 @@
+{
+  "candidate": "e87263e2b0d6055340254ad84fa25d18bf8bc06d",
+  "checks": [
+    {
+      "name": "centro visual del signo de pregunta",
+      "status": "failed",
+      "error": "Error: expect(received).toBeLessThanOrEqual(expected)\n\nExpected: <= 0.75\nReceived:    2.25"
+    },
+    {
+      "name": "cuarenta desmontajes 3D por entrada inválida y recuperación",
+      "status": "passed"
+    },
+    {
+      "name": "tabla completa admite navegación rápida sin índices fuera de rango",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "graphicsWarnings": [
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost.",
+    "WARNING: Too many active WebGL contexts. Oldest context will be lost."
+  ],
+  "guideIcon": {
+    "viewport": {
+      "width": 21.59375,
+      "height": 21.59375
+    },
+    "pixelDimensions": {
+      "width": 46,
+      "height": 44
+    },
+    "ink": {
+      "left": 18.5,
+      "right": 29.5,
+      "top": 15.5,
+      "bottom": 37.5
+    },
+    "offsetCssX": 0.5,
+    "offsetCssY": 2.25
+  }
+}

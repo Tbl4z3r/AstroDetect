@@ -1,0 +1,290 @@
+{
+  "candidate": "e87263e2b0d6055340254ad84fa25d18bf8bc06d",
+  "waitAfterEachActionMs": 350,
+  "stableSampleIntervalMs": 500,
+  "errors": [],
+  "results": [
+    {
+      "name": "start360",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "target": {
+        "top": 70.75,
+        "left": 45,
+        "bottom": 438.703125,
+        "right": 315,
+        "width": 270,
+        "height": 367.953125
+      },
+      "panel": {
+        "top": 508.8125,
+        "left": 16,
+        "bottom": 784,
+        "right": 344,
+        "width": 328,
+        "height": 275.1875
+      },
+      "highlight": {
+        "top": 62.75,
+        "left": 37,
+        "bottom": 446.703125,
+        "right": 323,
+        "width": 286,
+        "height": 383.953125
+      },
+      "overlap": 0,
+      "visibleTargetHeight": 367.953125,
+      "scrollY": 1939,
+      "scrollSamples": [
+        1939,
+        1939,
+        1939
+      ],
+      "conditions": {
+        "targetVisible": true,
+        "highlightHeight": true,
+        "separated": true,
+        "panelInViewport": true,
+        "stableScroll": true
+      },
+      "passed": true
+    },
+    {
+      "name": "desktop1280",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "target": {
+        "top": -155.375,
+        "left": 357.796875,
+        "bottom": 363.5,
+        "right": 1015,
+        "width": 657.203125,
+        "height": 518.875
+      },
+      "panel": {
+        "top": 608.8125,
+        "left": 460,
+        "bottom": 884,
+        "right": 820,
+        "width": 360,
+        "height": 275.1875
+      },
+      "highlight": {
+        "top": 8,
+        "left": 349.796875,
+        "bottom": 371.5,
+        "right": 1023,
+        "width": 673.203125,
+        "height": 363.5
+      },
+      "overlap": 0,
+      "visibleTargetHeight": 355.5,
+      "scrollY": 430,
+      "scrollSamples": [
+        430,
+        430,
+        430
+      ],
+      "conditions": {
+        "targetVisible": true,
+        "highlightHeight": true,
+        "separated": true,
+        "panelInViewport": true,
+        "stableScroll": true
+      },
+      "passed": true
+    },
+    {
+      "name": "narrow320",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "target": {
+        "top": 15.546875,
+        "left": 45,
+        "bottom": 358.5,
+        "right": 275,
+        "width": 230,
+        "height": 342.953125
+      },
+      "panel": {
+        "top": 326.484375,
+        "left": 16,
+        "bottom": 624,
+        "right": 304,
+        "width": 288,
+        "height": 297.515625
+      },
+      "highlight": {
+        "top": 8,
+        "left": 37,
+        "bottom": 310.484375,
+        "right": 283,
+        "width": 246,
+        "height": 302.484375
+      },
+      "overlap": 0,
+      "visibleTargetHeight": 302.9375,
+      "scrollY": 2184,
+      "scrollSamples": [
+        2184,
+        2184,
+        2184
+      ],
+      "conditions": {
+        "targetVisible": true,
+        "highlightHeight": true,
+        "separated": true,
+        "panelInViewport": true,
+        "stableScroll": true
+      },
+      "passed": true
+    },
+    {
+      "name": "narrow320-scroll",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "target": {
+        "top": -184.453125,
+        "left": 45,
+        "bottom": 158.5,
+        "right": 275,
+        "width": 230,
+        "height": 342.953125
+      },
+      "panel": {
+        "top": 326.484375,
+        "left": 16,
+        "bottom": 624,
+        "right": 304,
+        "width": 288,
+        "height": 297.515625
+      },
+      "highlight": {
+        "top": 8,
+        "left": 37,
+        "bottom": 166.5,
+        "right": 283,
+        "width": 246,
+        "height": 158.5
+      },
+      "overlap": 0,
+      "visibleTargetHeight": 150.5,
+      "scrollY": 2384,
+      "scrollSamples": [
+        2384,
+        2384,
+        2384
+      ],
+      "conditions": {
+        "targetVisible": true,
+        "highlightHeight": true,
+        "separated": true,
+        "panelInViewport": true,
+        "stableScroll": true
+      },
+      "passed": true
+    },
+    {
+      "name": "landscape640",
+      "viewport": {
+        "width": 640,
+        "height": 320
+      },
+      "target": {
+        "top": 15.625,
+        "left": 49,
+        "bottom": 379.859375,
+        "right": 431,
+        "width": 382,
+        "height": 364.234375
+      },
+      "panel": {
+        "top": 128,
+        "left": 140,
+        "bottom": 304,
+        "right": 500,
+        "width": 360,
+        "height": 176
+      },
+      "highlight": {
+        "top": 8,
+        "left": 41,
+        "bottom": 112,
+        "right": 439,
+        "width": 398,
+        "height": 104
+      },
+      "overlap": 0,
+      "visibleTargetHeight": 104.375,
+      "scrollY": 1508,
+      "scrollSamples": [
+        1508,
+        1508,
+        1508
+      ],
+      "conditions": {
+        "targetVisible": true,
+        "highlightHeight": true,
+        "separated": true,
+        "panelInViewport": true,
+        "stableScroll": true
+      },
+      "passed": true
+    },
+    {
+      "name": "return360",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "target": {
+        "top": 119.75,
+        "left": 45,
+        "bottom": 487.703125,
+        "right": 315,
+        "width": 270,
+        "height": 367.953125
+      },
+      "panel": {
+        "top": 508.8125,
+        "left": 16,
+        "bottom": 784,
+        "right": 344,
+        "width": 328,
+        "height": 275.1875
+      },
+      "highlight": {
+        "top": 111.75,
+        "left": 37,
+        "bottom": 492.8125,
+        "right": 323,
+        "width": 286,
+        "height": 381.0625
+      },
+      "overlap": 0,
+      "visibleTargetHeight": 367.953125,
+      "scrollY": 1890,
+      "scrollSamples": [
+        1890,
+        1890,
+        1890
+      ],
+      "conditions": {
+        "targetVisible": true,
+        "highlightHeight": true,
+        "separated": true,
+        "panelInViewport": true,
+        "stableScroll": true
+      },
+      "passed": true
+    }
+  ]
+}
