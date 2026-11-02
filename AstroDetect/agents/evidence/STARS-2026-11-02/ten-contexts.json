@@ -1,0 +1,77 @@
+{
+  "source": "local preview; not a public GitHub Pages capacity test",
+  "date": "2026-11-02T18:13:24.753Z",
+  "browser": "156.0.8078.4",
+  "node": "v22.12.0",
+  "operatingSystem": "win32 10.0.26300",
+  "processor": "Intel(R) Core(TM) Ultra 7 256V",
+  "logicalProcessors": 8,
+  "concurrentContexts": 10,
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "totalDurationMs": 10569,
+  "sessions": [
+    {
+      "index": 0,
+      "seed": 100,
+      "durationMs": 1710,
+      "errors": []
+    },
+    {
+      "index": 1,
+      "seed": 101,
+      "durationMs": 2265,
+      "errors": []
+    },
+    {
+      "index": 2,
+      "seed": 102,
+      "durationMs": 9497,
+      "errors": []
+    },
+    {
+      "index": 3,
+      "seed": 103,
+      "durationMs": 7275,
+      "errors": []
+    },
+    {
+      "index": 4,
+      "seed": 104,
+      "durationMs": 9743,
+      "errors": []
+    },
+    {
+      "index": 5,
+      "seed": 105,
+      "durationMs": 9498,
+      "errors": []
+    },
+    {
+      "index": 6,
+      "seed": 106,
+      "durationMs": 10078,
+      "errors": []
+    },
+    {
+      "index": 7,
+      "seed": 107,
+      "durationMs": 10238,
+      "errors": []
+    },
+    {
+      "index": 8,
+      "seed": 108,
+      "durationMs": 10068,
+      "errors": []
+    },
+    {
+      "index": 9,
+      "seed": 109,
+      "durationMs": 9725,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-02",
+  "url": "http://127.0.0.1:4182/AstroDetect/",
+  "code": "working tree from b86ed2613d1d8f1389e4adada6b248be5e3a3a7d",
+  "checks": [
+    {
+      "id": "red-dwarf",
+      "status": "passed",
+      "normal": {
+        "count": 13952,
+        "red": 240.58658256880733,
+        "green": 136.21394782110093,
+        "blue": 96.86561066513761
+      },
+      "pausedAfterResize": {
+        "count": 7344,
+        "red": 240.18954248366012,
+        "green": 136.26797385620915,
+        "blue": 97.14596949891067
+      }
+    },
+    {
+      "id": "orange-dwarf",
+      "status": "passed",
+      "normal": {
+        "count": 13948,
+        "red": 240.61134212790364,
+        "green": 173.97727272727272,
+        "blue": 111.03168913105822
+      },
+      "pausedAfterResize": {
+        "count": 7344,
+        "red": 240.18954248366012,
+        "green": 173.9170751633987,
+        "blue": 111.26729302832244
+      }
+    },
+    {
+      "id": "sunlike",
+      "status": "passed",
+      "normal": {
+        "count": 13948,
+        "red": 240.61134212790364,
+        "green": 198.50609406366505,
+        "blue": 115.72462001720677
+      },
+      "pausedAfterResize": {
+        "count": 7344,
+        "red": 240.18954248366012,
+        "green": 198.3707788671024,
+        "blue": 115.94294662309368
+      }
+    },
+    {
+      "id": "hot-star",
+      "status": "passed",
+      "normal": {
+        "count": 13948,
+        "red": 240.61134212790364,
+        "green": 227.75516203039862,
+        "blue": 208.22892170920562
+      },
+      "pausedAfterResize": {
+        "count": 7344,
+        "red": 240.18954248366012,
+        "green": 227.51933551198258,
+        "blue": 208.1670751633987
+      }
+    },
+    {
+      "name": "layout at 180,320,360,1280",
+      "status": "passed"
+    }
+  ],
+  "pageErrors": [],
+  "status": "passed"
+}
