@@ -67,6 +67,7 @@ test('móvil de 360px permite teclado, errores y avance manual con movimiento re
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Ir a la configuración', exact: true })).toBeFocused();
   await page.keyboard.press('Enter');
+  await expect(page.getByRole('heading', { name: 'Diseña el sistema', exact: true })).toBeFocused();
   await page.keyboard.press('Tab');
   await expect(page.getByLabel('Modelo de estrella', { exact: true })).toBeFocused();
   await page.keyboard.press('Tab');
