@@ -6,7 +6,7 @@ test('arranca desde la subruta y carga recursos sin errores', async ({ page }) =
   page.on('response', response => { if (response.status() >= 400) failures.push(response.url()); });
   await page.goto('./');
   await expect(page.getByRole('heading', { name: 'AstroDetect' })).toBeVisible();
-  await expect(page.getByText('Simulación educativa')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Guía', exact: true })).toBeVisible();
   await page.reload();
   await expect(page.getByRole('main')).toBeVisible();
   expect(failures).toEqual([]);

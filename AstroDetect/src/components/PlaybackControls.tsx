@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function PlaybackControls(props: Props) {
-  return <div className="playback-controls">
+  return <div className="playback-controls" data-guide="playback">
     <div className="playback-buttons">
       <button type="button" onClick={props.playing ? props.onPause : props.onPlay} disabled={props.reducedMotion}>{props.playing ? 'Pausar' : 'Reproducir'}</button>
       <button type="button" onClick={props.onRestart}>Volver al inicio</button>

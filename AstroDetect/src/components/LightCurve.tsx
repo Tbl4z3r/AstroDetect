@@ -33,7 +33,7 @@ export default function LightCurve({ result, timeDays }: { result: SimulationRes
     return { min, max, clean: path('cleanFlux'), observed: path('observedFlux') };
   }, [result, right]);
   const ticks = width < 400 ? [0, 0.5, 1] : [0, 0.25, 0.5, 0.75, 1];
-  return <figure className="light-curve" ref={figureRef}>
+  return <figure className="light-curve" ref={figureRef} data-guide="curve">
     <p className="axis-label">Flujo normalizado (sin unidad)</p>
     <svg viewBox={`0 0 ${width} 260`} role="img" aria-labelledby="curve-title curve-description" data-time-days={timeDays}>
       <title id="curve-title">Curva de brillo simulada</title>

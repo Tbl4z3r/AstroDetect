@@ -26,7 +26,6 @@ export default function ScenarioControls({ onScenarioChange, initialScenario = D
   }
   return <section aria-labelledby="configuracion">
     <p className="section-index">Tu experimento</p><h2 id="configuracion" tabIndex={-1}>Diseña el sistema</h2>
-    <p className="control-introduction">Cambia una variable. Predice su efecto.</p>
     <fieldset><legend>Parámetros del escenario</legend>
       <div className="controls-grid">{fields.map(({ key, label, unit, help }) => {
         const { min, max } = SCENARIO_LIMITS[key];
@@ -36,7 +35,7 @@ export default function ScenarioControls({ onScenarioChange, initialScenario = D
           : !Number.isFinite(value) ? 'Introduce un número finito.'
           : value < min || value > max ? `Introduce un valor entre ${min} y ${max}, inclusive.`
           : key === 'seed' && !Number.isInteger(value) ? 'Introduce una semilla entera, sin decimales.' : '';
-        return <div className="control" key={key}>
+        return <div className="control" key={key} data-guide={key}>
           <label htmlFor={key}>{label} ({unit})</label>
           <p id={`${key}-help`} className="control-help">{help} Límites: {min} a {max}, inclusive.</p>
           <input id={key} type="number" required min={min} max={max} step={key === 'seed' ? 1 : 'any'} value={raw}

@@ -82,6 +82,6 @@ test('teclado, foco visible, restablecimiento y disposición estrecha', async ()
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), { message: String(width) }).toBe(true);
   }
   expect(await page.getByRole('button', { name: 'Observar', exact: false }).getAttribute('aria-pressed')).toBe('true');
-  expect(await page.getByRole('heading', { name: 'Una órbita, dos miradas' }).isVisible()).toBe(true);
+  expect(await page.getByRole('region', { name: 'Simulación orbital', exact: true }).isVisible()).toBe(true);
   expect(await page.getByText(/No hay resultados de detección/).isVisible()).toBe(true);
 }, 30000);
