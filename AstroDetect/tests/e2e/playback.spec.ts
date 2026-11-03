@@ -11,8 +11,8 @@ for (const reducedMotion of ['reduce', 'no-preference'] as const) {
     await page.setViewportSize({ width: reducedMotion === 'reduce' ? 360 : 1280, height: 900 });
     await page.goto('./');
     await expect(page.getByRole('button', { name: 'Centrar cámara', exact: true })).toBeEnabled();
-    await page.clock.install();
-    await page.clock.pauseAt(new Date());
+    await page.clock.install({ time: new Date('2026-11-02T12:00:00Z') });
+    await page.clock.pauseAt(new Date('2026-11-02T12:00:01Z'));
     const play = page.getByRole('button', { name: 'Reproducir', exact: true });
     await expect(play).toBeEnabled();
     await page.clock.runFor(500);
@@ -54,8 +54,8 @@ for (const reducedMotion of ['reduce', 'no-preference'] as const) {
 test('cambiar la preferencia y abrir la guía pausa sin impedir una nueva reproducción', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   await page.goto('./');
-  await page.clock.install();
-  await page.clock.pauseAt(new Date());
+  await page.clock.install({ time: new Date('2026-11-02T12:00:00Z') });
+  await page.clock.pauseAt(new Date('2026-11-02T12:00:01Z'));
   const play = page.getByRole('button', { name: 'Reproducir', exact: true });
   await play.click();
   await page.clock.runFor(500);
