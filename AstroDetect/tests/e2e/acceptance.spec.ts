@@ -62,7 +62,7 @@ test('móvil de 360px permite teclado, errores y avance manual con movimiento re
   await page.setViewportSize({ width: 360, height: 800 });
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('./');
-  await expect(page.getByRole('button', { name: 'Reproducir', exact: true })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Reproducir', exact: true })).toBeEnabled();
   await expect(page.getByText('Movimiento reducido activo:', { exact: false })).toBeVisible();
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Ir a la configuración', exact: true })).toBeFocused();

@@ -87,7 +87,8 @@ test('teclado, movimiento reducido, extremos y pantalla móvil', async () => {
   await page.goto('http://127.0.0.1:4188/AstroDetect/');
   await page.emulateMedia({ reducedMotion: 'reduce' });
   const play = page.getByRole('button', { name: 'Reproducir', exact: true });
-  await expect.poll(() => play.isEnabled()).toBe(false);
+  await expect.poll(() => page.getByText('Movimiento reducido activo:', { exact: false }).isVisible()).toBe(true);
+  await expect.poll(() => play.isEnabled()).toBe(true);
   const slider = page.getByRole('slider', { name: 'Tiempo simulado (días)' });
   await slider.focus();
   await slider.press('Home');
@@ -124,7 +125,8 @@ test('teclado, movimiento reducido, extremos y pantalla móvil', async () => {
   await page.clock.runFor(100);
   expect(Number(await page.getByRole('img', { name: 'Curva de brillo simulada' }).getAttribute('data-time-days'))).toBeLessThan(1);
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect.poll(() => play.isEnabled()).toBe(false);
+  await expect.poll(() => page.getByText('Movimiento reducido activo:', { exact: false }).isVisible()).toBe(true);
+  await expect.poll(() => play.isEnabled()).toBe(true);
   const stopped = await page.getByTestId('clock').textContent();
   await page.clock.runFor(1000);
   expect(await page.getByTestId('clock').textContent()).toBe(stopped);

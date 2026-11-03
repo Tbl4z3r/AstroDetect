@@ -14,13 +14,13 @@ interface Props {
 export default function PlaybackControls(props: Props) {
   return <div className="playback-controls" data-guide="playback">
     <div className="playback-buttons">
-      <button type="button" onClick={props.playing ? props.onPause : props.onPlay} disabled={props.reducedMotion}>{props.playing ? 'Pausar' : 'Reproducir'}</button>
+      <button type="button" onClick={props.playing ? props.onPause : props.onPlay}>{props.playing ? 'Pausar' : 'Reproducir'}</button>
       <button type="button" onClick={props.onRestart}>Volver al inicio</button>
       <button type="button" onClick={() => props.onSeek(props.timeDays + props.cadenceDays)} disabled={props.timeDays >= props.durationDays}>Avanzar una muestra</button>
       {props.onTransit && <button type="button" onClick={props.onTransit}>Ir al primer tránsito</button>}
     </div>
     <p>Velocidad de visualización: recorrido completo en 30 segundos; no modifica el período orbital.</p>
-    {props.reducedMotion && <p>Movimiento reducido activo: reproducción continua desactivada. Usa el control de tiempo o avanza una muestra con el teclado.</p>}
+    {props.reducedMotion && <p>Movimiento reducido activo: la simulación comienza en pausa. Puedes pulsar Reproducir para iniciarla, usar el control de tiempo o avanzar una muestra.</p>}
     <label htmlFor="simulation-time">Tiempo simulado (días)</label>
     <input id="simulation-time" type="range" min="0" max={props.durationDays} step={props.cadenceDays} value={props.timeDays}
       aria-valuetext={`${props.timeDays.toFixed(4)} días de ${props.durationDays} días`}

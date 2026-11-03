@@ -14,7 +14,7 @@ export function usePlayback(durationDays: number) {
     preference.addEventListener('change', updatePreference);
     return () => preference.removeEventListener('change', updatePreference);
   }, []);
-  const isPlaying = playing && timeDays < durationDays && !reducedMotion;
+  const isPlaying = playing && timeDays < durationDays;
   useEffect(() => {
     if (!isPlaying) return;
     let frame = 0;
